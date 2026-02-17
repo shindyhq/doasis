@@ -7,6 +7,11 @@ export async function createClient() {
   const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
   if (!supabaseUrl || !supabaseAnonKey) {
+    if (process.env.NODE_ENV === 'production') {
+      console.warn('Supabase credentials missing during build. This is expected if they are not set in the build environment.');
+      // Return a "null" client type that won't crash the build process
+      return null as any;
+    }
     throw new Error('Supabase credentials missing. Ensure NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY are set.');
   }
 
@@ -61,6 +66,7 @@ export async function getUser() {
   // 2. Fallback to Real Supabase Auth
   try {
     const supabase = await createClient();
+    if (!supabase) return { data: { user: null }, error: null };
     const result = await supabase.auth.getUser();
     return result;
   } catch (e) {
