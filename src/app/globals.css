@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@config "../../tailwind.config.ts";
+
+:root {
+  --background: #fdfbf7;
+  --foreground: #2d3a2f;
+}
+
+@layer base {
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    @apply antialiased selection:bg-accent/30 selection:text-primary leading-relaxed;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display tracking-tight leading-tight;
+  }
+
+  p {
+    @apply font-serif font-light text-primary/85 leading-relaxed;
+  }
+
+  .font-serif-italic {
+    font-family: var(--font-cormorant);
+    font-style: italic;
+    font-weight: 400;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .bg-grain {
+    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+    background-repeat: repeat;
+    background-size: 200px;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 100;
+  }
+
+  .glass {
+    @apply bg-white/60 backdrop-blur-xl border border-white/60;
+  }
+
+  .glass-dark {
+    @apply bg-primary/60 backdrop-blur-xl border border-white/20;
+  }
+
+  .editorial-shadow {
+    box-shadow:
+      0 50px 100px -20px rgba(0, 0, 0, 0.05),
+      0 30px 60px -30px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-invitational {
+    @apply font-display px-8 py-4 rounded-2xl font-bold uppercase tracking-[0.25em] text-[10px] transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 cursor-pointer active:scale-95;
+  }
+}
