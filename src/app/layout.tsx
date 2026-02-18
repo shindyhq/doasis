@@ -23,6 +23,8 @@ export const metadata: Metadata = {
 };
 
 import { MotionProvider } from '@/components/ui/MotionProvider';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function RootLayout({
   children,
@@ -36,6 +38,8 @@ export default function RootLayout({
           <Navbar />
           <main>{children}</main>
           <Footer />
+          <Analytics />
+          <SpeedInsights />
         </MotionProvider>
       </body>
     </html>
