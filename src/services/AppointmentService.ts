@@ -3,7 +3,8 @@ import { Appointment } from '@/types/custom';
 
 export class AppointmentService {
   static async getUpcomingAppointments(userId: string) {
-    const supabase = await createClient(); // createClient is async in server.ts
+    const supabase = await createClient();
+    if (!supabase) return [];
     
     const { data, error } = await supabase
       .from('appointments')

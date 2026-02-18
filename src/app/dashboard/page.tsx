@@ -22,8 +22,16 @@ export default async function DashboardPage() {
   const userDisplayName = user.user_metadata?.full_name || user.email?.split('@')[0];
   
   // Fetch data using Services
-  const upcomingAppointments = await AppointmentService.getUpcomingAppointments(user.id);
-  const nextAppointment = upcomingAppointments && upcomingAppointments.length > 0 ? upcomingAppointments[0] : null;
+  let upcomingAppointments = [];
+  let nextAppointment = null;
+
+  try {
+    upcomingAppointments = await AppointmentService.getUpcomingAppointments(user.id);
+    nextAppointment = upcomingAppointments && upcomingAppointments.length > 0 ? upcomingAppointments[0] : null;
+  } catch (error) {
+    console.error('Failed to fetch appointments:', error);
+    // Non-blocking error: allow dashboard to load even if data fetching fails
+  }
 
   return (
     <div className="space-y-12">
