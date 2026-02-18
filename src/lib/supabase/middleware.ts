@@ -65,12 +65,12 @@ export async function updateSession(request: NextRequest) {
   }
 
   // --- SECURITY HEADERS ---
-  const cspHeader = `
     default-src 'self';
-    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://ntlotxxozwdrphhpfidp.supabase.co;
-    style-src 'self' 'unsafe-inline';
-    img-src 'self' blob: data: https://ntlotxxozwdrphhpfidp.supabase.co https://images.unsplash.com;
-    font-src 'self' data:;
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' ${process.env.NEXT_PUBLIC_SUPABASE_URL};
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    font-src 'self' data: https://fonts.gstatic.com;
+    img-src 'self' blob: data: ${process.env.NEXT_PUBLIC_SUPABASE_URL} https://images.unsplash.com;
+    connect-src 'self' ${process.env.NEXT_PUBLIC_SUPABASE_URL};
     object-src 'none';
     base-uri 'self';
     form-action 'self';
