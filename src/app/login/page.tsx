@@ -10,8 +10,10 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 export default function LoginPage() {
+  const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [fullName, setFullName] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
@@ -22,7 +24,7 @@ export default function LoginPage() {
     setMounted(true);
   }, []);
 
-  const handleLogin = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
@@ -30,25 +32,64 @@ export default function LoginPage() {
     // 1. Generic Error Message for Security (Anti-Enumeration)
     const genericErrorMessage = "Invalid credentials. Please check your email and password and try again.";
 
-    const { error: authError } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
+    try {
+      if (isLogin) {
+        // --- LOGIN LOGIC ---
+        const { error: authError } = await supabase.auth.signInWithPassword({
+          email,
+          password,
+        });
 
-    if (authError) {
-      // Log security event for failure
-      await logSecurityEvent('login_failure', { email });
-      
-      // Always show generic error in production to prevent account enumeration
-      setError(genericErrorMessage);
+        if (authError) {
+          await logSecurityEvent('login_failure', { email });
+          // Always show generic error in production
+          setError(genericErrorMessage);
+        } else {
+          await logSecurityEvent('login_success', { email });
+          router.push('/dashboard');
+          router.refresh();
+          return; // Stop here to avoid resetting loading state too early
+        }
+      } else {
+        // --- SIGNUP LOGIC ---
+        const { data, error: authError } = await supabase.auth.signUp({
+          email,
+          password,
+          options: {
+            data: {
+              full_name: fullName,
+              avatar_url: '',
+            },
+          },
+        });
+
+        if (authError) {
+          throw authError; // Throw to catch block
+        }
+
+        if (data.user) {
+           await logSecurityEvent('signup_success', { email });
+           router.push('/dashboard');
+           router.refresh();
+           return;
+        }
+      }
+    } catch (err: any) {
+      console.error("Auth error:", err);
+      if (!isLogin) {
+         await logSecurityEvent('signup_failure', { email, error: err.message });
+         setError(err.message || "An error occurred during sign up.");
+      } else {
+         setError(genericErrorMessage);
+      }
+    } finally {
       setLoading(false);
-    } else {
-      // Log security event for success
-      await logSecurityEvent('login_success', { email });
-      
-      router.push('/dashboard');
-      router.refresh();
     }
+  };
+
+  const toggleMode = () => {
+    setIsLogin(!isLogin);
+    setError(null);
   };
 
   return (
@@ -79,20 +120,59 @@ export default function LoginPage() {
           </Link>
         </div>
 
-        <div className="glass-dark p-8 md:p-12 rounded-[2rem] border border-white/5 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.5)] relative overflow-hidden">
+        <div className="glass-dark p-8 md:p-12 rounded-[2rem] border border-white/5 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.5)] relative overflow-hidden transition-all duration-500">
           {/* Subtle Inner Glow */}
           <div className="absolute -top-px left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
           
-          <div className="mb-10 text-center">
-            <h2 className="text-[2.75rem] leading-none font-display font-medium text-white mb-4 tracking-[-0.03em]">
-              Welcome Back.
-            </h2>
-            <p className="font-serif italic text-white/40 text-lg">
-              Return to your quiet space.
-            </p>
+          <div className="mb-10 text-center relative">
+             <AnimatePresence mode="wait">
+              <motion.div
+                key={isLogin ? 'login-header' : 'signup-header'}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.3 }}
+              >
+                <h2 className="text-[2.75rem] leading-none font-display font-medium text-white mb-4 tracking-[-0.03em]">
+                  {isLogin ? 'Welcome Back.' : 'Begin Journey.'}
+                </h2>
+                <p className="font-serif italic text-white/40 text-lg">
+                  {isLogin ? 'Return to your quiet space.' : 'Create your sanctuary space.'}
+                </p>
+              </motion.div>
+             </AnimatePresence>
           </div>
 
-          <form onSubmit={handleLogin} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <AnimatePresence mode="popLayout">
+              {!isLogin && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0, overflow: 'hidden' }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="space-y-3"
+                >
+                  <label className="text-[10px] uppercase tracking-[0.25em] font-display font-bold text-white/50 ml-1">
+                    Full Name
+                  </label>
+                  <div className="group relative">
+                    <div className="absolute left-5 top-1/2 -translate-y-1/2 text-white/20 group-focus-within:text-accent transition-colors duration-300">
+                      <User size={16} />
+                    </div>
+                    <input 
+                      type="text"
+                      value={fullName}
+                      onChange={(e) => setFullName(e.target.value)}
+                      required={!isLogin}
+                      className="w-full bg-white/[0.03] border border-white/10 rounded-2xl py-5 pl-14 pr-6 focus:bg-white/[0.06] focus:ring-0 focus:border-accent/50 transition-all outline-none text-white font-display"
+                      placeholder="Your Name"
+                    />
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
             <div className="space-y-3">
               <label className="text-[10px] uppercase tracking-[0.25em] font-display font-bold text-white/50 ml-1">
                 Sanctuary ID
@@ -115,11 +195,13 @@ export default function LoginPage() {
             <div className="space-y-3">
               <div className="flex justify-between items-center px-1">
                 <label className="text-[10px] uppercase tracking-[0.25em] font-display font-bold text-white/50">
-                  Access Path
+                  Password
                 </label>
-                <Link href="/contact" className="text-[9px] uppercase tracking-widest text-accent/60 hover:text-accent transition-colors">
-                  Lost Key?
-                </Link>
+                 {isLogin && (
+                  <Link href="/contact" className="text-[9px] uppercase tracking-widest text-accent/60 hover:text-accent transition-colors">
+                    Lost Key?
+                  </Link>
+                )}
               </div>
               <div className="group relative">
                 <div className="absolute left-5 top-1/2 -translate-y-1/2 text-white/20 group-focus-within:text-accent transition-colors duration-300">
@@ -154,7 +236,7 @@ export default function LoginPage() {
                 disabled={loading}
               >
                 <span className="relative z-10 flex items-center gap-2">
-                  {loading ? 'Opening Gates...' : 'Enter the Sanctuary'}
+                  {loading ? 'Processing...' : (isLogin ? 'Enter the Sanctuary' : 'Create Account')}
                   {!loading && <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />}
                 </span>
                 <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity" />
@@ -179,17 +261,18 @@ export default function LoginPage() {
           
           <div className="h-12 w-px bg-gradient-to-b from-primary/10 to-transparent" />
           
-          <Link 
-            href="/contact" 
+          <button 
+            type="button"
+            onClick={toggleMode}
             className="group flex flex-col items-center gap-4 border-none outline-none"
           >
             <span className="text-xs text-primary/40 uppercase tracking-[0.2em] font-display font-bold group-hover:text-primary transition-colors">
-              New seeker?
+              {isLogin ? 'New seeker?' : 'Already have a key?'}
             </span>
             <span className="text-sm font-serif italic text-accent hover:text-primary transition-all underline underline-offset-8 decoration-accent/20 group-hover:decoration-primary/40">
-              Request access to the sanctuary
+              {isLogin ? 'Request access to the sanctuary' : 'Enter the sanctuary'}
             </span>
-          </Link>
+          </button>
         </div>
       </motion.div>
 
