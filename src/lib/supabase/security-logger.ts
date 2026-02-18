@@ -5,6 +5,8 @@ import { createClient } from './server';
 export type SecurityEventType = 
   | 'login_success' 
   | 'login_failure' 
+  | 'signup_success'
+  | 'signup_failure'
   | 'mfa_enrollment' 
   | 'mfa_verification' 
   | 'password_change_request' 
