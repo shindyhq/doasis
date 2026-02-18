@@ -65,6 +65,7 @@ export async function updateSession(request: NextRequest) {
   }
 
   // --- SECURITY HEADERS ---
+  const cspHeader = `
     default-src 'self';
     script-src 'self' 'unsafe-inline' 'unsafe-eval' ${process.env.NEXT_PUBLIC_SUPABASE_URL};
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
