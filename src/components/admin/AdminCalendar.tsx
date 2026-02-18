@@ -91,7 +91,7 @@ export const AdminCalendar = ({ sessions, isLoading, onDateSelect }: AdminCalend
     return (
       <div className="grid grid-cols-7 gap-px bg-primary/5 rounded-[32px] overflow-hidden border border-primary/5 shadow-inner">
         {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
-          <div key={day} className="bg-white/40 py-4 font-display text-[10px] uppercase tracking-[0.2em] font-bold text-primary/30 text-center">
+          <div key={day} className="bg-white/40 py-4 font-display text-xs uppercase tracking-[0.2em] font-bold text-primary/30 text-center">
             {day}
           </div>
         ))}
@@ -130,7 +130,7 @@ export const AdminCalendar = ({ sessions, isLoading, onDateSelect }: AdminCalend
                       setSelectedSession(session);
                     }}
                     className={`
-                      px-2 py-0.5 rounded-md text-[8px] font-display font-bold uppercase tracking-tighter truncate cursor-pointer hover:scale-105 transition-transform
+                      px-2 py-1 rounded-md text-[10px] font-display font-bold uppercase tracking-tighter truncate cursor-pointer hover:scale-105 transition-transform
                       ${session.type === 'coaching' ? 'bg-accent/10 text-accent border border-accent/20' : 'bg-primary/5 text-primary/60 border border-primary/10'}
                     `}
                   >
@@ -167,7 +167,7 @@ export const AdminCalendar = ({ sessions, isLoading, onDateSelect }: AdminCalend
           return (
             <div key={day.toString()} className="flex flex-col gap-4">
               <div className={`text-center p-4 rounded-3xl ${isToday(day) ? 'bg-primary text-background' : 'bg-primary/5 text-primary'}`}>
-                <p className="font-display text-[9px] uppercase tracking-widest font-bold opacity-60">{format(day, 'EEE')}</p>
+                <p className="font-display text-[10px] uppercase tracking-widest font-bold opacity-60">{format(day, 'EEE')}</p>
                 <p className="text-xl font-display font-medium mt-1">{format(day, 'd')}</p>
               </div>
               <div className="flex-1 space-y-3">
@@ -249,7 +249,7 @@ export const AdminCalendar = ({ sessions, isLoading, onDateSelect }: AdminCalend
           return (
             <div key={hour.toString()} className="flex gap-6 group">
               <div className="w-20 pt-2 text-right">
-                <span className="font-display text-[11px] uppercase tracking-widest font-bold text-primary/30 group-hover:text-primary transition-colors">
+                <span className="font-display text-xs uppercase tracking-widest font-bold text-primary/30 group-hover:text-primary transition-colors">
                   {format(hour, 'h a')}
                 </span>
               </div>
@@ -281,7 +281,7 @@ export const AdminCalendar = ({ sessions, isLoading, onDateSelect }: AdminCalend
   };
 
   return (
-    <div className="glass rounded-[40px] p-8 border border-primary/5 shadow-2xl relative">
+    <div className="glass rounded-[40px] p-10 border border-primary/5 shadow-none bg-white/50 relative">
       {/* Header & View Controls */}
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-12 pb-8 border-b border-primary/5">
         <div className="flex flex-wrap items-center gap-8">
@@ -388,6 +388,7 @@ export const AdminCalendar = ({ sessions, isLoading, onDateSelect }: AdminCalend
             >
               <button 
                 onClick={() => setSelectedSession(null)}
+                title="Close"
                 className="absolute right-6 top-6 p-3 bg-primary/5 rounded-2xl text-primary/30 hover:text-primary hover:bg-primary/10 transition-all"
               >
                 <X size={20} />
@@ -441,7 +442,10 @@ export const AdminCalendar = ({ sessions, isLoading, onDateSelect }: AdminCalend
                     <Video size={18} />
                     Enter Sanctuary
                   </button>
-                  <button className="p-5 bg-primary/5 rounded-[24px] text-primary hover:bg-primary/10 transition-all">
+                  <button 
+                    title="View Documents"
+                    className="p-5 bg-primary/5 rounded-[24px] text-primary hover:bg-primary/10 transition-all"
+                  >
                     <FileText size={20} />
                   </button>
                 </div>

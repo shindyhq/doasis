@@ -25,10 +25,10 @@ export const AdminTodoList = ({ todos, onAdd, onToggle, onDelete, isLoading }: A
   };
 
   return (
-    <div className="glass rounded-[40px] p-8 border border-primary/5 shadow-xl flex flex-col bg-white/40">
+    <div className="glass rounded-[40px] p-10 border border-primary/5 shadow-none flex flex-col bg-white/50 min-h-[400px]">
       <div className="flex items-center justify-between mb-8">
         <div>
-          <h3 className="text-2xl font-display font-medium text-primary">Sanctuary <span className="font-serif italic text-secondary">Tasks</span></h3>
+          <h3 className="text-3xl font-display font-medium text-primary">Sanctuary <span className="font-serif italic text-secondary">Tasks</span></h3>
           <p className="font-serif italic text-xs text-primary/40 mt-1">Daily administrative focus</p>
         </div>
         <div className="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center text-accent">
@@ -55,14 +55,14 @@ export const AdminTodoList = ({ todos, onAdd, onToggle, onDelete, isLoading }: A
         </div>
         
         <div className="flex items-center gap-4 px-2">
-          <span className="font-display text-[9px] uppercase tracking-widest font-bold text-primary/30">Priority:</span>
+          <span className="font-display text-xs uppercase tracking-widest font-bold text-primary/30">Priority:</span>
           {['low', 'medium', 'high'].map((p) => (
             <button
               key={p}
               type="button"
               onClick={() => setNewPriority(p as any)}
               className={`
-                px-3 py-1 rounded-full font-display text-[9px] uppercase tracking-widest font-bold transition-all border
+                px-4 py-1.5 rounded-full font-display text-[10px] uppercase tracking-widest font-bold transition-all border
                 ${newPriority === p 
                   ? 'bg-primary text-background border-primary shadow-md' 
                   : 'bg-white text-primary/40 border-primary/5 hover:border-primary/20'}
@@ -78,7 +78,7 @@ export const AdminTodoList = ({ todos, onAdd, onToggle, onDelete, isLoading }: A
         {isLoading ? (
           <div className="flex flex-col items-center justify-center py-20 text-primary/20 gap-3">
             <Loader2 className="animate-spin" size={32} />
-            <p className="font-display text-[10px] uppercase tracking-widest font-bold">Refining records...</p>
+            <p className="font-display text-xs uppercase tracking-widest font-bold">Refining records...</p>
           </div>
         ) : todos.length > 0 ? (
           <AnimatePresence initial={false}>
@@ -106,7 +106,7 @@ export const AdminTodoList = ({ todos, onAdd, onToggle, onDelete, isLoading }: A
                     <span className={`font-display text-sm font-medium ${todo.completed ? 'line-through text-primary/40' : 'text-primary'}`}>
                       {todo.title}
                     </span>
-                    <span className={`text-[9px] uppercase tracking-widest font-bold mt-1 ${
+                    <span className={`text-[10px] uppercase tracking-widest font-bold mt-1 ${
                       todo.priority === 'high' ? 'text-red-400' : todo.priority === 'medium' ? 'text-accent' : 'text-primary/30'
                     }`}>
                       {todo.priority} Priority
