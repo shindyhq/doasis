@@ -46,7 +46,7 @@ export const AdminClientManager = ({ clients }: AdminClientManagerProps) => {
   };
 
   return (
-    <div className="flex h-[calc(100vh-200px)] min-h-[600px] border border-primary/5 rounded-[32px] overflow-hidden shadow-2xl bg-white/40 glass">
+    <div className="flex min-h-[900px] border border-primary/5 rounded-[40px] overflow-hidden shadow-2xl bg-white/40 glass">
       
       {/* LEFT PANE: Client List (Master) */}
       <div className="w-[350px] md:w-[400px] border-r border-primary/5 flex flex-col bg-white/50 backdrop-blur-md">

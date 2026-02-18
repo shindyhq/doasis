@@ -30,20 +30,20 @@ export default async function AdminPage() {
       </div>
 
       {/* Main Content Grid */}
-      <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 h-[800px]">
-        <div className="xl:col-span-2 flex flex-col h-full">
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-10 items-start">
+        <div className="xl:col-span-2 flex flex-col">
            <AdminClientManager clients={(clients as any[]) || []} />
         </div>
 
         {/* Right Col: Quick Tools */}
-        <div className="flex flex-col gap-8 h-full overflow-hidden">
+        <div className="flex flex-col gap-10 sticky top-6">
            {/* Calendar Snippet */}
-           <div className="flex-1 min-h-0 bg-white/40 border border-primary/5 rounded-[32px] p-1 overflow-hidden relative">
+           <div className="bg-white/40 border border-primary/5 rounded-[40px] p-1 shadow-sm">
               <AdminCalendarWrapper />
            </div>
            
            {/* Halo Tasks */}
-           <div className="h-1/3 min-h-[300px]">
+           <div>
               <AdminTodoListWrapper />
            </div>
         </div>

@@ -28,3 +28,14 @@ export interface SecurityLog {
   metadata: Record<string, any>;
   created_at: string;
 }
+
+export interface JournalEntry {
+  id: string;
+  user_id: string;
+  title: string;
+  content: string | null;
+  mood: string | null;
+  tags: string[] | null;
+  created_at: string;
+  updated_at: string;
+}
