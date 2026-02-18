@@ -2,6 +2,7 @@ import { Section } from '@/components/layout/Section';
 import { Button } from '@/components/ui/Button';
 import { Reveal } from '@/components/ui/Reveal';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, Check, BadgeCheck, Heart, Shield, Sprout, Globe, Compass } from 'lucide-react';
 import { BLOG_POSTS } from '@/data/posts';
 import { HomeHeroCarousel } from '@/components/home/HomeHeroCarousel';
@@ -20,10 +21,12 @@ export default function Home() {
           <div className="md:col-span-5 relative">
             <Reveal>
               <div className="aspect-[3/4] bg-primary/5 rounded-[40px] overflow-hidden shadow-2xl relative group">
-                <img 
+                <Image 
                   src="/images/main-home.jpg" 
-                  className="w-full h-full object-cover grayscale opacity-80 mix-blend-multiply group-hover:grayscale-0 group-hover:opacity-100 group-hover:mix-blend-normal transition-all duration-1000" 
+                  fill
+                  className="object-cover grayscale opacity-80 mix-blend-multiply group-hover:grayscale-0 group-hover:opacity-100 group-hover:mix-blend-normal transition-all duration-1000" 
                   alt="Minimalist sanctuary"
+                  sizes="(max-width: 768px) 100vw, 40vw"
                 />
                 <div className="absolute inset-0 bg-primary/20 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-1000" />
               </div>
@@ -64,7 +67,7 @@ export default function Home() {
             
             <Link 
               href="/about" 
-              className="mt-16 text-xs uppercase tracking-[0.4em] font-bold text-accent hover:text-primary transition-colors flex items-center gap-4 group"
+              className="mt-16 text-xs uppercase tracking-[0.4em] font-bold text-accent-dark hover:text-primary transition-colors flex items-center gap-4 group"
             >
               Explore my story
               <div className="h-[1px] w-12 bg-accent group-hover:w-24 transition-all duration-500" />
@@ -79,7 +82,7 @@ export default function Home() {
         <div className="absolute top-0 left-0 w-full h-1 bg-accent/20" />
         
         <div className="max-w-4xl mx-auto text-center mb-32 relative z-10">
-          <h2 className="text-xs font-display uppercase tracking-[0.4em] font-bold text-accent/80 mb-8 block">The Offerings</h2>
+          <h2 className="text-xs font-display uppercase tracking-[0.4em] font-bold text-accent mb-8 block">The Offerings</h2>
           <h3 className="text-4xl md:text-6xl text-white font-display mb-8 font-medium">Three ways to begin.</h3>
         </div>
 
@@ -134,7 +137,7 @@ export default function Home() {
       {/* Trust Quote Section */}
       <section className="bg-background py-32 md:py-48 relative px-6">
         <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
-          <span className="text-xs font-display uppercase tracking-[0.4em] font-bold text-accent mb-12 block">A Sacred Witness</span>
+          <span className="text-xs font-display uppercase tracking-[0.4em] font-bold text-accent-dark mb-12 block">A Sacred Witness</span>
           <h2 className="text-3xl md:text-5xl font-display text-primary leading-tight mb-16 px-4">
             &quot;Working with Oluyemisi felt like coming <span className="font-serif-italic text-secondary">home to myself.</span>&quot;
           </h2>
@@ -167,7 +170,7 @@ export default function Home() {
       {/* Blog/Resource Teasers Section */}
       <Section className="bg-background py-32 md:py-40 relative">
         <div className="text-center mb-24">
-          <h2 className="text-xs uppercase tracking-[0.4em] font-bold text-accent mb-6 block">From the Journal</h2>
+          <h2 className="text-xs uppercase tracking-[0.4em] font-bold text-accent-dark mb-6 block">From the Journal</h2>
           <h3 className="text-4xl md:text-5xl font-serif-italic text-primary font-light">Reflections for your journey</h3>
         </div>
 
@@ -193,7 +196,7 @@ export default function Home() {
                 
                 {/* Post Meta - Legible & Outfit */}
                 <div className="flex items-center gap-4 mb-6">
-                  <span className="text-xs uppercase tracking-[0.4em] font-display font-bold text-accent">{post.category}</span>
+                  <span className="text-xs uppercase tracking-[0.4em] font-display font-bold text-accent-dark">{post.category}</span>
                   <div className="h-[1px] w-8 bg-primary/10" />
                   <span className="text-xs uppercase tracking-[0.4em] font-display font-bold text-primary/20">{post.readTime}</span>
                 </div>
@@ -207,7 +210,7 @@ export default function Home() {
                 
                 <Link 
                   href={`/blog/${post.slug}`}
-                  className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] font-display font-bold text-accent hover:gap-4 transition-all group"
+                  className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] font-display font-bold text-accent-dark hover:gap-4 transition-all group"
                 >
                   Read Reflection
                   <ArrowRight className="w-3 h-3" />

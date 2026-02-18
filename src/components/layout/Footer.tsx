@@ -113,7 +113,7 @@ export const Footer = () => {
         {/* Level 3: Footer Meta */}
         <div className="flex flex-col items-center gap-4 text-[10px] uppercase tracking-[0.25em] font-bold font-display">
           <span className="text-background/60">Copyright © {currentYear} D&apos;Oasis Sanctuary. All rights reserved.</span>
-          <span className="text-background/30 hover:text-background/60 transition-opacity cursor-default">Designed with purpose.</span>
+          <span className="text-background/60 hover:text-background/80 transition-opacity cursor-default">Designed with purpose.</span>
         </div>
 
       </div>

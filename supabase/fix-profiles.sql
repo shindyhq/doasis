@@ -19,4 +19,4 @@ ON CONFLICT (id) DO NOTHING;
 -- Replace 'YOUR_EMAIL@example.com' with your actual email
 UPDATE public.profiles
 SET role = 'admin'
-WHERE email = 'YOUR_EMAIL@example.com'; 
+WHERE email = 'fourteemedia@gmail.com'; 

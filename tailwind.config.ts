@@ -24,7 +24,7 @@ const config: Config = {
         accent: {
           DEFAULT: '#969a7b', // New Olive Sage
           foreground: '#0A1B12',
-          dark: '#7d8161', // Darkened variation
+          dark: '#5C6045', // Darkened for accessibility (WCAG AA)
         },
       },
       fontFamily: {

@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
 import { Reveal } from '@/components/ui/Reveal';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, Sparkles } from 'lucide-react';
 
 const SLIDES = [
@@ -50,6 +51,9 @@ export function HomeHeroCarousel() {
     }, 8000);
 
     const handleMouseMove = (e: MouseEvent) => {
+      // Disable parallax on mobile to reduce TBT
+      if (window.innerWidth < 1024) return;
+      
       setMousePos({ 
         x: (e.clientX / window.innerWidth - 0.5) * 30, 
         y: (e.clientY / window.innerHeight - 0.5) * 30 
@@ -73,15 +77,22 @@ export function HomeHeroCarousel() {
           animate={{ opacity: 0.4, scale: 1 }}
           exit={{ opacity: 0, scale: 0.95 }}
           transition={{ duration: 2, ease: "circOut" }}
-          className="absolute inset-0 grayscale scale-110 pointer-events-none"
+          className="absolute inset-0 pointer-events-none"
           style={{ 
-            backgroundImage: `url(${SLIDES[current].bg})`, 
-            backgroundSize: 'cover', 
-            backgroundPosition: 'center',
             x: mousePos.x * 0.5,
             y: mousePos.y * 0.5
           }}
-        />
+        >
+          <Image
+            src={SLIDES[current].bg}
+            alt="Hero background"
+            fill
+            className="object-cover grayscale scale-110"
+            priority={true}
+            quality={90}
+            sizes="100vw"
+          />
+        </motion.div>
       </AnimatePresence>
 
       {/* Darker Overlay for better contrast */}
@@ -192,6 +203,8 @@ export function HomeHeroCarousel() {
             key={slide.id + '-dot'}
             onClick={() => setCurrent(i)}
             className="group py-4 px-2"
+            aria-label={`Go to slide ${i + 1}: ${slide.title}`}
+            aria-current={current === i ? 'true' : 'false'}
           >
             <div className={`h-1 transition-all duration-500 rounded-full ${
               current === i ? 'w-12 bg-accent shadow-[0_0_10px_rgba(150,154,123,0.5)]' : 'w-4 bg-white/20 group-hover:bg-white/40'
