@@ -1,4 +1,4 @@
-'use client';
+import { useState, useEffect } from 'react';
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -32,6 +32,27 @@ interface DashboardSidebarProps {
 export const DashboardSidebar = ({ isOpen, onClose }: DashboardSidebarProps) => {
   const pathname = usePathname();
   const isDesktop = useMediaQuery('(min-width: 1024px)');
+  const [isAdmin, setIsAdmin] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    const checkRole = async () => {
+      const supabase = createClient();
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) {
+        setIsAdmin(false);
+        return;
+      }
+
+      const { data: profile } = await supabase
+        .from('profiles')
+        .select('role')
+        .eq('id', user.id)
+        .single();
+      
+      setIsAdmin(profile?.role === 'admin');
+    };
+    checkRole();
+  }, []);
 
   return (
     <>
@@ -78,12 +99,9 @@ export const DashboardSidebar = ({ isOpen, onClose }: DashboardSidebarProps) => 
         {/* Navigation Links */}
         <nav className="flex-1 space-y-4">
           {NAV_ITEMS.map((item) => {
-            // Simple visibility check for Admin Portal
             if (item.adminOnly) {
-              const supabase = createClient();
-              // In this mock environment, we can check for the mock cookie
-              const isMockAdmin = typeof document !== 'undefined' && document.cookie.includes('sb-mock-auth=true');
-              if (!isMockAdmin) return null;
+              if (isAdmin === null) return null; // Still loading
+              if (!isAdmin) return null; // Not an admin
             }
 
             const isActive = pathname === item.href;
