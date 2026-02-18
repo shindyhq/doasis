@@ -162,6 +162,15 @@ export const DashboardSidebar = ({ isOpen, onClose }: DashboardSidebarProps) => 
               Exit Sanctuary
             </span>
           </button>
+
+          {/* Trust Status Badge */}
+          <div className="mt-6 px-5 py-3 rounded-2xl bg-white/[0.03] border border-white/5 flex items-center gap-3">
+             <div className="w-2 h-2 rounded-full bg-accent animate-pulse shadow-[0_0_8px_rgba(150,154,123,0.5)]" />
+             <div className="flex flex-col">
+                <span className="text-[8px] uppercase tracking-[0.2em] font-bold text-white/30">Sanctuary Status</span>
+                <span className="text-[10px] font-display font-bold text-accent/80">Shielded & Encrypted</span>
+             </div>
+          </div>
         </div>
       </motion.aside>
     </>

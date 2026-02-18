@@ -174,7 +174,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center">
             <div className="aspect-[4/3] md:aspect-square bg-primary/5 relative group order-2 md:order-1 overflow-hidden">
               <Image 
-                src="/_doc/images/contact-collab.jpg" 
+                src="/images/contact-collab.jpg" 
                 alt="Collaboration and Speaking" 
                 fill 
                 className="object-cover transition-transform duration-[3000ms] ease-out group-hover:scale-110"

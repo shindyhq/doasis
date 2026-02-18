@@ -3,6 +3,8 @@ export const dynamic = 'force-dynamic';
 import { redirect } from 'next/navigation';
 import { ProfileForm } from '@/components/dashboard/ProfileForm';
 import { SecuritySection } from '@/components/dashboard/SecuritySection';
+import { MFASection } from '@/components/dashboard/MFASection';
+import { SecurityLogs } from '@/components/dashboard/SecurityLogs';
 import { Settings, User, Shield } from 'lucide-react';
 
 export default async function ProfilePage() {
@@ -64,6 +66,11 @@ export default async function ProfilePage() {
         </div>
 
         <SecuritySection />
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
+           <MFASection />
+           <SecurityLogs />
+        </div>
       </section>
 
       {/* Account Deletion / Support */}

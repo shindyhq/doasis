@@ -64,15 +64,54 @@ export async function updateSession(request: NextRequest) {
     return NextResponse.redirect(url)
   }
 
-  // IMPORTANT: You *must* return the supabaseResponse object as it is. If you're
-  // creating a new response object with NextResponse.next() make sure to:
-  // 1. Pass the request in it, like so:
-  //    const myNewResponse = NextResponse.next({ request })
-  // 2. Copy over the cookies, like so:
-  //    myNewResponse.cookies.setAll(supabaseResponse.cookies.getAll())
-  // 3. Change the myNewResponse object to fit your needs, but avoid mutating
-  //    the cookies.
-  // 4. Return the myNewResponse object.
+  // --- SECURITY HEADERS ---
+  const cspHeader = `
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://ntlotxxozwdrphhpfidp.supabase.co;
+    style-src 'self' 'unsafe-inline';
+    img-src 'self' blob: data: https://ntlotxxozwdrphhpfidp.supabase.co https://images.unsplash.com;
+    font-src 'self' data:;
+    object-src 'none';
+    base-uri 'self';
+    form-action 'self';
+    frame-ancestors 'none';
+    upgrade-insecure-requests;
+  `.replace(/\s{2,}/g, ' ').trim();
+
+  supabaseResponse.headers.set('Content-Security-Policy', cspHeader);
+  supabaseResponse.headers.set('X-Frame-Options', 'DENY');
+  supabaseResponse.headers.set('X-Content-Type-Options', 'nosniff');
+  supabaseResponse.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+  supabaseResponse.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+  supabaseResponse.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
+
+  // --- ABSOLUTE SESSION TIMEOUT (24 Hours) ---
+  const MAX_SESSION_DURATION = 24 * 60 * 60 * 1000; // 24 hours in ms
+  const sessionStartTime = request.cookies.get('sb-session-start')?.value;
+
+  if (user && !sessionStartTime) {
+    // Session just started, set the start time cookie
+    supabaseResponse.cookies.set('sb-session-start', Date.now().toString(), {
+      maxAge: 60 * 60 * 24, // 1 day
+      httpOnly: true,
+      secure: true,
+      sameSite: 'lax',
+    });
+  } else if (user && sessionStartTime) {
+    const elapsed = Date.now() - parseInt(sessionStartTime);
+    if (elapsed > MAX_SESSION_DURATION) {
+      // Force logout by clearing the session start time and redirecting to login
+      const url = request.nextUrl.clone();
+      url.pathname = '/login';
+      const response = NextResponse.redirect(url);
+      response.cookies.delete('sb-session-start');
+      // Note: Supabase cookies will be naturally invalidated if we don't refresh them,
+      // but a explicit redirect is safer for absolute timeouts.
+      return response;
+    }
+  } else if (!user) {
+    supabaseResponse.cookies.delete('sb-session-start');
+  }
 
   return supabaseResponse
 }

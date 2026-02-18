@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { createClient } from '@/lib/supabase/client';
+import { logSecurityEvent } from '@/lib/supabase/security-logger';
 import { Button } from '@/components/ui/Button';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Shield, Mail, Lock, ArrowRight, User, Sparkles } from 'lucide-react';
@@ -26,17 +27,8 @@ export default function LoginPage() {
     setLoading(true);
     setError(null);
 
-    // Development Bypass for Mock Supabase
-    const isMock = process.env.NEXT_PUBLIC_SUPABASE_URL?.includes('mock-project');
-    
-    if (isMock) {
-      if (email.trim() === 'admin@doasis.com' && password.trim() === 'admin123') {
-        document.cookie = "sb-mock-auth=true; path=/";
-        router.push('/dashboard');
-        router.refresh();
-        return;
-      }
-    }
+    // 1. Generic Error Message for Security (Anti-Enumeration)
+    const genericErrorMessage = "Invalid credentials. Please check your email and password and try again.";
 
     const { error: authError } = await supabase.auth.signInWithPassword({
       email,
@@ -44,9 +36,16 @@ export default function LoginPage() {
     });
 
     if (authError) {
-      setError(authError.message);
+      // Log security event for failure
+      await logSecurityEvent('login_failure', { email });
+      
+      // Always show generic error in production to prevent account enumeration
+      setError(genericErrorMessage);
       setLoading(false);
     } else {
+      // Log security event for success
+      await logSecurityEvent('login_success', { email });
+      
       router.push('/dashboard');
       router.refresh();
     }
@@ -163,22 +162,12 @@ export default function LoginPage() {
             </div>
           </form>
 
-          {/* Bypass Area for Dev */}
-          {process.env.NEXT_PUBLIC_SUPABASE_URL?.includes('mock-project') && (
-            <div className="mt-8 flex justify-center">
-              <button
-                type="button"
-                onClick={() => {
-                  document.cookie = "sb-mock-auth=true; path=/";
-                  router.push('/dashboard');
-                  router.refresh();
-                }}
-                className="text-[9px] uppercase tracking-[0.4em] text-white/20 hover:text-accent transition-colors py-2 px-4 border border-white/5 rounded-full hover:border-accent/20"
-              >
-                Super Key (Bypass)
-              </button>
-            </div>
-          )}
+          {/* Security Note */}
+          <div className="mt-8 flex justify-center">
+            <p className="text-[9px] uppercase tracking-[0.4em] text-white/10 py-2 px-4 border border-white/5 rounded-full">
+              Encrypted Sanctuary Access
+            </p>
+          </div>
         </div>
 
         <div className="mt-12 text-center flex flex-col items-center gap-6">

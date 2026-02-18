@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { User, Mail, Phone, ChevronRight } from 'lucide-react';
+import { logSecurityEvent } from '@/lib/supabase/security-logger';
 
 interface ProfileFormProps {
   initialData: {
@@ -17,6 +18,13 @@ export const ProfileForm = ({ initialData }: ProfileFormProps) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Logic for updating profile in Supabase would go here
+    try {
+      // Intentionally placing log before hypothetical update for demo/traceability
+      await logSecurityEvent('profile_update_attempt', { email: formData.email });
+      // ... actual update logic ...
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   return (
