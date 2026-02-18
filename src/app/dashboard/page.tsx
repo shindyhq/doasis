@@ -1,7 +1,7 @@
-import { createClient, getUser } from '@/lib/supabase/server';
+import { getUser } from '@/lib/supabase/server';
 export const dynamic = 'force-dynamic';
 import { redirect } from 'next/navigation';
-import { motion } from 'framer-motion';
+import { AppointmentService } from '@/services/AppointmentService';
 import { 
   Calendar, 
   Clock, 
@@ -10,6 +10,7 @@ import {
   Star 
 } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
+import { format } from 'date-fns';
 
 export default async function DashboardPage() {
   const { data: { user } } = await getUser();
@@ -19,6 +20,10 @@ export default async function DashboardPage() {
   }
 
   const userDisplayName = user.user_metadata?.full_name || user.email?.split('@')[0];
+  
+  // Fetch data using Services
+  const upcomingAppointments = await AppointmentService.getUpcomingAppointments(user.id);
+  const nextAppointment = upcomingAppointments && upcomingAppointments.length > 0 ? upcomingAppointments[0] : null;
 
   return (
     <div className="space-y-12">
@@ -38,8 +43,13 @@ export default async function DashboardPage() {
       {/* Quick Stats/Highlights */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {[
-          { label: 'Upcoming Session', value: 'Feb 15, 2:00 PM', icon: Calendar, color: 'text-accent' },
-          { label: 'Completed Reflections', value: '8 Sessions', icon: BookOpen, color: 'text-secondary' },
+          { 
+            label: 'Upcoming Session', 
+            value: nextAppointment ? format(new Date(nextAppointment.scheduled_at), 'MMM d, h:mm a') : 'No sessions scheduled', 
+            icon: Calendar, 
+            color: 'text-accent' 
+          },
+          { label: 'Completed Reflections', value: '8 Sessions', icon: BookOpen, color: 'text-secondary' }, // Placeholder for now
           { label: 'Current Plan', value: 'The Becoming', icon: Star, color: 'text-primary' },
         ].map((stat, i) => (
           <div key={i} className="glass p-8 rounded-[32px] border border-primary/5 flex flex-col gap-4">

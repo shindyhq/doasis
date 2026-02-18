@@ -61,13 +61,13 @@ export default function BlogPost() {
             </Reveal>
             
             <Reveal delay={0.3}>
-              <h1 className="text-5xl md:text-7xl font-serif italic text-primary leading-[1.1] mb-10">
+              <h1 className="text-5xl md:text-7xl font-display font-medium text-primary leading-[1.1] mb-10">
                 {post.title}
               </h1>
             </Reveal>
 
             <Reveal delay={0.4}>
-              <div className="flex items-center gap-8 text-[10px] uppercase tracking-[0.2em] font-bold text-primary/30">
+              <div className="flex items-center gap-8 text-[10px] uppercase tracking-[0.2em] font-display font-bold text-primary/30">
                 <div className="flex items-center gap-2">
                   <Calendar className="w-3 h-3" />
                   {post.date}

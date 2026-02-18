@@ -91,7 +91,7 @@ export default function Blog() {
                   <motion.img 
                     src={post.image} 
                     alt={post.title}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] ease-out group-hover:scale-110"
+                    className="absolute inset-0 w-full h-full object-cover grayscale opacity-90 mix-blend-multiply group-hover:grayscale-0 group-hover:opacity-100 group-hover:mix-blend-normal transition-all duration-[2000ms] ease-out group-hover:scale-110"
                   />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center p-16 text-center">

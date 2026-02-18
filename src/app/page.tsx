@@ -183,7 +183,7 @@ export default function Home() {
                     <img 
                       src={post.image} 
                       alt={post.title}
-                      className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-1000 grayscale hover:grayscale-0 tint-accent mix-blend-multiply hover:mix-blend-normal"
+                      className="absolute inset-0 w-full h-full object-cover grayscale opacity-90 mix-blend-multiply group-hover:grayscale-0 group-hover:opacity-100 group-hover:mix-blend-normal group-hover:scale-110 transition-all duration-1000 ease-in-out"
                     />
                   ) : (
                     <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 opacity-60 group-hover:opacity-80 transition-opacity duration-500" />

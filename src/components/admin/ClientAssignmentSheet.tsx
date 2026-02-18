@@ -1,10 +1,9 @@
-'use client';
-
-import { useState, useRef } from 'react';
-import { X, Calendar, Video, FileText, Plus, Save, Loader2, Check, ExternalLink } from 'lucide-react';
+import { useState, useRef, useEffect } from 'react';
+import { X, Calendar, Video, FileText, Plus, Save, Loader2, Check, ExternalLink, StickyNote, Lock } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Profile } from '@/lib/types/admin';
 import { Button } from '@/components/ui/Button';
+import { addClientNote, getClientNotes } from '@/actions/admin-actions'; // Import Server Actions
 
 interface ClientAssignmentSheetProps {
   client: Profile | null;
@@ -13,7 +12,7 @@ interface ClientAssignmentSheetProps {
 }
 
 export const ClientAssignmentSheet = ({ client, onClose, onSuccess }: ClientAssignmentSheetProps) => {
-  const [activeTab, setActiveTab] = useState<'services' | 'links' | 'documents'>('services');
+  const [activeTab, setActiveTab] = useState<'services' | 'links' | 'documents' | 'notes'>('services');
   const [isSaving, setIsSaving] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   
@@ -21,33 +20,60 @@ export const ClientAssignmentSheet = ({ client, onClose, onSuccess }: ClientAssi
   const [serviceName, setServiceName] = useState('The Becoming — Bi-Weekly Coaching');
   const [price, setPrice] = useState('350.00');
   const [zoomLink, setZoomLink] = useState('');
+  
+  // Notes State
+  const [noteContent, setNoteContent] = useState('');
+  const [notes, setNotes] = useState<any[]>([]);
+  const [isLoadingNotes, setIsLoadingNotes] = useState(false);
 
   // Document State
   const [uploadedDocs, setUploadedDocs] = useState<any[]>([]);
   const [isUploading, setIsUploading] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  // Fetch notes when tab changes to 'notes'
+  useEffect(() => {
+    if (activeTab === 'notes' && client) {
+      setIsLoadingNotes(true);
+      getClientNotes(client.id)
+        .then(setNotes)
+        .catch(console.error)
+        .finally(() => setIsLoadingNotes(false));
+    }
+  }, [activeTab, client]);
+
   const handleSave = async () => {
     if (!client) return;
     setIsSaving(true);
     try {
-      const payload = activeTab === 'services' 
-        ? { clientId: client.id, type: 'service', data: { serviceName, price: parseFloat(price) } }
-        : { clientId: client.id, type: 'link', data: { link: zoomLink } };
-
-      const resp = await fetch('/api/admin/clients/assign', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-
-      if (resp.ok) {
+      if (activeTab === 'notes') {
+        if (!noteContent.trim()) return;
+        const newNote = await addClientNote(client.id, noteContent);
+        setNotes([newNote, ...notes]);
+        setNoteContent('');
         setIsSuccess(true);
-        setTimeout(() => {
+      } else {
+        // ... existing save logic for other tabs ...
+        const payload = activeTab === 'services' 
+          ? { clientId: client.id, type: 'service', data: { serviceName, price: parseFloat(price) } }
+          : { clientId: client.id, type: 'link', data: { link: zoomLink } };
+
+        const resp = await fetch('/api/admin/clients/assign', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (resp.ok) setIsSuccess(true);
+      }
+
+      if (isSuccess || (activeTab === 'notes' && !isSuccess)) { // Success state handling
+         setTimeout(() => {
           setIsSuccess(false);
-          if (onSuccess) onSuccess();
+          if (onSuccess && activeTab !== 'notes') onSuccess(); // Don't close sheet on note save
         }, 1500);
       }
+
     } catch (e) {
       console.error('Save failed:', e);
     } finally {
@@ -56,20 +82,15 @@ export const ClientAssignmentSheet = ({ client, onClose, onSuccess }: ClientAssi
   };
 
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    // ... existing upload logic ...
     const file = e.target.files?.[0];
     if (!file || !client) return;
-
     setIsUploading(true);
     const formData = new FormData();
     formData.append('file', file);
     formData.append('clientId', client.id);
-
     try {
-      const resp = await fetch('/api/admin/upload', {
-        method: 'POST',
-        body: formData
-      });
-
+      const resp = await fetch('/api/admin/upload', { method: 'POST', body: formData });
       if (resp.ok) {
         const { data } = await resp.json();
         setUploadedDocs(prev => [data, ...prev]);
@@ -109,7 +130,7 @@ export const ClientAssignmentSheet = ({ client, onClose, onSuccess }: ClientAssi
               Client Management
             </p>
             <h2 className="text-3xl font-display font-medium text-primary">
-              Assign to <span className="font-serif italic">{client.full_name}</span>
+              Manage <span className="font-serif italic">{client.full_name}</span>
             </h2>
           </div>
           <button 
@@ -122,16 +143,17 @@ export const ClientAssignmentSheet = ({ client, onClose, onSuccess }: ClientAssi
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex px-8 py-4 gap-8 border-b border-primary/5 bg-white/20">
+        <div className="flex px-8 py-4 gap-6 border-b border-primary/5 bg-white/20 overflow-x-auto">
           {[
             { id: 'services', label: 'Services', icon: Calendar },
             { id: 'links', label: 'Links', icon: Video },
             { id: 'documents', label: 'Documents', icon: FileText },
+            { id: 'notes', label: 'Private Notes', icon: StickyNote },
           ].map(tab => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id as any)}
-              className={`flex items-center gap-2 py-2 font-display text-[11px] uppercase tracking-widest font-bold transition-all border-b-2 ${
+              className={`flex items-center gap-2 py-2 font-display text-[11px] uppercase tracking-widest font-bold transition-all border-b-2 whitespace-nowrap ${
                 activeTab === tab.id 
                   ? 'border-accent text-primary' 
                   : 'border-transparent text-primary/30 hover:text-primary/60'
@@ -285,6 +307,56 @@ export const ClientAssignmentSheet = ({ client, onClose, onSuccess }: ClientAssi
                 </div>
               </motion.div>
             )}
+
+            {activeTab === 'notes' && (
+              <motion.div 
+                key="notes"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                className="space-y-6"
+              >
+                 <div className="p-6 bg-[#f0f0e0]/50 rounded-[24px] border border-primary/5 flex gap-4">
+                  <Lock className="text-primary/40 shrink-0" size={20} />
+                  <p className="text-[13px] font-serif italic text-primary/70 leading-relaxed">
+                    These notes are strictly private. Only administrators can view them. They are never shared with the client.
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  <label className="block font-display text-[11px] uppercase tracking-widest font-bold text-primary/70 px-1">
+                    Add New Note
+                  </label>
+                  <textarea 
+                    placeholder="Reflections on recent session progress..." 
+                    value={noteContent}
+                    onChange={(e) => setNoteContent(e.target.value)}
+                    className="w-full h-32 bg-white border border-primary/10 rounded-2xl p-4 font-body text-sm text-primary outline-none focus:border-accent transition-colors resize-none"
+                  />
+                </div>
+
+                <div className="space-y-4">
+                   <p className="font-display text-[10px] uppercase tracking-widest font-bold text-primary/30 px-1">History</p>
+                   {isLoadingNotes ? (
+                     <div className="flex justify-center py-8"><Loader2 className="animate-spin text-primary/20" /></div>
+                   ) : notes.length > 0 ? (
+                     <div className="space-y-3">
+                        {notes.map((note) => (
+                          <div key={note.id} className="bg-white p-4 rounded-2xl border border-primary/5 space-y-2">
+                             <p className="text-sm text-primary/80 whitespace-pre-wrap">{note.note}</p>
+                             <p className="text-[10px] font-display uppercase tracking-wider text-primary/30">
+                               {new Date(note.created_at).toLocaleDateString()}
+                             </p>
+                          </div>
+                        ))}
+                     </div>
+                   ) : (
+                     <div className="text-center py-8 text-primary/30 italic font-serif text-sm">No private notes yet.</div>
+                   )}
+                </div>
+              </motion.div>
+            )}
+
           </AnimatePresence>
         </div>
 
@@ -296,7 +368,7 @@ export const ClientAssignmentSheet = ({ client, onClose, onSuccess }: ClientAssi
           <Button 
             variant="primary" 
             onClick={handleSave}
-            disabled={isSaving || isSuccess}
+            disabled={isSaving || (activeTab !== 'notes' && isSuccess)} // Notes allows multiple saves
             className="flex-1 max-w-[240px]"
           >
             {isSaving ? (
@@ -306,7 +378,7 @@ export const ClientAssignmentSheet = ({ client, onClose, onSuccess }: ClientAssi
             ) : (
               <Save className="mr-2" size={18} />
             )}
-            {isSaving ? 'Preserving...' : isSuccess ? 'Saved to Sanctuary' : 'Update Client Access'}
+            {isSaving ? 'Saving...' : isSuccess ? 'Saved' : activeTab === 'notes' ? 'Save Private Note' : 'Update Client Access'}
           </Button>
         </div>
       </motion.aside>

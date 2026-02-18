@@ -32,6 +32,15 @@
     font-style: italic;
     font-weight: 400;
   }
+
+  /* Global Image Hover Effect */
+  img:not(.no-hover-effect):not([src*=".svg"]) {
+    @apply grayscale opacity-90 transition-all duration-700 ease-in-out;
+  }
+
+  img:not(.no-hover-effect):not([src*=".svg"]):hover {
+    @apply grayscale-0 opacity-100;
+  }
 }
 
 @layer utilities {

@@ -48,7 +48,7 @@ export const AdminTodoList = ({ todos, onAdd, onToggle, onDelete, isLoading }: A
           <button 
             type="submit"
             title="Add Task"
-            className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-primary text-background rounded-xl hover:bg-accent hover:text-primary transition-all active:scale-90"
+            className="absolute right-2 top-1/2 -translate-y-1/2 p-3 bg-primary text-background rounded-xl hover:bg-accent hover:text-primary transition-all active:scale-90 touch-manipulation min-h-[44px] min-w-[44px]"
           >
             <Plus size={20} />
           </button>

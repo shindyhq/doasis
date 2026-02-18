@@ -37,7 +37,8 @@ import {
   User,
   Video,
   FileText,
-  ExternalLink
+  ExternalLink,
+  Plus
 } from 'lucide-react';
 import { Session } from '@/lib/types/admin';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -136,6 +137,16 @@ export const AdminCalendar = ({ sessions, isLoading, onDateSelect }: AdminCalend
                     {session.title}
                   </div>
                 ))}
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onDateSelect?.(day);
+                  }}
+                  className="md:hidden w-6 h-6 flex items-center justify-center bg-primary text-background rounded-full text-[10px] shadow-sm ml-auto mt-1"
+                  aria-label={`Select ${format(day, 'MMMM d')}`}
+                >
+                  <Plus size={12} />
+                </button>
               </div>
             </button>
           );
@@ -326,12 +337,12 @@ export const AdminCalendar = ({ sessions, isLoading, onDateSelect }: AdminCalend
                key={mode}
                onClick={() => setViewMode(mode as ViewMode)}
                className={`
-                 p-2.5 rounded-xl transition-all relative group active:scale-95
+                 p-3 rounded-xl transition-all relative group active:scale-95 touch-manipulation min-h-[44px] min-w-[44px]
                  ${viewMode === mode ? 'bg-white text-primary shadow-md' : 'text-primary/30 hover:text-primary/60'}
                `}
                title={label}
              >
-               <Icon size={18} />
+               <Icon size={20} />
                <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-primary text-background text-[8px] px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none uppercase font-bold tracking-tighter">
                  {label}
                </span>
