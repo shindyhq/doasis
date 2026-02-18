@@ -22,6 +22,7 @@ export default function LoginPage() {
 
   useEffect(() => {
     setMounted(true);
+    console.log('DEBUG: Current Supabase URL:', process.env.NEXT_PUBLIC_SUPABASE_URL);
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
