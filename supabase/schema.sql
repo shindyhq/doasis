@@ -211,3 +211,24 @@ create trigger update_journal_updated_at
     before update on journal_entries
     for each row
     execute procedure update_updated_at_column();
+
+-- AUTOMATIC PROFILE CREATION
+-- This function and trigger automatically creates a profile entry when a new user signs up via Supabase Auth
+create or replace function public.handle_new_user() 
+returns trigger as $$
+begin
+  insert into public.profiles (id, full_name, avatar_url, role)
+  values (
+    new.id, 
+    new.raw_user_meta_data->>'full_name', 
+    new.raw_user_meta_data->>'avatar_url',
+    'client' -- Default role
+  );
+  return new;
+end;
+$$ language plpgsql security definer;
+
+-- Trigger the function every time a user is created
+create or replace trigger on_auth_user_created
+  after insert on auth.users
+  for each row execute procedure public.handle_new_user();
