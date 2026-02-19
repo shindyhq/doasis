@@ -23,7 +23,7 @@ export default async function AppointmentsPage() {
 
   let upcomingAppointments: Appointment[] = [];
   let history: Appointment[] = [];
-  let error = null;
+  let error: any = null;
 
   try {
     upcomingAppointments = await AppointmentService.getUpcomingAppointments(user.id);
@@ -56,7 +56,7 @@ export default async function AppointmentsPage() {
         </Button>
       </section>
 
-      {error && (
+      {!!error && (
         <div className="bg-red-50 text-red-600 p-4 rounded-xl border border-red-100 mb-8">
           <p className="font-bold">Unable to load appointments</p>
           <p className="text-sm">Please try again later or contact support if the issue persists.</p>
