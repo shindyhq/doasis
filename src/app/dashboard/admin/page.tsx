@@ -27,43 +27,54 @@ export default async function AdminPage() {
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-accent/5 to-transparent rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-secondary/5 to-transparent rounded-full blur-3xl pointer-events-none" />
 
-      {/* Header */}
-      <div className="relative z-10 mb-10 flex items-end justify-between">
-        <div>
-          <h1 className="text-4xl md:text-5xl font-display font-medium text-primary tracking-tight">
-            Sanctuary <span className="font-serif italic text-accent">Control</span>
-          </h1>
-          <p className="font-serif italic text-primary/40 mt-2 text-lg">
-            Manage souls, schedule sessions, and orchestrate the journey.
-          </p>
-        </div>
-        <AdminPageClient />
-      </div>
+      <div className="max-w-7xl mx-auto space-y-16 relative z-10">
+        {/* Header */}
+        <section className="flex items-end justify-between border-b border-primary/5 pb-8">
+          <div>
+            <p className="text-xs uppercase tracking-[0.4em] font-bold text-accent mb-4">
+              Sanctuary Control
+            </p>
+            <h1 className="text-5xl font-display font-medium text-primary tracking-tight">
+              Admin <span className="font-serif italic">Dashboard</span>
+            </h1>
+            <p className="mt-6 text-lg font-serif italic text-primary/60 max-w-2xl leading-relaxed">
+              Orchestrate the journey. Manage souls, schedule sessions, and guide the path forward.
+            </p>
+          </div>
+          <AdminPageClient />
+        </section>
 
-      {/* Main Grid Layout */}
-      <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 relative z-10">
-        
-        {/* Left Column: Client Management (Spans 2 cols) */}
-        <div className="xl:col-span-2">
+        {/* Section 1: Calendar (Full Width) */}
+        <section className="space-y-8">
+           <div className="flex items-center gap-4">
+             <h2 className="text-2xl font-display font-medium text-primary">Sanctuary Schedule</h2>
+             <div className="h-px flex-1 bg-primary/5"></div>
+           </div>
+           <SanctuaryCalendarWidget sessions={sessions as any[]} />
+        </section>
+
+        {/* Section 2: Client Management (Full Width) */}
+        <section className="space-y-8">
+          <div className="flex items-center justify-between">
+             <h2 className="text-2xl font-display font-medium text-primary">Soul Directory</h2>
+             <div className="h-px flex-1 bg-primary/5 ml-8"></div>
+          </div>
           <AdminClientManager clients={(clients as any[]) || []} />
-        </div>
+        </section>
 
-        {/* Right Column: Widgets (Stacked) */}
-        <div className="space-y-8 flex flex-col sticky top-6">
-          <SanctuaryCalendarWidget sessions={sessions as any[]} />
-          <SanctuaryTasksWidget 
-            todos={todos as any[]} 
-            onAdd={async (title, priority) => {
-              'use server';
-            }}
-            onToggle={async (id) => {
-              'use server';
-            }}
-            onDelete={async (id) => {
-              'use server';
-            }}
-          />
-        </div>
+        {/* Section 3: Tasks (Full Width) */}
+        <section className="space-y-8">
+           <div className="flex items-center gap-4">
+             <h2 className="text-2xl font-display font-medium text-primary">Sanctuary Priorities</h2>
+             <div className="h-px flex-1 bg-primary/5"></div>
+           </div>
+           <SanctuaryTasksWidget 
+             todos={todos as any[]} 
+             onAdd={async (title, priority) => { 'use server'; }}
+             onToggle={async (id) => { 'use server'; }}
+             onDelete={async (id) => { 'use server'; }}
+           />
+        </section>
       </div>
     </div>
   );
