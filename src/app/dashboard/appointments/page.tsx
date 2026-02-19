@@ -21,8 +21,17 @@ export default async function AppointmentsPage() {
     return redirect('/login');
   }
 
-  const upcomingAppointments = await AppointmentService.getUpcomingAppointments(user.id);
-  const history = await AppointmentService.getAppointmentHistory(user.id);
+  let upcomingAppointments: Appointment[] = [];
+  let history: Appointment[] = [];
+  let error = null;
+
+  try {
+    upcomingAppointments = await AppointmentService.getUpcomingAppointments(user.id);
+    history = await AppointmentService.getAppointmentHistory(user.id);
+  } catch (e) {
+    console.error('Error fetching appointments:', e);
+    error = e;
+  }
   
   const nextSession = upcomingAppointments && upcomingAppointments.length > 0 ? upcomingAppointments[0] : null;
 
@@ -46,6 +55,13 @@ export default async function AppointmentsPage() {
           Schedule New Session
         </Button>
       </section>
+
+      {error && (
+        <div className="bg-red-50 text-red-600 p-4 rounded-xl border border-red-100 mb-8">
+          <p className="font-bold">Unable to load appointments</p>
+          <p className="text-sm">Please try again later or contact support if the issue persists.</p>
+        </div>
+      )}
 
       {/* Featured Appointment (Next Session) */}
       <section className="space-y-6">
