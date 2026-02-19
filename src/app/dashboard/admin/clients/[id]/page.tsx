@@ -26,7 +26,7 @@ interface PageProps {
 export default async function ClientDetailPage(props: PageProps) {
   const params = await props.params;
   const { id } = params;
-  const supabase = createClient();
+  const supabase = await createClient();
 
   // 1. Verify Admin Access
   const { data: { user } } = await supabase.auth.getUser();

@@ -3,6 +3,7 @@ import { redirect } from 'next/navigation';
 import { format, startOfMonth, endOfMonth, eachDayOfInterval, isSameMonth, isSameDay, addDays, getDay } from 'date-fns';
 import { ChevronLeft, ChevronRight, User } from 'lucide-react';
 import Link from 'next/link';
+import { Appointment } from '@/types/custom';
 
 export const dynamic = 'force-dynamic';
 
@@ -12,7 +13,7 @@ export default async function AdminCalendarPage({
   searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
 }) {
   const params = await searchParams;
-  const supabase = createClient();
+  const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
 
   if (!user) redirect('/login');
@@ -51,7 +52,7 @@ export default async function AdminCalendarPage({
 
   // Helper to find appointments for a day
   const getAppointmentsForDay = (day: Date) => {
-    return appointments?.filter(appt => isSameDay(new Date(appt.scheduled_at), day)) || [];
+    return appointments?.filter((appt: Appointment & { profiles: any }) => isSameDay(new Date(appt.scheduled_at), day)) || [];
   };
 
   // Calendar Grid Padding (Empty cells before 1st of month)

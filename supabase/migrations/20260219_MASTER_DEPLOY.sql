@@ -164,35 +164,55 @@ alter table public.payments enable row level security;
 -- 11. POLICIES (Simplified for Production)
 
 -- Profiles
+drop policy if exists "Public profiles are viewable by everyone" on public.profiles;
 create policy "Public profiles are viewable by everyone" on public.profiles for select using (true);
+
+drop policy if exists "Users can update own profile" on public.profiles;
 create policy "Users can update own profile" on public.profiles for update using (auth.uid() = id);
 
 -- Check-ins
+drop policy if exists "Users manage own check-ins" on public.check_ins;
 create policy "Users manage own check-ins" on public.check_ins for all using (auth.uid() = user_id);
 
 -- Goals
+drop policy if exists "Users manage own goals" on public.goals;
 create policy "Users manage own goals" on public.goals for all using (auth.uid() = user_id);
+
+drop policy if exists "Users manage own milestones" on public.goal_milestones;
 create policy "Users manage own milestones" on public.goal_milestones for all using (
   exists (select 1 from public.goals where id = goal_id and user_id = auth.uid())
 );
 
 -- Resources
+drop policy if exists "Published resources viewable" on public.resources;
 create policy "Published resources viewable" on public.resources for select using (is_published = true);
+
+drop policy if exists "Users manage own resource tracking" on public.client_resources;
 create policy "Users manage own resource tracking" on public.client_resources for all using (auth.uid() = user_id);
 
 -- Messages
+drop policy if exists "Users access own messages" on public.messages;
 create policy "Users access own messages" on public.messages for select using (auth.uid() = sender_id or auth.uid() = receiver_id);
+
+drop policy if exists "Users send messages" on public.messages;
 create policy "Users send messages" on public.messages for insert with check (auth.uid() = sender_id);
 
 -- Notifications
+drop policy if exists "Users view own notifications" on public.notifications;
 create policy "Users view own notifications" on public.notifications for select using (auth.uid() = user_id);
 
 -- Community
+drop policy if exists "Members view community" on public.community_posts;
 create policy "Members view community" on public.community_posts for select using (auth.role() = 'authenticated');
+
+drop policy if exists "Members post to community" on public.community_posts;
 create policy "Members post to community" on public.community_posts for insert with check (auth.uid() = author_id);
 
 -- Badges
+drop policy if exists "Badges viewable" on public.badges;
 create policy "Badges viewable" on public.badges for select using (true);
+
+drop policy if exists "User badges viewable" on public.user_badges;
 create policy "User badges viewable" on public.user_badges for select using (auth.uid() = user_id);
 
 -- 12. SEED DATA

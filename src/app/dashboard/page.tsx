@@ -17,7 +17,7 @@ import { CheckInService } from '@/services/CheckInService';
 import { CheckInWidget } from '@/components/dashboard/widgets/CheckInWidget';
 
 export default async function DashboardPage() {
-  const supabase = createClient();
+  const supabase = await createClient();
   const { data: { user } } = await getUser();
 
   if (!user) {
@@ -32,13 +32,13 @@ export default async function DashboardPage() {
   let recentJournals: JournalEntry[] = [];
   let journalStats = { totalEntries: 0 };
   let isAdmin = false;
+  let profile: any = null; // Define profile outside
   let todayCheckIn: ReturnType<typeof CheckInService.getTodayCheckIn> extends Promise<infer U> ? U : null = null;
 
   try {
     const [appointments, journals, stats, profileRes, checkInRes] = await Promise.all([
       AppointmentService.getUpcomingAppointments(user.id),
       JournalService.getRecentEntries(user.id),
-      JournalService.getStats(user.id),
       JournalService.getStats(user.id),
       supabase.from('profiles').select('role, created_at').eq('id', user.id).single(),
       CheckInService.getTodayCheckIn()
@@ -48,7 +48,8 @@ export default async function DashboardPage() {
     nextAppointment = upcomingAppointments && upcomingAppointments.length > 0 ? upcomingAppointments[0] : null;
     recentJournals = journals;
     journalStats = stats;
-    isAdmin = profileRes.data?.role === 'admin' || user.id === 'mock-admin-id';
+    profile = profileRes.data; // Assign profile data
+    isAdmin = profile?.role === 'admin' || user.id === 'mock-admin-id';
     todayCheckIn = checkInRes;
 
   } catch (error) {
@@ -97,9 +98,9 @@ export default async function DashboardPage() {
         {/* Wellness Check-in (Mood) */}
         <div className="flex flex-col gap-4 items-end">
            <CheckInWidget initialCheckIn={todayCheckIn} />
-           {profileRes.data?.created_at && (
+           {profile?.created_at && (
              <div className="bg-white/50 px-4 py-2 rounded-full border border-primary/5 text-[10px] font-bold uppercase tracking-widest text-primary/40">
-                {Math.floor((new Date().getTime() - new Date(profileRes.data.created_at).getTime()) / (1000 * 60 * 60 * 24))} Days in Journey
+                {Math.floor((new Date().getTime() - new Date(profile.created_at).getTime()) / (1000 * 60 * 60 * 24))} Days in Journey
              </div>
            )}
         </div>

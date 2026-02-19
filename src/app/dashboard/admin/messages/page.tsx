@@ -6,7 +6,7 @@ import { formatDistanceToNow } from 'date-fns';
 export const dynamic = 'force-dynamic';
 
 export default async function AdminMessagesPage() {
-  const supabase = createClient();
+  const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
   
   let conversations: any[] = [];

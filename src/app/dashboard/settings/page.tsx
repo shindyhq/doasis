@@ -4,7 +4,7 @@ import { User, Lock, Bell, Sliders } from 'lucide-react';
 export const dynamic = 'force-dynamic';
 
 export default async function SettingsPage() {
-  const supabase = createClient();
+  const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
 
   if (!user) return null;
@@ -33,7 +33,7 @@ export default async function SettingsPage() {
               <form action={async (formData) => {
                  'use server';
                  const fullName = formData.get('fullName') as string;
-                 const supabase = createClient();
+                 const supabase = await createClient();
                  await supabase.from('profiles').update({ full_name: fullName }).eq('id', user.id);
               }}>
                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

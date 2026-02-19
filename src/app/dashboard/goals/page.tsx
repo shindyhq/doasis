@@ -5,7 +5,7 @@ import { Goal } from '@/types/custom';
 export const dynamic = 'force-dynamic';
 
 export default async function GoalsPage() {
-  const supabase = createClient();
+  const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
 
   if (!user) {
