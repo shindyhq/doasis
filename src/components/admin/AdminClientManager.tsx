@@ -83,7 +83,7 @@ export const AdminClientManager = ({ clients }: AdminClientManagerProps) => {
                   }`}>
                     {client.full_name || 'Unnamed Soul'}
                   </h4>
-                  <p className={`text-xs truncate font-medium ${
+                  <p className={`text-xs truncate font-medium font-display ${
                     selectedClientId === client.id ? 'text-white/60' : 'text-primary/40'
                   }`}>
                     {client.email}
@@ -147,7 +147,7 @@ export const AdminClientManager = ({ clients }: AdminClientManagerProps) => {
                     {selectedClient.full_name || 'Unnamed Soul'}
                   </h1>
                   
-                  <div className="flex items-center gap-4 text-primary/40 text-sm font-medium">
+                  <div className="flex items-center gap-4 text-primary/40 text-sm font-medium font-display">
                     <span className="flex items-center gap-2 px-3 py-1 rounded-lg bg-primary/5 text-primary">
                        <Shield size={14} />
                        {selectedClient.role}
@@ -167,7 +167,7 @@ export const AdminClientManager = ({ clients }: AdminClientManagerProps) => {
                       </div>
                       <p className="font-display text-xs uppercase tracking-widest font-bold text-primary/30 mb-1">Total Impact</p>
                       <p className="text-3xl font-display font-bold text-primary">12</p>
-                      <p className="text-xs text-primary/40 font-serif italic mt-2">Sessions completed</p>
+                      <p className="text-xs text-primary/40 font-display mt-2">Sessions completed</p>
                    </div>
                    
                    <div className="p-6 rounded-[32px] bg-white border border-primary/5 shadow-sm hover:shadow-md transition-all group">
@@ -176,7 +176,7 @@ export const AdminClientManager = ({ clients }: AdminClientManagerProps) => {
                       </div>
                       <p className="font-display text-xs uppercase tracking-widest font-bold text-primary/30 mb-1">Time Invested</p>
                       <p className="text-3xl font-display font-bold text-primary">24h</p>
-                      <p className="text-xs text-primary/40 font-serif italic mt-2">Personal growth</p>
+                      <p className="text-xs text-primary/40 font-display mt-2">Personal growth</p>
                    </div>
                 </div>
 
@@ -197,7 +197,7 @@ export const AdminClientManager = ({ clients }: AdminClientManagerProps) => {
                         <div className="w-px h-10 bg-primary/10"></div>
                         <div className="flex-1">
                            <h4 className="font-display font-medium text-primary group-hover:text-accent transition-colors">1:1 Coaching Session</h4>
-                           <p className="text-xs text-primary/40">Focused on clarity and purpose mapping.</p>
+                           <p className="text-xs text-primary/40 font-display">Focused on clarity and purpose mapping.</p>
                         </div>
                         <div className="text-primary/20 hover:text-primary transition-colors">
                           <ArrowRight size={18} />

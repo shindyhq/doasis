@@ -44,7 +44,7 @@ Widget.Header = function WidgetHeader({ title, subtitle, action, icon, className
         )}
         <div>
           <h3 className="text-xl font-display font-medium text-primary">{title}</h3>
-          {subtitle && <p className="text-xs font-serif italic text-primary/40 mt-1">{subtitle}</p>}
+          {subtitle && <p className="text-xs font-display text-primary/40 mt-1">{subtitle}</p>}
         </div>
       </div>
       {action && <div>{action}</div>}

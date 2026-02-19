@@ -70,7 +70,7 @@ export const SanctuaryCalendarWidget = ({ sessions, isLoading }: SanctuaryCalend
                 `}
               >
                 <span className={`
-                  text-xs font-medium block mb-1
+                  text-xs font-display font-medium block mb-1
                   ${isToday(day) ? 'bg-primary text-background w-6 h-6 rounded-full flex items-center justify-center' : 'text-primary/40'}
                 `}>
                   {format(day, 'd')}
@@ -78,7 +78,7 @@ export const SanctuaryCalendarWidget = ({ sessions, isLoading }: SanctuaryCalend
                 
                 <div className="space-y-1">
                   {daySessions.slice(0, 2).map(session => (
-                    <div key={session.id} className="text-[10px] truncate px-1.5 py-0.5 rounded-md bg-accent/10 text-accent font-medium">
+                    <div key={session.id} className="text-[10px] font-display truncate px-1.5 py-0.5 rounded-md bg-accent/10 text-accent font-medium">
                       {session.title}
                     </div>
                   ))}
