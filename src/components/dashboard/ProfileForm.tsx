@@ -1,5 +1,7 @@
 'use client';
 
+import { createClient } from '@/lib/supabase/client';
+
 import { useState } from 'react';
 import { User, Mail, Phone, ChevronRight } from 'lucide-react';
 import { logSecurityEvent } from '@/lib/supabase/security-logger';
@@ -15,15 +17,36 @@ interface ProfileFormProps {
 export const ProfileForm = ({ initialData }: ProfileFormProps) => {
   const [formData, setFormData] = useState(initialData);
 
+  /* import removed */
+  const [loading, setLoading] = useState(false);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Logic for updating profile in Supabase would go here
+    setLoading(true);
+
     try {
-      // Intentionally placing log before hypothetical update for demo/traceability
-      await logSecurityEvent('profile_update_attempt', { email: formData.email });
-      // ... actual update logic ...
+      const supabase = createClient();
+      
+      const { error } = await supabase.auth.updateUser({
+        data: {
+          full_name: formData.full_name,
+          phone: formData.phone,
+        }
+      });
+
+      if (error) throw error;
+
+      await logSecurityEvent('profile_update_attempt', { 
+        email: formData.email,
+        changes: ['full_name', 'phone'] 
+      });
+
+      alert('Profile updated successfully.');
     } catch (err) {
-      console.error(err);
+      console.error('Error updating profile:', err);
+      alert('Failed to update profile. Please try again.');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -94,10 +117,11 @@ export const ProfileForm = ({ initialData }: ProfileFormProps) => {
 
       <Button 
         type="submit"
-        className="w-full md:w-fit group"
+        disabled={loading}
+        className="w-full md:w-fit group disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        Update Information
-        <ChevronRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+        {loading ? 'Updating...' : 'Update Information'}
+        {!loading && <ChevronRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />}
       </Button>
     </form>
   );

@@ -9,6 +9,8 @@ import {
   FileText,
   ChevronRight
 } from 'lucide-react';
+import { JournalService } from '@/services/JournalService';
+import { format } from 'date-fns';
 
 export default async function JournalPage() {
   const { data: { user } } = await getUser();
@@ -16,6 +18,8 @@ export default async function JournalPage() {
   if (!user) {
     return redirect('/login');
   }
+
+  const entries = await JournalService.getRecentEntries(user.id, 50); // Fetch up to 50 for now
 
   return (
     <div className="space-y-12">
@@ -51,52 +55,61 @@ export default async function JournalPage() {
       </div>
 
       {/* Journal entries grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {[
-          { date: 'Feb 08, 2026', title: 'The Weight of Quiet', category: 'Grief', excerpt: 'Today we explored the silence that follows loss. Not as a void, but as a space for holding what remains...' },
-          { date: 'Feb 01, 2026', title: 'Naming the Void', category: 'Identity', excerpt: 'When labels fall away, who is the woman that remains? We began mapping the landscape of the "in-between"...' },
-          { date: 'Jan 25, 2026', title: 'First Breath in the Desert', category: 'General', excerpt: 'Setting the foundation for our work together. The desert is not empty; it is a place of profound clarity...' },
-          { date: 'Jan 18, 2026', title: 'The Invitation to Rest', category: 'The Practice of Rest', excerpt: 'Reflecting on the distinction between exhaustion and the holy invitation to deep, cellular rest...' },
-        ].map((entry, i) => (
-          <div key={i} className="glass p-10 rounded-[40px] border border-primary/5 space-y-8 group hover:shadow-2xl hover:shadow-black/5 transition-all">
-            <div className="flex items-start justify-between">
-              <div>
-                <p className="font-display text-[11px] uppercase tracking-[0.3em] font-bold text-accent mb-2">
-                  {entry.category}
-                </p>
-                <h4 className="text-3xl font-display font-medium tracking-tight text-primary">
-                  {entry.title}
-                </h4>
-              </div>
-              <div className="p-3 bg-primary/5 rounded-2xl text-primary/40">
-                <FileText size={20} />
-              </div>
-            </div>
-            
-            <p className="font-serif italic text-primary/60 leading-relaxed line-clamp-3">
-              "{entry.excerpt}"
-            </p>
-
-            <div className="pt-4 border-t border-primary/5 flex items-center justify-between">
-              <span className="font-display text-[11px] uppercase tracking-widest font-bold text-primary/60">
-                Recorded {entry.date}
-              </span>
-              <div className="flex items-center gap-2">
-                <button 
-                  title="Download Record"
-                  className="p-3 rounded-xl hover:bg-primary hover:text-background text-primary/40 transition-all"
-                >
-                  <Download size={18} />
-                </button>
-                <button className="px-5 py-3 rounded-xl bg-primary text-background font-display text-[11px] uppercase tracking-widest font-bold hover:bg-accent hover:text-primary transition-all flex items-center gap-2">
-                  Read Record
-                  <ChevronRight size={14} />
-                </button>
-              </div>
-            </div>
+      {entries.length === 0 ? (
+        <div className="flex flex-col items-center justify-center p-20 glass rounded-[40px] border border-primary/5 text-center space-y-6">
+          <div className="p-6 rounded-full bg-primary/5 text-primary/40">
+            <BookOpen size={48} />
           </div>
-        ))}
-      </div>
+          <div>
+             <h3 className="text-2xl font-display font-medium text-primary">Your Journal is Quiet</h3>
+             <p className="font-serif italic text-primary/60 mt-2 max-w-md mx-auto">
+               The pages are waiting for your story. Entries will appear here once your journey begins.
+             </p>
+          </div>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {entries.map((entry) => (
+            <div key={entry.id} className="glass p-10 rounded-[40px] border border-primary/5 space-y-8 group hover:shadow-2xl hover:shadow-black/5 transition-all">
+              <div className="flex items-start justify-between">
+                <div>
+                  <p className="font-display text-[11px] uppercase tracking-[0.3em] font-bold text-accent mb-2">
+                    {entry.mood || 'Reflection'}
+                  </p>
+                  <h4 className="text-3xl font-display font-medium tracking-tight text-primary line-clamp-2">
+                    {entry.title}
+                  </h4>
+                </div>
+                <div className="p-3 bg-primary/5 rounded-2xl text-primary/40 group-hover:bg-accent group-hover:text-primary transition-colors duration-500">
+                  <FileText size={20} />
+                </div>
+              </div>
+              
+              <p className="font-serif italic text-primary/60 leading-relaxed line-clamp-3">
+                "{entry.content || 'No content provided...'}"
+              </p>
+
+              <div className="pt-4 border-t border-primary/5 flex items-center justify-between">
+                <span className="font-display text-[11px] uppercase tracking-widest font-bold text-primary/60">
+                  Recorded {format(new Date(entry.created_at), 'MMM dd, yyyy')}
+                </span>
+                <div className="flex items-center gap-2">
+                  <button 
+                    title="Download Record"
+                    className="p-3 rounded-xl hover:bg-primary hover:text-background text-primary/40 transition-all"
+                  >
+                    <Download size={18} />
+                  </button>
+                  <button className="px-5 py-3 rounded-xl bg-primary text-background font-display text-[11px] uppercase tracking-widest font-bold hover:bg-accent hover:text-primary transition-all flex items-center gap-2">
+                    Read Record
+                    <ChevronRight size={14} />
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
