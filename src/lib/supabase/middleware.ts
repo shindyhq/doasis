@@ -9,17 +9,7 @@ export async function updateSession(request: NextRequest) {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-  const isMockUrl = supabaseUrl?.includes('mock-project');
-  const hasMockCookie = request.cookies.get('sb-mock-auth')?.value === 'true';
-
-  // If in mock environment, bypass real Supabase calls entirely
-  if (!supabaseUrl || !supabaseAnonKey || isMockUrl) {
-    // If it's a protected route and we don't have the mock cookie, redirect to login
-    if (isMockUrl && !hasMockCookie && request.nextUrl.pathname.startsWith('/dashboard')) {
-      const url = request.nextUrl.clone()
-      url.pathname = '/login'
-      return NextResponse.redirect(url)
-    }
+  if (!supabaseUrl || !supabaseAnonKey) {
     return supabaseResponse;
   }
 

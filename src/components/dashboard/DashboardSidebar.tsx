@@ -11,7 +11,8 @@ import {
   LogOut,
   User,
   Users,
-  Settings
+  Settings,
+  Target
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -19,6 +20,7 @@ const NAV_ITEMS = [
   { name: 'Overview', href: '/dashboard', icon: LayoutDashboard },
   { name: 'Clients', href: '/dashboard/admin', icon: Users, adminOnly: true },
   { name: 'Appointments', href: '/dashboard/appointments', icon: Calendar },
+  { name: 'Goals', href: '/dashboard/goals', icon: Target },
   { name: 'Journal', href: '/dashboard/journal', icon: BookOpen },
   { name: 'Library', href: '/dashboard/library', icon: Video },
   { name: 'Billing', href: '/dashboard/billing', icon: CreditCard },
@@ -165,7 +167,7 @@ export const DashboardSidebar = ({ isOpen, onClose }: DashboardSidebarProps) => 
                 console.warn('Sign out redirected or failed, clearing local session...', e);
               } finally {
                 // Force clear mock auth cookie for development/bypass environments
-                document.cookie = "sb-mock-auth=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+                // document.cookie = "sb-mock-auth=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
                 // Always redirect to home
                 window.location.href = '/';
               }

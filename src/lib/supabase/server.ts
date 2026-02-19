@@ -46,22 +46,7 @@ export async function createClient() {
 export async function getUser() {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
   
-  // 1. Check Development Bypass First
-  if (supabaseUrl?.includes('mock-project')) {
-    const cookieStore = await cookies();
-    const hasMockCookie = cookieStore.get('sb-mock-auth')?.value === 'true';
-    if (hasMockCookie) {
-      return {
-        data: {
-          user: {
-            email: 'admin@doasis.com',
-            user_metadata: { full_name: 'Sanctuary Guide', phone: '' }
-          }
-        },
-        error: null
-      };
-    }
-  }
+  // 1. Fallback to Real Supabase Auth is now the ONLY path
 
   // 2. Fallback to Real Supabase Auth
   try {

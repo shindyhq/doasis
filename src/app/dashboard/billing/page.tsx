@@ -1,137 +1,97 @@
-import { createClient, getUser } from '@/lib/supabase/server';
-export const dynamic = 'force-dynamic';
-import { redirect } from 'next/navigation';
-import { 
-  CreditCard, 
-  Download, 
-  ExternalLink,
-  Receipt,
-  CheckCircle2,
-  AlertCircle
-} from 'lucide-react';
-import { Button } from '@/components/ui/Button';
+import { CreditCard, Download, ShieldCheck } from 'lucide-react';
 
-export default async function BillingPage() {
-  const { data: { user } } = await getUser();
-
-  if (!user) {
-    return redirect('/login');
-  }
-
+export default function BillingPage() {
   return (
-    <div className="space-y-12">
-      {/* Page Header */}
-      <section className="flex flex-col md:flex-row md:items-end justify-between gap-8">
-        <div>
-          <p className="text-xs uppercase tracking-[0.4em] font-bold text-accent mb-4">
-            Honorable Stewardship
-          </p>
-          <h1 className="text-5xl font-display font-medium text-primary tracking-tight">
-            Billing & <span className="font-serif italic text-secondary">Finances</span>
-          </h1>
-          <p className="mt-4 text-lg font-serif italic text-primary/60 max-w-xl">
-            Manage your subscriptions, view invoices, and update payment methods with ease and transparency.
-          </p>
-        </div>
-        <Button variant="primary" className="w-fit rounded-2xl px-10 py-5">
-           Manage via Stripe Portal
-           <ExternalLink size={16} className="ml-3" />
-        </Button>
-      </section>
+    <div className="space-y-8">
+      <header>
+        <p className="text-xs uppercase tracking-[0.4em] font-bold text-accent mb-4">
+          Account & Finance
+        </p>
+        <h1 className="text-5xl font-display font-medium text-primary tracking-tight">
+          Billing
+        </h1>
+      </header>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-        {/* Left Column: Plan & Details */}
-        <div className="lg:col-span-2 space-y-12">
-          {/* Active Plan Card */}
-          <section className="space-y-6">
-            <h3 className="font-display font-bold uppercase tracking-widest text-[12px] text-primary/70 px-4">
-              Current Plan
-            </h3>
-            <div className="glass p-10 rounded-[40px] border border-primary/5 relative overflow-hidden">
-               <div className="relative z-10 flex flex-col md:flex-row gap-12 items-start md:items-center">
-                 <div className="flex-1 space-y-4">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/5 text-primary font-display text-[11px] uppercase tracking-widest font-bold rounded-lg leading-none">
-                      Active Subscription
-                    </div>
-                    <h2 className="text-4xl font-display font-medium text-primary tracking-tight">
-                      The Becoming <span className="text-2xl font-serif italic text-primary/40">— Bi-Weekly Coaching</span>
-                    </h2>
-                    <p className="font-serif italic text-primary/60 max-w-md">
-                      Includes two 60-minute deep reflection sessions per month, plus full access to the resource sanctuary.
-                    </p>
-                 </div>
-                 <div className="text-right">
-                    <p className="text-3xl font-display font-bold text-primary">$350<span className="text-base text-primary/40 font-medium">/mo</span></p>
-                    <p className="font-display text-[11px] uppercase tracking-widest font-bold text-primary/60 mt-1">Next Billing: Mar 01, 2026</p>
-                 </div>
-               </div>
-            </div>
-          </section>
-
-          {/* Payment Method */}
-          <section className="space-y-6">
-            <h3 className="font-display font-bold uppercase tracking-widest text-[12px] text-primary/70 px-4">
-              Payment Method
-            </h3>
-            <div className="bg-white border border-primary/5 rounded-[32px] p-8 flex items-center justify-between group cursor-pointer hover:border-accent/40 transition-colors">
-               <div className="flex items-center gap-6">
-                 <div className="w-16 h-10 bg-primary/5 rounded-lg flex items-center justify-center text-primary/40 group-hover:bg-primary group-hover:text-white transition-all">
-                   <CreditCard size={24} />
-                 </div>
-                  <div>
-                    <p className="font-display font-bold text-primary italic">Visa •••• 4242</p>
-                    <p className="font-display text-[11px] uppercase tracking-widest font-bold text-primary/60">Expires 12/28</p>
-                  </div>
-               </div>
-                <Button 
-                  variant="ghost" 
-                  className="px-4 py-2 text-[10px]"
-                >
-                  Edit Details
-                </Button>
-            </div>
-          </section>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Current Plan */}
+        <div className="bg-primary text-white p-8 rounded-[32px] relative overflow-hidden">
+           <div className="absolute top-0 right-0 p-8 opacity-10">
+              <ShieldCheck size={120} />
+           </div>
+           <h3 className="text-xs font-bold uppercase tracking-widest opacity-60 mb-2">Current Plan</h3>
+           <div className="text-3xl font-display font-bold mb-6">The Becoming</div>
+           <div className="flex items-baseline gap-1 mb-8">
+              <span className="text-4xl font-bold">$150</span>
+              <span className="opacity-60">/ session</span>
+           </div>
+           <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest">
+              <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" /> Active
+           </div>
         </div>
 
-        {/* Right Column: Invoices */}
-        <div className="space-y-6">
-           <h3 className="font-display font-bold uppercase tracking-widest text-[12px] text-primary/70 px-4">
-             Invoice History
-           </h3>
-           <div className="space-y-4">
-             {[
-               { id: '458A-92', amount: '$350.00', date: 'Feb 01, 2026', status: 'Paid' },
-               { id: '312C-44', amount: '$350.00', date: 'Jan 01, 2026', status: 'Paid' },
-               { id: '129F-12', amount: '$350.00', date: 'Dec 01, 2025', status: 'Paid' },
-               { id: '001B-01', amount: '$150.00', date: 'Nov 15, 2025', status: 'Paid' },
-             ].map((inv, i) => (
-                <div key={i} className="bg-white/50 border border-primary/5 rounded-[24px] p-6 flex flex-col gap-4 group hover:border-accent/20 transition-all hover:shadow-2xl hover:shadow-black/5 duration-500">
-                  <div className="flex items-start justify-between">
-                     <div className="p-2 bg-primary/5 rounded-xl text-primary/20 group-hover:text-primary/40 transition-colors">
-                       <Receipt size={18} />
-                     </div>
-                     <span className="font-display text-[11px] uppercase tracking-widest font-bold text-green-700 flex items-center gap-1">
-                       <CheckCircle2 size={12} /> {inv.status}
-                     </span>
-                  </div>
-                   <div>
-                     <p className="font-display text-[12px] uppercase tracking-widest font-bold text-primary/70 mb-1">Invoice #{inv.id}</p>
-                     <div className="flex items-center justify-between">
-                        <p className="font-display font-bold text-primary">{inv.amount}</p>
-                        <p className="text-xs text-primary/40 font-bold uppercase tracking-tighter">{inv.date}</p>
-                     </div>
-                  </div>
-                  <Button 
-                    variant="ghost" 
-                    className="w-full bg-primary/5 hover:bg-primary hover:text-background text-[11px] py-3.5"
-                  >
-                    <Download size={14} className="mr-2" /> Download PDF
-                  </Button>
-                </div>
-              ))}
-            </div>
+        {/* Payment Method */}
+        <div className="bg-white/50 border border-white/60 p-8 rounded-[32px] flex flex-col justify-center">
+           <h3 className="text-xs font-bold uppercase tracking-widest text-primary/40 mb-6">Payment Method</h3>
+           <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-8 bg-slate-800 rounded flex items-center justify-center text-white text-[10px] font-bold tracking-widest">VISA</div>
+              <div className="font-mono text-primary">•••• •••• •••• 4242</div>
+           </div>
+           <button className="w-full py-3 rounded-xl border border-primary/10 font-bold text-primary/60 hover:bg-white hover:text-primary transition-colors text-sm">
+              Update Card
+           </button>
         </div>
       </div>
+
+      {/* Invoice History */}
+      <section>
+         <h2 className="text-xl font-display font-medium text-primary mb-6">Invoice History</h2>
+         <div className="bg-white/50 border border-white/60 rounded-[32px] overflow-hidden">
+            <div className="p-6 text-center text-primary/40 border-b border-primary/5">
+               <p className="font-serif italic">No recent invoices.</p>
+            </div>
+            {/* Mock Row for visualization */}
+            <div className="p-6 flex items-center justify-between hover:bg-white/60 transition-colors">
+               <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary/40">
+                     <FileText size={18} />
+                  </div>
+                  <div>
+                     <div className="font-bold text-primary text-sm">Invoice #INV-2024-001</div>
+                     <div className="text-xs text-primary/40">Jan 15, 2026</div>
+                  </div>
+               </div>
+               <div className="flex items-center gap-4">
+                  <span className="text-sm font-bold text-primary">$150.00</span>
+                  <button className="p-2 hover:bg-primary/5 rounded-full text-primary/40 hover:text-primary transition-colors">
+                     <Download size={16} />
+                  </button>
+               </div>
+            </div>
+         </div>
+      </section>
     </div>
   );
+}
+
+// Helper icon
+function FileText({ size }: { size: number }) {
+  return (
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      width={size} 
+      height={size} 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="currentColor" 
+      strokeWidth="2" 
+      strokeLinecap="round" 
+      strokeLinejoin="round"
+    >
+      <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+      <polyline points="14 2 14 8 20 8"/>
+      <line x1="16" x2="8" y1="13" y2="13"/>
+      <line x1="16" x2="8" y1="17" y2="17"/>
+      <line x1="10" x2="8" y1="9" y2="9"/>
+    </svg>
+  )
 }

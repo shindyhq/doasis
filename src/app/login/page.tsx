@@ -262,18 +262,16 @@ export default function LoginPage() {
           
           <div className="h-12 w-px bg-gradient-to-b from-primary/10 to-transparent" />
           
-          <button 
-            type="button"
-            onClick={toggleMode}
-            className="group flex flex-col items-center gap-4 border-none outline-none"
-          >
-            <span className="text-xs text-primary/40 uppercase tracking-[0.2em] font-display font-bold group-hover:text-primary transition-colors">
-              {isLogin ? 'New seeker?' : 'Already have a key?'}
-            </span>
-            <span className="text-sm font-serif italic text-accent hover:text-primary transition-all underline underline-offset-8 decoration-accent/20 group-hover:decoration-primary/40">
-              {isLogin ? 'Request access to the sanctuary' : 'Enter the sanctuary'}
-            </span>
-          </button>
+          <p className="text-center mt-8 text-primary/40 text-sm font-serif italic">
+            {isLogin ? "New to the sanctuary?" : "Already fit for the journey?"}
+            <button
+              onClick={() => setIsLogin(!isLogin)}
+              className="ml-2 font-bold text-accent hover:text-primary transition-colors uppercase tracking-widest text-xs border-b border-transparent hover:border-primary"
+            >
+              {isLogin ? "Request Access" : "Enter the Sanctuary"}
+            </button>
+          </p>
+
         </div>
       </motion.div>
 
