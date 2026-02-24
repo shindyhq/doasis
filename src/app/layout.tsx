@@ -23,6 +23,7 @@ export const metadata: Metadata = {
 };
 
 import { MotionProvider } from '@/components/ui/MotionProvider';
+import { ToastProvider } from '@/components/ui/Toast';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
@@ -35,11 +36,13 @@ export default function RootLayout({
     <html lang="en" className={`${outfit.variable} ${cormorant.variable} ${playfair.variable}`}>
       <body className="font-sans antialiased bg-background text-foreground selection:bg-accent/20 selection:text-primary">
         <MotionProvider>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-          <Analytics />
-          <SpeedInsights />
+          <ToastProvider>
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+            <Analytics />
+            <SpeedInsights />
+          </ToastProvider>
         </MotionProvider>
       </body>
     </html>

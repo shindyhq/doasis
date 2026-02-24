@@ -13,18 +13,19 @@ export interface Post {
 export const BLOG_POSTS: Post[] = [
   {
     slug: 'grief-timeline-expectations',
-    title: 'When Grief Doesn\'t Follow the Timeline Everyone Expects',
-    excerpt: 'They\'ll tell you it gets easier. That time heals. That you should be "over it" by now. But what if grief isn\'t something to get over—but something to walk through?',
+    title: "When Grief Doesn't Follow the Timeline Everyone Expects",
+    excerpt:
+      'They\'ll tell you it gets easier. That time heals. That you should be "over it" by now. But what if grief isn\'t something to get over - but something to walk through?',
     category: 'Grief & Loss',
     date: 'February 12, 2026',
     readTime: '10 min read',
-    image: '/images/external/blog-grief-tree.jpg',
+    image: '/images/external/blog-grief-tree.avif',
     content: `
 # When Grief Doesn't Follow the Expected Timeline
 
 They tell you it gets easier. They say time heals all wounds. They offer a gentle squeeze of the hand and murmur, "You should be feeling better by now."
 
-But you're not. And the guilt of that—the feeling of being *broken* for still hurting—is sometimes heavier than the grief itself.
+But you're not. And the guilt of that - the feeling of being *broken* for still hurting - is sometimes heavier than the grief itself.
 
 If that's where you are today, I want you to hear something clearly: **There is nothing wrong with you.** Your grief is not a disorder. It is a testament to the depth of your love.
 
@@ -34,9 +35,9 @@ If that's where you are today, I want you to hear something clearly: **There is 
 
 Our culture has a troubling obsession with closure. We want neat endings. We want to "move on" and "get over it." We treat grief like a project with a deadline instead of what it truly is: a lifelong relationship with absence.
 
-Psychiatrist Elisabeth Kübler-Ross gave us the well-known "five stages of grief"—denial, anger, bargaining, depression, acceptance. But even she clarified that these stages were **never meant to be linear.** They were never meant to be a checklist. Yet somehow, we turned them into one, and we started measuring each other's healing against it.
+Psychiatrist Elisabeth Kübler-Ross gave us the well-known "five stages of grief" - denial, anger, bargaining, depression, acceptance. But even she clarified that these stages were **never meant to be linear.** They were never meant to be a checklist. Yet somehow, we turned them into one, and we started measuring each other's healing against it.
 
-The truth? **Grief is not a straight line.** It is a spiral. You will circle back to places you thought you had left. You will feel fine on a Tuesday and undone by Thursday. A song, a scent, a season—any of these can pull you back into the deep end without warning.
+The truth? **Grief is not a straight line.** It is a spiral. You will circle back to places you thought you had left. You will feel fine on a Tuesday and undone by Thursday. A song, a scent, a season - any of these can pull you back into the deep end without warning.
 
 And that is not regression. That is love, remembering.
 
@@ -69,7 +70,7 @@ If you are reading this and your chest feels tight, I want to invite you into a 
 
 **Close your eyes. Place one hand on your heart. Take three slow breaths.**
 
-Now, whisper to yourself—or to God, if that feels right:
+Now, whisper to yourself - or to God, if that feels right:
 
 > *"I am allowed to grieve at my own pace. My love is not a weakness. My tears are not a failure. I am held, even here."*
 
@@ -82,20 +83,21 @@ Don't let the rush of others dictate your rest. Their discomfort with your pain 
 Your soul knows the way home. It just needs the permission to take the long route.
 
 `,
-    cta: `And if you need someone to walk beside you—not to fix you, not to rush you, but simply to *witness* you in this season—**The Clarity Session** at D'Oasis offers a focused, 90-minute space to untangle the grief you're carrying right now. No timelines, no performance—just honest, sacred presence with someone who won't rush your process.
+    cta: `And if you need someone to walk beside you - not to fix you, not to rush you, but simply to *witness* you in this season - **The Clarity Session** at D'Oasis offers a focused, 90-minute space to untangle the grief you're carrying right now. No timelines, no performance - just honest, sacred presence with someone who won't rush your process.
 
-*Not sure if you're ready? [Book a free 15-minute consultation](/booking)—no pressure, just presence.*
+*Not sure if you're ready? [Book a free 15-minute consultation](/booking) - no pressure, just presence.*
 
-*You are not behind. You are not broken. You are becoming.*`
+*You are not behind. You are not broken. You are becoming.*`,
   },
   {
     slug: 'faith-in-the-questions',
     title: 'How to Honor Your Faith While Questioning Everything',
-    excerpt: 'What do you do when the belief system that once felt like home starts feeling like a cage? Navigating the intersection of doubt and devotion.',
+    excerpt:
+      'What do you do when the belief system that once felt like home starts feeling like a cage? Navigating the intersection of doubt and devotion.',
     category: 'Faith Deconstruction',
     date: 'February 8, 2026',
     readTime: '11 min read',
-    image: '/images/external/blog-faith-canyon.jpg',
+    image: '/images/external/blog-faith-canyon.avif',
     content: `
 # Faith in the Questions: Honoring the Doubt
 
@@ -111,17 +113,17 @@ If this is you, I want you to know: **You are not losing your faith. You may be 
 
 We have been conditioned to treat doubt as a spiritual disease. Something to confess, rebuke, and overcome. But doubt has a long, honored history in the life of faith.
 
-Abraham questioned God's promise when decades passed without a child. Moses argued with God at the burning bush. The Psalmist cried, *"My God, my God, why have you forsaken me?"*—words Jesus Himself quoted on the cross.
+Abraham questioned God's promise when decades passed without a child. Moses argued with God at the burning bush. The Psalmist cried, *"My God, my God, why have you forsaken me?"* - words Jesus Himself quoted on the cross.
 
 **Doubt is not the absence of faith. It is faith doing push-ups.** It is the soul's way of saying, "I need this to be real, not just inherited."
 
-Theologian Paul Tillich wrote that doubt is not the opposite of faith—it is an *element* of faith. The willingness to sit with uncertainty, to hold the tension between what you were taught and what you have experienced, is one of the bravest spiritual acts a person can perform.
+Theologian Paul Tillich wrote that doubt is not the opposite of faith - it is an *element* of faith. The willingness to sit with uncertainty, to hold the tension between what you were taught and what you have experienced, is one of the bravest spiritual acts a person can perform.
 
 ## Deconstruction is Not Destruction
 
 The word "deconstruction" has become something of a lightning rod in faith communities. Some hear it and think "apostasy." Others hear it and breathe a sigh of relief.
 
-But at its core, deconstruction is simply the process of **examining the beliefs you hold to determine which ones are truly yours**—and which ones were handed to you by culture, family, or institutions that may not have had your wholeness in mind.
+But at its core, deconstruction is simply the process of **examining the beliefs you hold to determine which ones are truly yours** - and which ones were handed to you by culture, family, or institutions that may not have had your wholeness in mind.
 
 Think of it like renovating a house. You don't tear down the entire structure. You inspect the foundation. You check which walls are load-bearing and which ones were added later, perhaps to keep you small. You remove the walls that no longer serve you and discover that the house is actually more spacious than you ever knew.
 
@@ -133,7 +135,7 @@ Think of it like renovating a house. You don't tear down the entire structure. Y
 - Feeling uncomfortable with theological positions that seem to contradict the character of a loving God
 - Grieving the loss of certainty while simultaneously feeling liberated
 - Recognizing that some of your "beliefs" were actually fear responses
-- Finding God in unexpected places—in nature, in art, in silence, rather than only in a building
+- Finding God in unexpected places - in nature, in art, in silence, rather than only in a building
 
 ## The Difference Between Faith and Religion
 
@@ -167,25 +169,26 @@ For many, it is this: **Love.** Not love as a doctrine, but love as an experienc
 
 You might find that once the scaffolding falls away, the true Temple was there all along. Just a bit more spacious than you were told.
 
-And if you need a companion for this journey—someone who won't flinch at your questions or rush you toward easy answers—**Becoming: 1:1 Coaching** at D'Oasis was designed for exactly this kind of sacred exploration. Over 6 or 12 weeks, you'll have sustained, personalized mentorship to navigate the questions, the grief, and the rebuilding—at your pace.
+And if you need a companion for this journey - someone who won't flinch at your questions or rush you toward easy answers - **Becoming: 1:1 Coaching** at D'Oasis was designed for exactly this kind of sacred exploration. Over 6 or 12 weeks, you'll have sustained, personalized mentorship to navigate the questions, the grief, and the rebuilding - at your pace.
 
-*Not sure where to start? [Book a free 15-minute consultation](/booking)—and we'll explore the next step together.*
+*Not sure where to start? [Book a free 15-minute consultation](/booking) - and we'll explore the next step together.*
 
 *The God who is real is not threatened by your inquiry. He is waiting in the middle of it.*
-    `
+    `,
   },
   {
     slug: 'practice-of-rest',
     title: 'Why I Stopped Trying to Pray the Pain Away',
-    excerpt: 'Sometimes the most spiritual thing you can do is admit that it hurts. A reflection on the sacred permission to be broken.',
+    excerpt:
+      'Sometimes the most spiritual thing you can do is admit that it hurts. A reflection on the sacred permission to be broken.',
     category: 'The Practice of Rest',
     date: 'February 1, 2026',
     readTime: '11 min read',
-    image: '/images/external/blog-rest-lake.jpg',
+    image: '/images/external/blog-rest-lake.avif',
     content: `
 # Why I Stopped Trying to Pray the Pain Away
 
-For years, I followed the script. If it hurt, I petitioned. If I felt low, I fasted. If the grief was thick, I quoted Scripture until it thinned out—or until I was too tired to feel anything at all.
+For years, I followed the script. If it hurt, I petitioned. If I felt low, I fasted. If the grief was thick, I quoted Scripture until it thinned out - or until I was too tired to feel anything at all.
 
 I treated God like a cosmic vending machine for emotional regulation. Insert prayer, receive peace. Insert worship, receive joy. And when the machine didn't work? I assumed the problem was my coin—my faith—not the machine itself.
 
@@ -216,11 +219,11 @@ Psalm 13: *"How long, O Lord? Will you forget me forever?"*
 
 Psalm 22: *"My God, my God, why have you forsaken me?"*
 
-Psalm 88—the darkest psalm in the entire Bible—ends with no praise, no resolution, no "but God" moment. It ends with the word *"darkness."* And it is still in the canon. Still considered inspired. Still sacred.
+Psalm 88 - the darkest psalm in the entire Bible - ends with no praise, no resolution, no "but God" moment. It ends with the word *"darkness."* And it is still in the canon. Still considered inspired. Still sacred.
 
 **God included lament in His Word because He wanted us to know that pain is not profane.** It is not something to be exorcised, bypassed, or prayed away. It is something to be *witnessed.* Honored. Walked through.
 
-When Jesus stood at the tomb of Lazarus, He already knew He was about to perform a resurrection. He knew the ending. And yet—*He wept.* Not because He lacked faith. But because love hurts. And He was not ashamed of that.
+When Jesus stood at the tomb of Lazarus, He already knew He was about to perform a resurrection. He knew the ending. And yet - *He wept.* Not because He lacked faith. But because love hurts. And He was not ashamed of that.
 
 ## What Happens When We Stop Bypassing
 
@@ -233,7 +236,7 @@ Here is what I discovered when I stopped praying the pain away:
 - **My prayers became real.** They stopped being performances and started being conversations. Messy, tearful, sometimes angry conversations.
 - **My relationships deepened.** When I stopped pretending to be "fine," I gave others permission to stop pretending too.
 - **My faith became resilient.** A faith that has wrestled with darkness is far stronger than a faith that has only lived in the light.
-- **My body began to heal.** The headaches, the insomnia, the clenched jaw—these were symptoms of emotions I had been suppressing in the name of faith.
+- **My body began to heal.** The headaches, the insomnia, the clenched jaw - these were symptoms of emotions I had been suppressing in the name of faith.
 
 ## The Sanctity of the Lament
 
@@ -267,21 +270,22 @@ You don't have to be "victorious" every minute. You don't have to slap a Bible v
 
 Not at the finish line. Not in the triumph. But in the exhaustion. In the honesty. In the sacred, messy, beautiful surrender of saying, "I can't do this alone."
 
-If you need a space where your lament is honored, where your tears are not rushed, and where faith and vulnerability coexist without judgment—**Restoration Circles** at D'Oasis offers an intimate monthly gathering for women who are learning to grieve together. Because sometimes, the most profound healing happens when we realize our private sorrow is part of a collective story.
+If you need a space where your lament is honored, where your tears are not rushed, and where faith and vulnerability coexist without judgment - **Restoration Circles** at D'Oasis offers an intimate monthly gathering for women who are learning to grieve together. Because sometimes, the most profound healing happens when we realize our private sorrow is part of a collective story.
 
 *Not sure if a group setting is right for you? [Book a free 15-minute consultation](/booking) and we'll find the container that fits.*
 
 *You don't have to pray the pain away. You just have to let it be witnessed.*
-    `
+    `,
   },
   {
     slug: 'sabbath-as-rebellion',
     title: 'Why Rest Feels Like Rebellion in Our Culture',
-    excerpt: 'In a world that demands our constant output, choosing to pause is a radical act of self-reclamation. Especially when your faith has been used to justify your exhaustion.',
+    excerpt:
+      'In a world that demands our constant output, choosing to pause is a radical act of self-reclamation. Especially when your faith has been used to justify your exhaustion.',
     category: 'The Practice of Rest',
     date: 'February 15, 2026',
     readTime: '12 min read',
-    image: '/images/external/blog-sabbath-reading.jpg',
+    image: '/images/external/blog-sabbath-reading.avif',
     content: `
 # Rest is Not a Luxury. It is a Right.
 
@@ -309,7 +313,7 @@ Sound familiar? For many women of faith, this isn't just occupational—it's spi
 
 ## The Strong Black Woman Schema
 
-Dr. Cheryl Woods-Giscombé's research on the **Strong Black Woman (SBW) schema** highlights how Black women are culturally expected to be caregivers, pillars, and problem-solvers—often at the expense of their own health and emotional needs.
+Dr. Cheryl Woods-Giscombé's research on the **Strong Black Woman (SBW) schema** highlights how Black women are culturally expected to be caregivers, pillars, and problem-solvers - often at the expense of their own health and emotional needs.
 
 This expectation is amplified in faith communities, where service is equated with devotion. The woman who volunteers for every committee, watches everyone's children, counsels every friend, and never asks for help is celebrated as "anointed." But she is often dying inside.
 
@@ -319,13 +323,13 @@ This expectation is amplified in faith communities, where service is equated wit
 
 The concept of Sabbath is not a suggestion in Scripture. It is a **commandment.** It appears in the Ten Commandments right alongside "do not murder" and "do not steal." God took rest so seriously that He modeled it Himself. After creating the universe, **He rested.** Not because He was tired, but because rest is part of the rhythm of creation.
 
-And notice what Sabbath was originally designed for: **the liberation of the overworked.** In Deuteronomy 5, the Sabbath commandment is explicitly tied to the Exodus—to the memory of slavery in Egypt. God is saying, *"You are no longer enslaved. Stop living like you are."*
+And notice what Sabbath was originally designed for: **the liberation of the overworked.** In Deuteronomy 5, the Sabbath commandment is explicitly tied to the Exodus - to the memory of slavery in Egypt. God is saying, *"You are no longer enslaved. Stop living like you are."*
 
 When you rest, you are not being lazy. You are participating in an ancient act of liberation. You are declaring that you are not a machine. You are not for consumption. You are a sacred being, worthy of stillness.
 
 ## The Idol of Productivity
 
-We've been conditioned to believe our worth is tied to what we produce. If we aren't "doing," we feel we aren't "being" enough. This is idolatry—not of a golden calf, but of the calendar, the to-do list, the social expectation.
+We've been conditioned to believe our worth is tied to what we produce. If we aren't "doing," we feel we aren't "being" enough. This is idolatry - not of a golden calf, but of the calendar, the to-do list, the social expectation.
 
 God didn't create you to be a machine. He created you for relationship. And you cannot relate when you are running on empty.
 
@@ -333,9 +337,9 @@ Consider this: **Jesus Himself withdrew.** Repeatedly. He left the crowds. He le
 
 ## The Science of Rest
 
-Neuroscience confirms what Scripture has always taught: rest is not passive—it is profoundly productive.
+Neuroscience confirms what Scripture has always taught: rest is not passive - it is profoundly productive.
 
-During rest, your brain activates what's called the **Default Mode Network (DMN)**—the neural system responsible for:
+During rest, your brain activates what's called the **Default Mode Network (DMN)** - the neural system responsible for:
 
 - Self-reflection and introspection
 - Processing emotions and memories
@@ -373,20 +377,17 @@ It might look like:
 When you rest, you are telling the world that you are not for sale. You are telling your community that you are more than your utility. You are a sacred being, worthy of stillness.
 
 `,
-    cta: `If you are ready to learn what rest looks like when it is not preceded by collapse—**The Clarity Session** at D'Oasis offers a focused, 90-minute space to name the patterns that keep you running, and begin designing a rhythm of rest that honors your body, your soul, and your God.
-
-*Not sure where to begin? [Book a free 15-minute consultation](/booking)—the first act of rest might be asking for help.*
-
-*The world keeps spinning even when you stop. That's the grace of it.*`
+    cta: `If you are ready to learn what rest looks like when it is not preceded by collapse - **The Clarity Session** at D'Oasis offers a focused, 90-minute space to name the patterns that keep you running, and begin designing a rhythm of rest that honors your body, your soul, and your God.`,
   },
   {
     slug: 'church-hurt-healing',
     title: 'When the Sanctuary Becomes the Source of Your Pain',
-    excerpt: 'What do you do when the place meant for your healing is the place that hurt you most? Navigating the complex journey of church hurt and spiritual recovery.',
+    excerpt:
+      'What do you do when the place meant for your healing is the place that hurt you most? Navigating the complex journey of church hurt and spiritual recovery.',
     category: 'Faith Deconstruction',
     date: 'February 12, 2026',
     readTime: '12 min read',
-    image: '/images/external/blog-church-hurt-pillars.jpg',
+    image: '/images/external/blog-church-hurt-pillars.avif',
     content: `
 # The Sacred Wound: Healing from Church Hurt
 
@@ -394,7 +395,7 @@ The church is supposed to be a hospital for the broken. But sometimes, it feels 
 
 When you've been hurt by leaders you trusted, a community you loved, or a theology that was weaponized against you, the wound goes deep. It's not just a social betrayal. It feels like a *spiritual* one. Because the place that was supposed to bring you closer to God is the very thing that made you question if He's even there.
 
-If this is your story, I want you to know: **Your pain is not a sign of spiritual weakness. It is a sign that something sacred was violated.** And the fact that you're still searching—still reading, still asking, still hoping—is evidence that your faith is far more resilient than the institution that wounded it.
+If this is your story, I want you to know: **Your pain is not a sign of spiritual weakness. It is a sign that something sacred was violated.** And the fact that you're still searching - still reading, still asking, still hoping - is evidence that your faith is far more resilient than the institution that wounded it.
 
 ---
 
@@ -406,7 +407,7 @@ Common symptoms include:
 
 - **Cognitive confusion**: Struggling to trust your own judgment after being told what to think for years
 - **Emotional dysregulation**: Swinging between anger, grief, numbness, and guilt
-- **Social isolation**: Feeling like you don't belong anywhere—too "worldly" for church, too "religious" for secular spaces
+- **Social isolation**: Feeling like you don't belong anywhere - too "worldly" for church, too "religious" for secular spaces
 - **Identity crisis**: Not knowing who you are outside the role the church assigned you
 - **Spiritual grief**: Mourning the God you thought you knew, the community you thought loved you, and the certainty you thought you had
 
@@ -417,10 +418,10 @@ Common symptoms include:
 Church hurt can take many forms, and it is important to name them clearly:
 
 ### Spiritual Abuse
-When leaders use their authority to manipulate, control, or shame. When questioning is labeled as "rebellion." When obedience is demanded without accountability. This is not discipleship—it is coercion.
+When leaders use their authority to manipulate, control, or shame. When questioning is labeled as "rebellion." When obedience is demanded without accountability. This is not discipleship - it is coercion.
 
 ### Betrayal Trauma
-Psychologist Jennifer Freyd's research on **betrayal trauma** shows that the closer the relationship between the abuser and the victim, the deeper the wound. When a pastor, mentor, or spiritual parent betrays your trust, it doesn't just hurt your feelings—it rewires your ability to trust. It makes intimacy feel dangerous. It makes vulnerability feel foolish.
+Psychologist Jennifer Freyd's research on **betrayal trauma** shows that the closer the relationship between the abuser and the victim, the deeper the wound. When a pastor, mentor, or spiritual parent betrays your trust, it doesn't just hurt your feelings - it rewires your ability to trust. It makes intimacy feel dangerous. It makes vulnerability feel foolish.
 
 ### Toxic Theology
 Some wounds are not caused by individual people but by **systems of belief** that teach you to hate parts of yourself. Theologies that tell you your body is sinful. That your questions are demonic. That your boundaries are selfish. That submission means silence. These ideas can live in your nervous system long after you've left the building.
@@ -430,7 +431,7 @@ Perhaps the most painful form: when the community *knows* and does nothing. When
 
 ## Acknowledging the Pain
 
-Don't let anyone spiritualize your hurt away. "Forgive and forget" is often used as a weapon to silence survivors. Premature forgiveness—forgiveness demanded before the wound has even been acknowledged—is not biblical. It is spiritual gaslighting.
+Don't let anyone spiritualize your hurt away. "Forgive and forget" is often used as a weapon to silence survivors. Premature forgiveness - forgiveness demanded before the wound has even been acknowledged - is not biblical. It is spiritual gaslighting.
 
 **Forgiveness may come. But it is a destination, not a starting point.** The starting point is truth. The starting point is naming what happened to you and allowing yourself to feel the full weight of it.
 
@@ -446,7 +447,7 @@ Healing from church hurt is not linear, and it doesn't look the same for everyon
 
 3. **Separating God from the institution**: This is perhaps the hardest work. The God who was misrepresented to you is not the God who actually exists. The Jesus who was used to control you is not the Jesus of the Gospels.
 
-4. **Finding safe people**: Healing happens in community—but it must be safe community. A therapist, a counselor, a trusted friend, a support group. Someone who can hold your story without trying to fix it.
+4. **Finding safe people**: Healing happens in community - but it must be safe community. A therapist, a counselor, a trusted friend, a support group. Someone who can hold your story without trying to fix it.
 
 5. **Rebuilding on your own terms**: You get to decide what faith looks like now. It might be a different church. It might be no church at all. It might be God and a journal and a walk in the woods. All of these are valid.
 
@@ -469,24 +470,21 @@ You are allowed to strip away the traditions that feel like chains. You are allo
 Healing takes time. Go slow. The Jesus who flipped tables in the temple is the same one who is flipping the tables of religious trauma in your heart today.
 
 `,
-    cta: `If you need a space that feels nothing like the place that hurt you—**Becoming: 1:1 Coaching** at D'Oasis offers sustained, personalized mentorship for women healing from church hurt. Over 6 or 12 weeks, you'll have a companion who understands that spiritual wounds require more than a single conversation—they require witnessed, unhurried care.
-
-*Not ready for a deep commitment? [Book a free 15-minute consultation](/booking)—no theology quiz, no performance required.*
-
-*The church may have failed you. But the God behind it hasn't stopped reaching for you.*`
+    cta: `If you need a space that feels nothing like the place that hurt you - **Becoming: 1:1 Coaching** at D'Oasis offers sustained, personalized mentorship for women healing from church hurt. Over 6 or 12 weeks, you'll have a companion who understands that spiritual wounds require more than a single conversation - they require witnessed, unhurried care.`,
   },
   {
     slug: 'ambiguous-loss-grief',
     title: 'The Grief of People Who Are Still Here',
-    excerpt: 'Mourning someone who is still alive is a heavy, silent burden. Whether it is dementia, addiction, or an emotional disconnect, your grief is valid.',
+    excerpt:
+      'Mourning someone who is still alive is a heavy, silent burden. Whether it is dementia, addiction, or an emotional disconnect, your grief is valid.',
     category: 'Grief & Loss',
     date: 'February 10, 2026',
     readTime: '11 min read',
-    image: '/images/external/blog-ambiguous-loss-hands.jpg',
+    image: '/images/external/blog-ambiguous-loss-hands.avif',
     content: `
 # Ambiguous Loss: The Long Goodbye
 
-We know how to handle death. There are rituals for it. Flowers, funerals, and casseroles. The world pauses—if only briefly—to acknowledge your pain. There are sympathy cards and memorial services and people who check on you for at least the first few weeks.
+We know how to handle death. There are rituals for it. Flowers, funerals, and casseroles. The world pauses - if only briefly - to acknowledge your pain. There are sympathy cards and memorial services and people who check on you for at least the first few weeks.
 
 But what about the losses that have no funeral?
 
@@ -498,7 +496,7 @@ The parent with Alzheimer's who is sitting right in front of you but doesn't rem
 
 ## What Is Ambiguous Loss?
 
-Dr. Pauline Boss, a researcher and therapist at the University of Minnesota, pioneered the concept of **ambiguous loss**—a type of grief that occurs when a loss is unclear, incomplete, or lacks resolution.
+Dr. Pauline Boss, a researcher and therapist at the University of Minnesota, pioneered the concept of **ambiguous loss** - a type of grief that occurs when a loss is unclear, incomplete, or lacks resolution.
 
 She identified two types:
 
@@ -522,7 +520,7 @@ Both types share something in common: **there is no closure.** There is no clear
 
 Unlike conventional grief, ambiguous loss doesn't follow a trajectory. There is no "before and after." There is only "during."
 
-Dr. Boss explains that ambiguous loss creates a state of **frozen grief**—the mourner cannot fully grieve because the loss is not confirmed. The person is still alive. The relationship might still change. Hope and heartbreak coexist in a perpetual, exhausting tension.
+Dr. Boss explains that ambiguous loss creates a state of **frozen grief** - the mourner cannot fully grieve because the loss is not confirmed. The person is still alive. The relationship might still change. Hope and heartbreak coexist in a perpetual, exhausting tension.
 
 This frozen grief manifests in several ways:
 
@@ -530,7 +528,7 @@ This frozen grief manifests in several ways:
 - **Guilt**: You feel guilty for grieving someone who is still alive
 - **Isolation**: Others don't understand your pain because "at least they're still here"
 - **Role confusion**: You don't know if you're a caregiver, a partner, a daughter, or a mourner
-- **Spiritual confusion**: You pray for restoration but don't know if it's coming—or if it should
+- **Spiritual confusion**: You pray for restoration but don't know if it's coming - or if it should
 
 ## The Weight of the "In-Between"
 
@@ -559,11 +557,11 @@ If you are carrying this kind of grief right now, try this practice:
 
 **Write two letters you will never send.**
 
-1. The first letter is to the person you are losing—the version of them that you miss. Tell them everything. What you loved. What you lost. What you wish you could say.
+1. The first letter is to the person you are losing - the version of them that you miss. Tell them everything. What you loved. What you lost. What you wish you could say.
 
 2. The second letter is to yourself. Write it with the compassion you would offer your dearest friend. Acknowledge what you are carrying. Validate your grief. Remind yourself that your pain is not a failure.
 
-Keep both letters somewhere safe. They are evidence that your love—and your loss—are real.
+Keep both letters somewhere safe. They are evidence that your love - and your loss - are real.
 
 ## Naming Your Grief
 
@@ -571,7 +569,7 @@ The first step to healing is naming it. Call it grief.
 
 You aren't just "sad" or "stressed." You are mourning. Give yourself permission to weep for the relationship that was, even if the person is still standing in front of you.
 
-Dr. Boss emphasizes that the goal with ambiguous loss is not closure—because closure may never come. The goal is **learning to live well despite the ambiguity.** This requires:
+Dr. Boss emphasizes that the goal with ambiguous loss is not closure - because closure may never come. The goal is **learning to live well despite the ambiguity.** This requires:
 
 - **Building tolerance for uncertainty**: Accepting that not all questions will be answered
 - **Finding meaning**: Identifying what still holds value in your life
@@ -579,20 +577,17 @@ Dr. Boss emphasizes that the goal with ambiguous loss is not closure—because c
 - **Discovering new hope**: Shifting from hoping for the old normal to building a new one
 
 `,
-    cta: `You don't have to hold it all together. God sees the silent funeral you are holding every single day. And if you need someone to sit with you in the "in-between"—**Becoming: 1:1 Coaching** at D'Oasis offers sustained companionship for the kind of grief that has no expiration date. Over 6 or 12 weeks, you'll have personalized mentorship from someone who understands that ambiguous loss requires more than a single session—it requires witnessed presence over time.
-
-*Not sure if this is the right fit? [Book a free 15-minute consultation](/booking)—we'll explore what would serve you best.*
-
-*Your grief doesn't need a funeral to be real. It just needs a witness.*`
+    cta: `You don't have to hold it all together. God sees the silent funeral you are holding every single day. And if you need someone to sit with you in the "in-between" - **The Clarity Session** at D'Oasis offers a focused, 90-minute space to untangle the grief you're carrying right now. No timelines, no performance - just honest, sacred presence with someone who won't rush your process.`,
   },
   {
     slug: 'good-christian-woman',
     title: 'Unlearning What It Means to Be a "Good Christian Woman"',
-    excerpt: 'The slow, sacred work of shedding expectations that were never meant to be ours. Finding yourself beneath the performance.',
+    excerpt:
+      'The slow, sacred work of shedding expectations that were never meant to be ours. Finding yourself beneath the performance.',
     category: 'Identity',
     date: 'January 10, 2026',
     readTime: '11 min read',
-    image: '/images/external/blog-identity-portrait.jpg',
+    image: '/images/external/blog-identity-portrait.avif',
     content: `
 # Unlearning the "Good Christian Woman"
 
@@ -608,9 +603,9 @@ We call it "servant leadership." But often, it's just self-abandonment dressed i
 
 ## The Blueprint That Was Never Meant to Be a Prison
 
-The Proverbs 31 woman was originally written as a poem—an acrostic hymn of praise, not a job description. Each line begins with a successive letter of the Hebrew alphabet. It was poetic. It was aspirational. It was never meant to be a checklist.
+The Proverbs 31 woman was originally written as a poem - an acrostic hymn of praise, not a job description. Each line begins with a successive letter of the Hebrew alphabet. It was poetic. It was aspirational. It was never meant to be a checklist.
 
-But somewhere along the way, the church turned a poem into a performance review. And women have been failing it—and hating themselves for failing it—ever since.
+But somewhere along the way, the church turned a poem into a performance review. And women have been failing it - and hating themselves for failing it - ever since.
 
 **The "Good Christian Woman" archetype is not biblical. It is cultural.** It is the product of patriarchal interpretation layered with cultural expectations, generational norms, and institutional convenience. It serves systems, not souls.
 
@@ -622,7 +617,7 @@ The "Good Christian Woman" pays an extraordinarily high price for her goodness:
 She is not allowed to have needs. She is the caretaker, the prayer warrior, the first to arrive and the last to leave. If she expresses frustration, she is told to "submit." If she cries, she is told to "trust God more." If she is angry, she is called bitter.
 
 ### Codependency
-Dr. Melody Beattie, in her groundbreaking work *Codependent No More*, describes codependency as a pattern of losing yourself in the process of caring for others. For many Christian women, this isn't a disorder—it's a spiritual mandate. "Die to yourself" is interpreted as "erase yourself."
+Dr. Melody Beattie, in her groundbreaking work *Codependent No More*, describes codependency as a pattern of losing yourself in the process of caring for others. For many Christian women, this isn't a disorder - it's a spiritual mandate. "Die to yourself" is interpreted as "erase yourself."
 
 ### Identity Fusion
 She doesn't know who she is outside of her roles. She is "Pastor's wife." "Ministry leader." "Prayer warrior." "Strong one." Remove the roles, and she panics. Because beneath the performance, she was never given permission to simply *be.*
@@ -663,9 +658,9 @@ Take a moment to complete this exercise:
 **Write down three roles you currently play. Then, beneath each role, write one thing you wish you could change about how you show up in it.**
 
 For example:
-- *Mother* — I wish I could stop feeling guilty when I take time for myself.
-- *Church member* — I wish I could say no to the committee without being judged.
-- *Wife* — I wish I could express my needs without feeling selfish.
+- *Mother* - I wish I could stop feeling guilty when I take time for myself.
+- *Church member* - I wish I could say no to the committee without being judged.
+- *Wife* - I wish I could express my needs without feeling selfish.
 
 Now read those wishes back to yourself. Those aren't complaints. They are **clues to the woman God actually made.** Follow them.
 
@@ -676,24 +671,25 @@ You are a daughter before you are a doer. You are beloved before you are busy. S
 She has opinions. She has desires. She has boundaries. She has a laugh that isn't performative and a faith that isn't curated for public consumption.
 
 `,
-    cta: `If you are ready to meet her—the real you, beneath the performance—**Becoming: 1:1 Coaching** at D'Oasis offers a personalized, 6- or 12-week journey to peel back the layers of expectation and rediscover the woman God actually made. Not the curated version. The real one.
+    cta: `If you are ready to meet her - the real you, beneath the performance - **Becoming: 1:1 Coaching** at D'Oasis offers a personalized, 6- or 12-week journey to peel back the layers of expectation and rediscover the woman God actually made. Not the curated version. The real one.
 
-*Not sure where to start? [Book a free 15-minute consultation](/booking)—show up as you are, not as you think you should be.*
+*Not sure where to start? [Book a free 15-minute consultation](/booking) - show up as you are, not as you think you should be.*
 
-*The woman God made needs no pedestal. She just needs permission to be herself.*`
+*The woman God made needs no pedestal. She just needs permission to be herself.*`,
   },
   {
     slug: 'permission-feel',
     title: 'The Day I Gave Myself Permission to Actually Feel',
-    excerpt: 'What happens when you stop spiritually bypassing your emotions and start honoring them as sacred information.',
+    excerpt:
+      'What happens when you stop spiritually bypassing your emotions and start honoring them as sacred information.',
     category: 'The Practice of Rest',
     date: 'January 5, 2026',
     readTime: '10 min read',
-    image: '/images/external/blog-emotions-rain.jpg',
+    image: '/images/external/blog-emotions-rain.avif',
     content: `
 # The Day I Gave Myself Permission to Feel
 
-For years, I was a master of the "Spiritual Bypass." If I felt angry, I quoted a verse about peace. If I felt sad, I reminded myself of my blessings. If I felt lonely, I told myself that God was all I needed—even though every part of me was screaming for a human hand to hold.
+For years, I was a master of the "Spiritual Bypass." If I felt angry, I quoted a verse about peace. If I felt sad, I reminded myself of my blessings. If I felt lonely, I told myself that God was all I needed - even though every part of me was screaming for a human hand to hold.
 
 I was using my faith as a shield against my own humanity. And the shield was killing me.
 
@@ -707,7 +703,7 @@ Then one day—sitting in my car, mascara running, hands shaking—I stopped fig
 
 Research by Dr. Brené Brown has shown that **we cannot selectively numb emotions.** When we suppress our anger, fear, or sadness, we simultaneously suppress our capacity for joy, love, and connection.
 
-This creates what psychologists call **emotional flattening**—a state where life feels muted, gray, and hollow. You're not depressed, exactly. But you're not alive either. You're surviving, but you've stopped feeling.
+This creates what psychologists call **emotional flattening** - a state where life feels muted, gray, and hollow. You're not depressed, exactly. But you're not alive either. You're surviving, but you've stopped feeling.
 
 For many women of faith, this is the hidden price of "spiritual maturity." We've been so focused on managing our emotions that we've forgotten how to experience them.
 
@@ -718,7 +714,7 @@ For many women of faith, this is the hidden price of "spiritual maturity." We've
 - You feel guilty when you experience negative emotions
 - You use spiritual language to avoid processing pain ("God is in control," "I'm blessed")
 - Your body carries tension, pain, or fatigue that has no medical explanation
-- You feel disconnected from yourself—like you're watching your life from the outside
+- You feel disconnected from yourself - like you're watching your life from the outside
 
 ## Emotions Are Sacred Information
 
@@ -741,28 +737,23 @@ Dr. Marc Brackett, director of the Yale Center for Emotional Intelligence, devel
 
 1. **R**ecognize: Notice the emotion as it arises in your body
 2. **U**nderstand: Ask what caused it and what information it carries
-3. **L**abel: Give it a specific name (not just "bad" or "upset," but "disappointed," "betrayed," "overwhelmed")
-4. **E**xpress: Share it appropriately—with a trusted person, in a journal, or in prayer
+3. **Label**: Give it a specific name (not just "bad" or "upset," but "disappointed," "betrayed," "overwhelmed")
+4. **Express**: Share it appropriately - with a trusted person, in a journal, or in prayer
 5. **R**egulate: Choose how to respond, not react
 
 This framework is transformative because it replaces suppression with **awareness.** You don't have to be controlled by your emotions. But you do have to listen to them.
 
 ## A God Who Weeps
-
-We serve a Savior who wept at a grave even though He knew He was about to perform a resurrection. He didn't bypass the pain; He sat in it.
-
-The God of the Bible is not stoic. He is:
-- **Angry** at injustice (Psalm 7:11)
 - **Grieved** by human pain (Genesis 6:6)
 - **Jealous** for relationship (Exodus 34:14)
 - **Delighted** by His children (Zephaniah 3:17)
 - **Moved with compassion** at suffering (Matthew 9:36)
 
-If the Creator of the universe expresses the full range of emotion, why would He ask you to suppress yours? **God does not want your performance. He wants your presence.** All of it—the messy, tear-stained, shaking-hands reality of who you are right now.
+If the Creator of the universe expresses the full range of emotion, why would He ask you to suppress yours? **God does not want your performance. He wants your presence.** All of it - the messy, tear-stained, shaking-hands reality of who you are right now.
 
 ## Where Emotions Live in the Body
 
-Your emotions are not just psychological—they are **physiological.** Research from the University of Turku mapped where people feel different emotions in their bodies:
+Your emotions are not just psychological - they are **physiological.** Research from the University of Turku mapped where people feel different emotions in their bodies:
 
 - **Anger**: head, chest, and arms (heat and tension)
 - **Sadness**: chest and throat (heaviness, constriction)
@@ -776,7 +767,7 @@ Learning to notice where emotions land in your body is one of the most powerful 
 
 Right now, pause and do a simple body scan:
 
-**Close your eyes. Start at the top of your head. Slowly move your attention downward—forehead, jaw, neck, shoulders, chest, stomach, hips, legs, feet.**
+**Close your eyes. Start at the top of your head. Slowly move your attention downward - forehead, jaw, neck, shoulders, chest, stomach, hips, legs, feet.**
 
 Notice where you feel tension, warmth, heaviness, or numbness. Don't judge it. Just notice.
 
@@ -784,7 +775,7 @@ Now ask that area of your body: *"What are you carrying for me?"*
 
 Listen. The answer may surprise you.
 
-> *"I give myself permission to feel. My emotions are not my enemy—they are my compass. I am safe to be human."*
+> *"I give myself permission to feel. My emotions are not my enemy - they are my compass. I am safe to be human."*
 
 ## You Have Permission
 
@@ -793,26 +784,27 @@ You have permission to be human. You have permission to hurt. You have permissio
 The Spirit is big enough to hold every messy, complicated thing you are feeling today. You don't have to clean up before you come to God. Come as the storm. He has been walking on water since before you were born.
 
 `,
-    cta: `If you need a space where your emotions are not spiritualized away—where your tears are not interrupted with a Bible verse, and where your anger is treated as sacred information—**Restoration Circles** at D'Oasis offers a monthly gathering where women practice the art of feeling together. No judgment, no performance—just honest, embodied presence.
+    cta: `If you need a space where your emotions are not spiritualized away - where your tears are not interrupted with a Bible verse, and where your anger is treated as sacred information - **Restoration Circles** at D'Oasis offers a monthly gathering where women practice the art of feeling together. No judgment, no performance - just honest, embodied presence.
 
 *Prefer one-on-one support? [Book a free 15-minute consultation](/booking) and we'll find the right container for you.*
 
-*Your feelings are not the problem. They are the doorway.*`
+*Your feelings are not the problem. They are the doorway.*`,
   },
   {
     slug: 'ancestral-wounds',
-    title: 'Breaking Generational Cycles You Didn\'t Know You Were Living',
-    excerpt: 'Healing isn\'t just personal—it\'s ancestral. How therapy helped me see the patterns I inherited and the freedom to choose differently.',
+    title: "Breaking Generational Cycles You Didn't Know You Were Living",
+    excerpt:
+      "Healing isn't just personal - it's ancestral. How therapy helped me see the patterns I inherited and the freedom to choose differently.",
     category: 'Identity',
     date: 'December 28, 2025',
     readTime: '12 min read',
-    image: '/images/external/blog-ancestral-forest.jpg',
+    image: '/images/external/blog-ancestral-forest.avif',
     content: `
 # Healing the Ancestral Heart
 
 We like to think of ourselves as independent islands. Fresh starts. Clean slates. But we are more like the latest ring in an old, deep tree. We carry the water—and the storms—of those who came before us.
 
-Generational trauma isn't just about big events—slavery, war, displacement. It's in the way we handle conflict. The way we view money. The way we respond to authority. The way we permit ourselves (or don't) to experience joy. It's in our nervous systems, our attachment styles, and the silent rules we live by without ever questioning where they came from.
+Generational trauma isn't just about big events - slavery, war, displacement. It's in the way we handle conflict. The way we view money. The way we respond to authority. The way we permit ourselves (or don't) to experience joy. It's in our nervous systems, our attachment styles, and the silent rules we live by without ever questioning where they came from.
 
 **You are not just healing yourself. You are healing a lineage.**
 
@@ -822,9 +814,9 @@ Generational trauma isn't just about big events—slavery, war, displacement. It
 
 The field of **epigenetics** has revolutionized our understanding of generational trauma. Research shows that traumatic experiences can literally alter gene expression, and these changes can be passed down through generations.
 
-A landmark study at Mount Sinai Hospital found that children of Holocaust survivors had altered cortisol levels—the stress hormone—even though *they themselves had never experienced the trauma.* Their bodies were pre-programmed for survival by their parents' experiences.
+A landmark study at Mount Sinai Hospital found that children of Holocaust survivors had altered cortisol levels - the stress hormone - even though *they themselves had never experienced the trauma.* Their bodies were pre-programmed for survival by their parents' experiences.
 
-Dr. Rachel Yehuda's research demonstrates that trauma doesn't just live in memory. It lives in **biology.** The anxiety you can't explain, the hypervigilance that has no obvious source, the sense of danger that follows you even into safe spaces—these may not be "your" responses. They may be inherited.
+Dr. Rachel Yehuda's research demonstrates that trauma doesn't just live in memory. It lives in **biology.** The anxiety you can't explain, the hypervigilance that has no obvious source, the sense of danger that follows you even into safe spaces - these may not be "your" responses. They may be inherited.
 
 **You are not crazy. You are carrying something that predates you.**
 
@@ -862,7 +854,7 @@ Maybe "being strong" was a survival mechanism for your grandmother, but for you,
 
 ## The Neuroscience of Breaking Cycles
 
-Dr. Daniel Siegel, a pioneer in interpersonal neurobiology, explains that healing generational trauma requires what he calls **"making sense of your story."** When you can create a coherent narrative of your family's history—acknowledging both the pain and the resilience—your brain literally rewires.
+Dr. Daniel Siegel, a pioneer in interpersonal neurobiology, explains that healing generational trauma requires what he calls **"making sense of your story."** When you can create a coherent narrative of your family's history - acknowledging both the pain and the resilience - your brain literally rewires.
 
 This process, called **earned secure attachment**, shows that your attachment style is not destiny. Even if you grew up in a home without emotional safety, you can develop secure attachment by:
 
@@ -900,20 +892,21 @@ Your grandmother survived what she survived so that you could have the luxury of
 One day, your children's children will drink from the well of peace you are digging today. One day, a daughter you may never meet will breathe easier because of the cycle you broke.
 
 `,
-    cta: `If you are ready to begin this ancestral healing—to understand the patterns, grieve the losses, and choose a different path—**Becoming: 1:1 Coaching** at D'Oasis offers the kind of sustained, personalized mentorship that generational work requires. Over 6 or 12 weeks, you'll have a companion who understands that breaking cycles is some of the most sacred—and demanding—work a woman can do.
+    cta: `If you are ready to begin this ancestral healing - to understand the patterns, grieve the losses, and choose a different path - **Becoming: 1:1 Coaching** at D'Oasis offers the kind of sustained, personalized mentorship that generational work requires. Over 6 or 12 weeks, you'll have a companion who understands that breaking cycles is some of the most sacred - and demanding - work a woman can do.
 
-*Not sure where to begin? [Book a free 15-minute consultation](/booking)—the first step toward breaking a cycle is simply naming it.*
+*Not sure where to begin? [Book a free 15-minute consultation](/booking) - the first step toward breaking a cycle is simply naming it.*
 
-*You are the answer to a prayer your ancestors didn't know how to pray.*`
+*You are the answer to a prayer your ancestors didn't know how to pray.*`,
   },
   {
     slug: 'holy-anger',
     title: 'When Anger is the Most Holy Thing You Can Feel',
-    excerpt: 'Not all anger is sinful. Sometimes it\'s the voice of your soul saying "this is not okay." Learning to honor righteous rage.',
+    excerpt:
+      'Not all anger is sinful. Sometimes it\'s the voice of your soul saying "this is not okay." Learning to honor righteous rage.',
     category: 'Faith Deconstruction',
     date: 'December 20, 2025',
     readTime: '11 min read',
-    image: '/images/external/blog-holy-anger-fire.jpg',
+    image: '/images/external/blog-holy-anger-fire.avif',
     content: `
 # The Holy Weight of Anger
 
@@ -921,7 +914,7 @@ We've been taught that anger is a "negative" emotion. In many religious spaces, 
 
 But what if some of the anger you carry is not sinful at all? What if it is *prophetic?*
 
-What if the fire in your belly is not something to extinguish, but something to honor—the voice of your soul saying, "This is not okay. And it never was."
+What if the fire in your belly is not something to extinguish, but something to honor - the voice of your soul saying, "This is not okay. And it never was."
 
 ---
 
@@ -931,7 +924,7 @@ Not all anger is created equal. There is a critical distinction between **destru
 
 **Destructive rage** is reactive, uncontrolled, and often aimed at the wrong target. It seeks to harm. It escalates. It leaves wreckage.
 
-**Righteous anger** is different. It is **focused, moral, and protective.** It arises in response to injustice, violation, or the dehumanization of yourself or others. It doesn't seek to destroy—it seeks to *restore.*
+**Righteous anger** is different. It is **focused, moral, and protective.** It arises in response to injustice, violation, or the dehumanization of yourself or others. It doesn't seek to destroy - it seeks to *restore.*
 
 Psychologist Dr. Harriet Lerner, in *The Dance of Anger*, describes healthy anger as "a signal worth listening to." It tells you that something important is at stake. That a value you hold is being violated. That a boundary you need is being crossed.
 
@@ -978,7 +971,7 @@ When anger is not expressed, it doesn't disappear. It goes underground. It becom
 
 - **Depression**: Anger turned inward. Many mental health professionals consider depression a form of frozen anger.
 - **Chronic pain**: The body stores what the mouth cannot say. Jaw clenching, back pain, headaches, and autoimmune disorders are common in people who chronically suppress anger.
-- **Passive aggression**: When direct expression is punished, anger finds indirect routes—sarcasm, withdrawal, sabotage.
+- **Passive aggression**: When direct expression is punished, anger finds indirect routes - sarcasm, withdrawal, sabotage.
 - **Explosive episodes**: The pressure builds until the container breaks. Then *you* are labeled as the problem, not the years of suppression that preceded the explosion.
 - **Resentment**: The slow poison of unexpressed hurt that corrodes relationships from the inside.
 
@@ -986,7 +979,7 @@ When anger is not expressed, it doesn't disappear. It goes underground. It becom
 
 If you carry anger that you've been taught to hide, try this exercise:
 
-**Get a piece of paper. Set a timer for 5 minutes. Write down everything—every person, system, institution, or situation—that you are angry about. Don't censor. Don't spiritualize. Just write.**
+**Get a piece of paper. Set a timer for 5 minutes. Write down everything - every person, system, institution, or situation - that you are angry about. Don't censor. Don't spiritualize. Just write.**
 
 When the timer ends, read your list. For each item, complete this sentence:
 
@@ -1013,25 +1006,26 @@ Here is a framework for transforming anger into action:
 
 3. **Identify the value at stake**: What sacred thing is being violated? Your dignity? Your truth? Someone else's safety?
 
-4. **Choose your response**: Anger gives you energy. You get to decide where to direct that energy—toward destructive reaction or constructive action.
+4. **Choose your response**: Anger gives you energy. You get to decide where to direct that energy-toward destructive reaction or constructive action.
 
 Jesus didn't flip the tables because He lost His temper. He flipped them because He loved His Father's house too much to see it become a den of thieves. **Love that much.**
 
 `,
-    cta: `If you need a space where your anger is not shamed—where it is treated as sacred information rather than a spiritual deficiency—**The Clarity Session** at D'Oasis offers a focused, 90-minute space to process what's burning in you, understand what your anger is protecting, and channel that fire toward something that heals.
+    cta: `If you need a space where your anger is not shamed - where it is treated as sacred information rather than a spiritual deficiency - **The Clarity Session** at D'Oasis offers a focused, 90-minute space to process what's burning in you, understand what your anger is protecting, and channel that fire toward something that heals.
 
-*Not sure if you're ready? [Book a free 15-minute consultation](/booking)—your fire is welcome here.*
+*Not sure if you're ready? [Book a free 15-minute consultation](/booking) - your fire is welcome here.*
 
-*Some fires are not meant to be extinguished. They are meant to illuminate.*`
+*Some fires are not meant to be extinguished. They are meant to illuminate.*`,
   },
   {
     slug: 'anticipatory-grief',
-    title: 'The Weight of Grieving Someone Who Hasn\'t Left Yet',
-    excerpt: 'Anticipatory grief is real, valid, and deeply complex. How to hold both hope and heartbreak at the same time.',
+    title: "The Weight of Grieving Someone Who Hasn't Left Yet",
+    excerpt:
+      'Anticipatory grief is real, valid, and deeply complex. How to hold both hope and heartbreak at the same time.',
     category: 'Grief & Loss',
     date: 'December 15, 2025',
     readTime: '11 min read',
-    image: '/images/external/blog-anticipatory-mountains.jpg',
+    image: '/images/external/blog-anticipatory-mountains.avif',
     content: `
 # The Weight of Anticipatory Grief
 
@@ -1045,7 +1039,7 @@ It's watching your mother forget your name, one syllable at a time. It's sitting
 
 ## Understanding Anticipatory Grief
 
-The term **anticipatory grief** was first introduced by psychiatrist Erich Lindemann in 1944. He observed that families of soldiers during World War II often began the grieving process *before* receiving news of a death—simply from the anticipation of loss.
+The term **anticipatory grief** was first introduced by psychiatrist Erich Lindemann in 1944. He observed that families of soldiers during World War II often began the grieving process *before* receiving news of a death - simply from the anticipation of loss.
 
 Since then, research has shown that anticipatory grief is not simply "getting a head start" on mourning. It is a **distinct psychological experience** with its own characteristics:
 
@@ -1059,7 +1053,7 @@ Since then, research has shown that anticipatory grief is not simply "getting a 
 
 ## Living in the Tension
 
-You are living in two worlds simultaneously. The world of today—where they are still breathing, still warm, still here. And the world of tomorrow—where they are not.
+You are living in two worlds simultaneously. The world of today - where they are still breathing, still warm, still here. And the world of tomorrow - where they are not.
 
 These two worlds pull at you constantly. In one moment, you are cherishing every breath. In the next, you are planning a service. In one moment, you are grateful. In the next, you are terrified.
 
@@ -1084,13 +1078,13 @@ Caregiver burnout is well-documented in research. The **National Alliance for Ca
 Anticipatory grief comes with emotions that feel deeply shameful:
 
 ### Relief
-The thought crosses your mind: *"When this is over, I can finally rest."* And then the guilt crashes in like a wave. But relief is not the same as wanting someone to die. Relief is the acknowledgment that suffering—both theirs and yours—has a cost. It is human. It is not heartless.
+The thought crosses your mind: *"When this is over, I can finally rest."* And then the guilt crashes in like a wave. But relief is not the same as wanting someone to die. Relief is the acknowledgment that suffering - both theirs and yours - has a cost. It is human. It is not heartless.
 
 ### Anger
 You are angry at the disease. At the doctors. At God. At the person who is leaving you. Anger in anticipatory grief is often the most suppressed emotion because it feels directed at someone who is vulnerable. But your anger is valid. It is the sound of love being torn from your hands.
 
 ### Loneliness
-You are surrounded by people—family, friends, medical staff—but deeply alone. Because nobody else is standing in your exact shoes. Nobody else is holding the specific weight you are holding. And most people don't know what to say, so they say nothing.
+You are surrounded by people - family, friends, medical staff - but deeply alone. Because nobody else is standing in your exact shoes. Nobody else is holding the specific weight you are holding. And most people don't know what to say, so they say nothing.
 
 ### Premature Nostalgia
 You find yourself mourning moments *while they are still happening.* You look at their face and think, "I will miss this face." You hear their voice and think, "I need to remember this sound." The present becomes a museum of future memories.
@@ -1113,7 +1107,7 @@ Your tears in the waiting room are not a failure of faith. They are Gethsemane t
 
 Try this **presence practice**:
 
-**Sit beside your loved one—or if you can't be with them, hold a photo of them. Set a timer for just three minutes. Don't speak. Don't plan. Don't worry about tomorrow.**
+**Sit beside your loved one - or if you can't be with them, hold a photo of them. Set a timer for just three minutes. Don't speak. Don't plan. Don't worry about tomorrow.**
 
 Simply be in *this* moment. Notice their breathing. Notice the light in the room. Notice the weight of your own body in the chair.
 
@@ -1136,35 +1130,36 @@ Dr. Ira Byock, a palliative care physician, identifies **four things that matter
 3. *"Thank you."*
 4. *"I love you."*
 
-If you can say these—even imperfectly, even through tears—you will have given both of you a gift that transcends the grief.
+If you can say these - even imperfectly, even through tears - you will have given both of you a gift that transcends the grief.
 
 ## You Are Not Alone
 
 God is in the waiting room with you. He is not rushing your heart. He is not judging your tears. He is not disappointed by your fear. He is sitting in the chair beside you, His hand on yours, whispering, *"I know. I know. I am here."*
 
 `,
-    cta: `And if you need a human companion for this journey—someone who can hold the weight of your anticipatory grief without trying to fix it or rush it—**Becoming: 1:1 Coaching** at D'Oasis offers sustained mentorship for the in-between. Over 6 or 12 weeks, you'll have a companion for the before-the-goodbye—someone who understands that loving someone who is still here and grieving someone who is leaving can coexist in the same heart.
+    cta: `And if you need a human companion for this journey - someone who can hold the weight of your anticipatory grief without trying to fix it or rush it - **Becoming: 1:1 Coaching** at D'Oasis offers sustained mentorship for the in-between. Over 6 or 12 weeks, you'll have a companion for the before-the-goodbye - someone who understands that loving someone who is still here and grieving someone who is leaving can coexist in the same heart.
 
-*Not sure where to start? [Book a free 15-minute consultation](/booking)—you don't have to carry this alone.*
+*Not sure where to start? [Book a free 15-minute consultation](/booking) - you don't have to carry this alone.*
 
 You don't have to know how. You just have to show up. And you don't have to show up alone.
 
-*The God who holds the ending also holds the middle. And He holds you.*`
+*The God who holds the ending also holds the middle. And He holds you.*`,
   },
   {
     slug: 'grief-after-miscarriage',
     title: 'The Grief Nobody Gives You a Card For: Miscarriage and Silent Loss',
-    excerpt: 'When the loss has no name, no funeral, and no casserole on the doorstep—but the grief fills every room in your body.',
+    excerpt:
+      'When the loss has no name, no funeral, and no casserole on the doorstep - but the grief fills every room in your body.',
     category: 'Grief & Loss',
     date: 'December 10, 2025',
     readTime: '11 min read',
-    image: '/images/external/blog-miscarriage-light.jpg',
+    image: '/images/external/blog-miscarriage-light.avif',
     content: `
 # The Grief Nobody Gives You a Card For
 
 There is no Hallmark card for miscarriage. No sympathy bouquet. No bereavement leave. No one brings a casserole to your door for a baby the world never met.
 
-And yet your body—your entire being—is grieving someone. Someone you already loved. Someone you already named, or dreamed of naming. Someone whose heartbeat you heard on a tiny screen, or whose presence you felt before any machine could confirm it.
+And yet your body - your entire being - is grieving someone. Someone you already loved. Someone you already named, or dreamed of naming. Someone whose heartbeat you heard on a tiny screen, or whose presence you felt before any machine could confirm it.
 
 **Your loss is real. Your baby was real. And your grief deserves to take up space.**
 
@@ -1187,21 +1182,21 @@ Disenfranchised grief is compounded by:
 
 ## The Unique Nature of Pregnancy Loss Grief
 
-Miscarriage grief is unlike other forms of loss because the griever is mourning not just a death, but an **unlived future.** You are not grieving memories—you are grieving possibilities.
+Miscarriage grief is unlike other forms of loss because the griever is mourning not just a death, but an **unlived future.** You are not grieving memories - you are grieving possibilities.
 
 Research by Dr. Joanne Cacciatore, a leading scholar on traumatic grief, identifies several dimensions unique to pregnancy loss:
 
 ### The Loss of Identity
-You were becoming a mother (or becoming a mother again). That identity shift had already begun—hormonally, psychologically, spiritually. Miscarriage doesn't just take a baby. It takes a version of you that was already forming.
+You were becoming a mother (or becoming a mother again). That identity shift had already begun - hormonally, psychologically, spiritually. Miscarriage doesn't just take a baby. It takes a version of you that was already forming.
 
 ### The Hormonal Storm
-The body doesn't know the pregnancy has ended. Hormones designed to sustain life are still circulating, crashing, and recalibrating. The grief is not just emotional—it is **biochemical.** Your body is mourning on a cellular level.
+The body doesn't know the pregnancy has ended. Hormones designed to sustain life are still circulating, crashing, and recalibrating. The grief is not just emotional - it is **biochemical.** Your body is mourning on a cellular level.
 
 ### The Loneliness of Early Loss
 Many women experience miscarriage before they've announced the pregnancy. This means they are grieving a loss that most people in their life never knew existed. The isolation can be crushing.
 
 ### The Guilt
-Perhaps the most painful dimension: the irrational but overwhelming sense that you did something wrong. That your body failed. That if you had rested more, stressed less, eaten differently, prayed harder—it wouldn't have happened.
+Perhaps the most painful dimension: the irrational but overwhelming sense that you did something wrong. That your body failed. That if you had rested more, stressed less, eaten differently, prayed harder - it wouldn't have happened.
 
 **It was not your fault.** Your body did not fail you. Sometimes the sacred and the devastating occupy the same moment, and no amount of self-blame will change that.
 
@@ -1218,8 +1213,8 @@ For women of faith, miscarriage can create a spiritual crisis:
 These questions are not sinful. They are the cries of a heart trying to reconcile love with loss. And God is not threatened by them.
 
 The Bible speaks to the pain of barrenness and loss with remarkable tenderness:
-- **Psalm 139:13-16** affirms that God knew your child before formation—that life was held by God even in its briefest form
-- **Matthew 5:4** promises comfort to those who mourn—without qualifiers about the "size" of the loss
+- **Psalm 139:13-16** affirms that God knew your child before formation - that life was held by God even in its briefest form
+- **Matthew 5:4** promises comfort to those who mourn - without qualifiers about the "size" of the loss
 - **Jeremiah 31:15-17** acknowledges Rachel weeping for her children and then offers hope: *"There is hope for your future."*
 
 Your baby was known by God. Held by God. And no theological framework that minimizes that truth is worthy of your pain.
@@ -1256,24 +1251,25 @@ Some practical steps for the journey:
 4. **Seek professional support**: A therapist specializing in perinatal loss can help you process grief that others may not understand.
 
 `,
-    cta: `If you need a space where your baby's name can be spoken aloud—where your grief is not measured against a gestational timeline, and where your tears are met with reverence instead of platitudes—**Becoming: 1:1 Coaching** at D'Oasis offers sustained, private mentorship for this kind of sacred sorrow. Over 6 or 12 weeks, you'll have a companion who will hold your loss as carefully as you do.
+    cta: `If you need a space where your baby's name can be spoken aloud - where your grief is not measured against a gestational timeline, and where your tears are met with reverence instead of platitudes - **Becoming: 1:1 Coaching** at D'Oasis offers sustained, private mentorship for this kind of sacred sorrow. Over 6 or 12 weeks, you'll have a companion who will hold your loss as carefully as you do.
 
-*Not sure if you're ready? [Book a free 15-minute consultation](/booking)—your baby's story matters here.*
+*Not sure if you're ready? [Book a free 15-minute consultation](/booking) - your baby's story matters here.*
 
-*Your baby existed. Your love existed. And that will never, ever be nothing.*`
+*Your baby existed. Your love existed. And that will never, ever be nothing.*`,
   },
   {
     slug: 'grief-of-the-life-unlived',
-    title: 'Mourning the Life You Thought You\'d Have',
-    excerpt: 'Sometimes the deepest grief isn\'t for someone who died—it\'s for the version of your life that never came to be.',
+    title: "Mourning the Life You Thought You'd Have",
+    excerpt:
+      "Sometimes the deepest grief isn't for someone who died - it's for the version of your life that never came to be.",
     category: 'Grief & Loss',
     date: 'December 5, 2025',
     readTime: '10 min read',
-    image: '/images/external/blog-life-unlived-road.jpg',
+    image: '/images/external/blog-life-unlived-road.avif',
     content: `
 # Mourning the Life You Thought You'd Have
 
-There was a version of your life that you imagined. Maybe you saw it clearly—the career, the marriage, the family, the home, the health, the freedom. Or maybe it was more of a feeling—a quiet certainty that things would unfold a certain way.
+There was a version of your life that you imagined. Maybe you saw it clearly - the career, the marriage, the family, the home, the health, the freedom. Or maybe it was more of a feeling - a quiet certainty that things would unfold a certain way.
 
 And then they didn't.
 
@@ -1287,7 +1283,7 @@ Not with a dramatic crash, necessarily. Sometimes the dream dies in slow motion.
 
 Psychologists use the term **life scripts** to describe the internalized narratives we carry about how our lives "should" unfold. These scripts are shaped by family expectations, cultural norms, religious teachings, and our own imaginations.
 
-When reality diverges significantly from our life script, we experience what Dr. Robert Neimeyer calls **narrative disruption**—a shattering of the story we believed we were living. This disruption triggers a grief response that is just as real as grieving a death, because in a very real sense, something *did* die: the future you believed was yours.
+When reality diverges significantly from our life script, we experience what Dr. Robert Neimeyer calls **narrative disruption** - a shattering of the story we believed we were living. This disruption triggers a grief response that is just as real as grieving a death, because in a very real sense, something *did* die: the future you believed was yours.
 
 Common life-script losses include:
 
@@ -1300,15 +1296,15 @@ Common life-script losses include:
 
 ## Why This Grief Feels Illegitimate
 
-This type of loss is often dismissed—by others and by yourself—because the object of grief is intangible. You can't point to a grave. You can't show a death certificate. The loss is an absence, not a presence.
+This type of loss is often dismissed - by others and by yourself - because the object of grief is intangible. You can't point to a grave. You can't show a death certificate. The loss is an absence, not a presence.
 
 And in faith communities, this grief is especially complicated. You may have been taught:
 
-- *"God has a plan"* — which makes you feel ungrateful for questioning it
-- *"Be content in all circumstances"* — which makes your grief feel like a spiritual failure
-- *"Count your blessings"* — which turns your sorrow into a sin
+- *"God has a plan"* - which makes you feel ungrateful for questioning it
+- *"Be content in all circumstances"* - which makes your grief feel like a spiritual failure
+- *"Count your blessings"* - which turns your sorrow into a sin
 
-**But contentment is not the same as denial.** Paul wrote about contentment from a prison cell—not because he pretended the chains weren't there, but because he found peace *despite* them. Your grief for the unlived life is not a rejection of God's plan. It is an honest reckoning with reality.
+**But contentment is not the same as denial.** Paul wrote about contentment from a prison cell - not because he pretended the chains weren't there, but because he found peace *despite* them. Your grief for the unlived life is not a rejection of God's plan. It is an honest reckoning with reality.
 
 ## The Five Stages of Life-Script Grief
 
@@ -1322,7 +1318,7 @@ Drawing from Dr. Neimeyer's narrative reconstruction model, here is how this gri
 
 4. **Despair**: "It's too late." The sinking realization that some doors have closed permanently. This is often the darkest stage.
 
-5. **Reconstruction**: "Who am I now?" The slow, sacred work of writing a new story—not the one you planned, but one that is authentic to who you've become.
+5. **Reconstruction**: "Who am I now?" The slow, sacred work of writing a new story - not the one you planned, but one that is authentic to who you've become.
 
 ## A Moment of Sanctuary
 
@@ -1334,7 +1330,7 @@ Fill in both columns honestly. Notice the gaps. Notice where reality exceeded im
 
 Then, at the bottom, write:
 
-> *"I grieve the gaps. I honor the surprises. And I give myself permission to write a new chapter that no one—not even me—expected."*
+> *"I grieve the gaps. I honor the surprises. And I give myself permission to write a new chapter that no one-not even me-expected."*
 
 This is not about toxic positivity. It is about **honest reckoning** followed by gentle reinvention.
 
@@ -1342,23 +1338,24 @@ This is not about toxic positivity. It is about **honest reckoning** followed by
 
 The life you imagined was beautiful. And the grief of losing it is legitimate. But you are not finished. Your story is still being written.
 
-The woman you are now—shaped by disappointment, refined by suffering, deepened by loss—has something the woman of your imagination never had: **resilience forged in reality.**
+The woman you are now - shaped by disappointment, refined by suffering, deepened by loss - has something the woman of your imagination never had: **resilience forged in reality.**
 
 `,
-    cta: `If you are ready to grieve the old story and begin writing the new one—**The Clarity Session** at D'Oasis offers a focused, 90-minute space to name what you've lost, honor it, and begin mapping the chapter that comes next. No toxic positivity. No spiritual bypassing. Just honest reckoning and gentle reinvention.
+    cta: `If you are ready to grieve the old story and begin writing the new one - **The Clarity Session** at D'Oasis offers a focused, 90-minute space to name what you've lost, honor it, and begin mapping the chapter that comes next. No toxic positivity. No spiritual bypassing. Just honest reckoning and gentle reinvention.
 
-*Not sure where to start? [Book a free 15-minute consultation](/booking)—sometimes the first step is just saying it out loud.*
+*Not sure where to start? [Book a free 15-minute consultation](/booking) - sometimes the first step is just saying it out loud.*
 
-*The life you imagined was a seed. What grows from here may look nothing like what you planted—and it may be more beautiful than you can imagine.*`
+*The life you imagined was a seed. What grows from here may look nothing like what you planted - and it may be more beautiful than you can imagine.*`,
   },
   {
     slug: 'when-the-body-remembers',
     title: 'When the Body Remembers What the Mind Forgot',
-    excerpt: 'Your body keeps a record of everything you\'ve survived. Learning to listen to its language is the beginning of deep healing.',
+    excerpt:
+      "Your body keeps a record of everything you've survived. Learning to listen to its language is the beginning of deep healing.",
     category: 'Grief & Loss',
     date: 'November 28, 2025',
     readTime: '11 min read',
-    image: '/images/external/blog-body-remembers-water.jpg',
+    image: '/images/external/blog-body-remembers-water.avif',
     content: `
 # When the Body Remembers What the Mind Forgot
 
@@ -1374,15 +1371,15 @@ A tightness in your chest when you walk into a certain building. A wave of nause
 
 ## The Body Keeps the Score
 
-Dr. Bessel van der Kolk's groundbreaking research, published in *The Body Keeps the Score*, fundamentally changed how we understand trauma. His central finding: **trauma is stored not just in the mind, but in the body.** And the body remembers even when the conscious mind has forgotten—or chosen to forget.
+Dr. Bessel van der Kolk's groundbreaking research, published in *The Body Keeps the Score*, fundamentally changed how we understand trauma. His central finding: **trauma is stored not just in the mind, but in the body.** And the body remembers even when the conscious mind has forgotten - or chosen to forget.
 
-When you experience a traumatic event, your brain's fear center (the **amygdala**) encodes the experience as a full sensory snapshot—sights, sounds, smells, textures, body positions. This encoding bypasses the rational brain (the **prefrontal cortex**) and lodges directly in the body's nervous system.
+When you experience a traumatic event, your brain's fear center (the **amygdala**) encodes the experience as a full sensory snapshot - sights, sounds, smells, textures, body positions. This encoding bypasses the rational brain (the **prefrontal cortex**) and lodges directly in the body's nervous system.
 
 This is why:
 - A particular cologne can trigger panic decades after abuse
 - The sound of a door slamming can send your heart racing
 - A time of year can bring unexplained heaviness
-- A type of touch—even a loving one—can feel threatening
+- A type of touch - even a loving one - can feel threatening
 
 **These are not overreactions. They are the body's survival alarms, faithfully doing the job they were designed to do.**
 
@@ -1392,10 +1389,10 @@ Somatic memory refers to the way traumatic experiences are encoded in the body's
 
 - **Fragmentary**: It consists of sensations, not stories
 - **Non-linear**: It can be triggered by stimuli that have no obvious connection to the original event
-- **Pre-verbal**: It can hold experiences from before you had language—infancy, early childhood, birth trauma
+- **Pre-verbal**: It can hold experiences from before you had language - infancy, early childhood, birth trauma
 - **Persistent**: It doesn't fade with time the way narrative memory does
 
-Dr. Peter Levine, creator of Somatic Experiencing therapy, explains that trauma occurs when the body's natural fight-or-flight response is interrupted. The survival energy that was mobilized but never discharged gets **frozen in the body.** Healing, then, is not about retelling the story—it is about completing the body's interrupted response.
+Dr. Peter Levine, creator of Somatic Experiencing therapy, explains that trauma occurs when the body's natural fight-or-flight response is interrupted. The survival energy that was mobilized but never discharged gets **frozen in the body.** Healing, then, is not about retelling the story - it is about completing the body's interrupted response.
 
 ## Where Trauma Lives in the Body
 
@@ -1422,7 +1419,7 @@ Your nervous system has two primary modes:
 
 For trauma survivors, the nervous system can get **stuck** in one of these modes. You may live in a state of chronic activation (always on edge) or chronic shutdown (always exhausted, disconnected). Often, you oscillate between both.
 
-This is not a character flaw. It is your nervous system's best attempt at keeping you safe. And healing begins when you learn to gently guide your nervous system back into the **ventral vagal state**—the zone of connection, safety, and calm.
+This is not a character flaw. It is your nervous system's best attempt at keeping you safe. And healing begins when you learn to gently guide your nervous system back into the **ventral vagal state** - the zone of connection, safety, and calm.
 
 ## A Moment of Sanctuary
 
@@ -1431,7 +1428,7 @@ Try this grounding practice:
 **Stand or sit with your feet flat on the floor. Press your feet down gently. Feel the ground beneath you.**
 
 Now slowly scan your body from feet to head. Where do you feel:
-- Tension? (Don't fix it—just notice.)
+- Tension? (Don't fix it - just notice.)
 - Warmth? (Acknowledge it.)
 - Numbness? (That's information too.)
 - Movement? (Your body may want to shift, stretch, or sway. Let it.)
@@ -1456,23 +1453,24 @@ If your body is holding trauma, traditional talk therapy alone may not be suffic
 
 Your body is not the enemy of your spirit. It is **part of the temple.** The same God who made your soul also made your nervous system, your fascia, your heartbeat. He designed your body to respond to danger. And He designed it to heal.
 
-The incarnation—God becoming flesh—is the ultimate affirmation that the body matters. Jesus lived in a body. He was tired, hungry, grieved, and in pain. He knows what it is to carry weight in human bones.
+The incarnation - God becoming flesh - is the ultimate affirmation that the body matters. Jesus lived in a body. He was tired, hungry, grieved, and in pain. He knows what it is to carry weight in human bones.
 
 `,
-    cta: `If you are ready to listen to what your body has been trying to tell you—**Becoming: 1:1 Coaching** at D'Oasis offers sustained mentorship that integrates mind, soul, and body. Over 6 or 12 weeks, you'll have a guide who understands that healing is not just a conversation—it's a full-body experience.
+    cta: `If you are ready to listen to what your body has been trying to tell you - **Becoming: 1:1 Coaching** at D'Oasis offers sustained mentorship that integrates mind, soul, and body. Over 6 or 12 weeks, you'll have a guide who understands that healing is not just a conversation - it's a full-body experience.
 
-*Not sure if this is right for you? [Book a free 15-minute consultation](/booking)—your body has been waiting for you to listen.*
+*Not sure if this is right for you? [Book a free 15-minute consultation](/booking) - your body has been waiting for you to listen.*
 
-*Your body has been faithful. It carried what you could not. Now it is time to listen to its story.*`
+*Your body has been faithful. It carried what you could not. Now it is time to listen to its story.*`,
   },
   {
     slug: 'toxic-positivity-in-church',
     title: 'When "Blessed and Highly Favored" Becomes a Mask',
-    excerpt: 'What happens when your faith community only has room for your victory? The hidden cost of toxic positivity in religious spaces.',
+    excerpt:
+      'What happens when your faith community only has room for your victory? The hidden cost of toxic positivity in religious spaces.',
     category: 'Faith Deconstruction',
     date: 'November 20, 2025',
     readTime: '10 min read',
-    image: '/images/external/blog-toxic-positivity-mask.jpg',
+    image: '/images/external/blog-toxic-positivity-mask.avif',
     content: `
 # When "Blessed and Highly Favored" Becomes a Mask
 
@@ -1480,7 +1478,7 @@ The incarnation—God becoming flesh—is the ultimate affirmation that the body
 
 "Blessed and highly favored."
 
-It rolls off the tongue so easily. It's the church greeting, the default setting, the spiritual auto-reply. And sometimes, it's true. But sometimes—many times—it's a mask. A beautifully crafted, scripture-scented mask that hides a woman who is falling apart.
+It rolls off the tongue so easily. It's the church greeting, the default setting, the spiritual auto-reply. And sometimes, it's true. But sometimes - many times - it's a mask. A beautifully crafted, scripture-scented mask that hides a woman who is falling apart.
 
 **What happens when your faith community only has room for your victory?**
 
@@ -1509,13 +1507,13 @@ Research by psychologists Dr. Susan David and Dr. Todd Kashdan shows that toxic 
 You learn to hide what you actually feel. Over time, you lose access to your own emotional landscape. You become fluent in "I'm blessed" and illiterate in "I'm struggling."
 
 ### Shame Amplification
-If you're told that a positive attitude is a sign of faith, then a negative emotion becomes evidence of spiritual failure. You don't just hurt—you hurt *and* you feel ashamed for hurting.
+If you're told that a positive attitude is a sign of faith, then a negative emotion becomes evidence of spiritual failure. You don't just hurt-you hurt *and* you feel ashamed for hurting.
 
 ### Relational Disconnection
 Authentic relationship requires vulnerability. When vulnerability is met with platitudes, you learn to keep people at the surface. The community feels wide but shallow. You are surrounded but alone.
 
 ### Delayed Healing
-Emotions that are not processed don't disappear—they accumulate. What starts as manageable sadness can become clinical depression. What starts as frustration can become burnout or rage. The longer the mask stays on, the more damage accumulates beneath it.
+Emotions that are not processed don't disappear - they accumulate. What starts as manageable sadness can become clinical depression. What starts as frustration can become burnout or rage. The longer the mask stays on, the more damage accumulates beneath it.
 
 ## When Church Culture Enables It
 
@@ -1524,7 +1522,7 @@ Toxic positivity thrives in church cultures that:
 - **Equate faith with feelings**: "If you truly trusted God, you'd feel peace." Faith is not an emotion. It is a decision made in the absence of certainty.
 - **Reward testimony over truth**: The person with the dramatic "God turned it around" story gets the microphone. The person still in the middle of the mess gets silence.
 - **Confuse vulnerability with weakness**: Admitting you're struggling is seen as a lack of faith, not an act of courage.
-- **Suppress lament**: Many churches skip Psalm 88 (the only psalm that ends in darkness) and rush to Psalm 23. But the Bible contains both—and so does life.
+- **Suppress lament**: Many churches skip Psalm 88 (the only psalm that ends in darkness) and rush to Psalm 23. But the Bible contains both-and so does life.
 
 ## What Jesus Actually Modeled
 
@@ -1543,7 +1541,7 @@ The next time someone asks "How are you?" and you feel the automatic "blessed an
 
 **Ask yourself: Is this true right now? Or is this a performance?**
 
-If it's a performance, try replacing it—even privately—with a more honest answer:
+If it's a performance, try replacing it-even privately-with a more honest answer:
 
 > *"I'm here. And that's enough for today."*
 
@@ -1551,31 +1549,32 @@ You don't owe anyone your performance. Your honesty is more sacred than your ple
 
 ## Beyond the Mask
 
-Healing begins when you give yourself permission to take off the mask. Not with everyone—not in every space. But somewhere. With someone.
+Healing begins when you give yourself permission to take off the mask. Not with everyone - not in every space. But somewhere. With someone.
 
 `,
-    cta: `If your faith community only has room for your highlight reel, that is not community—it is an audience. And you deserve more than applause. You deserve witnesses.
+    cta: `If your faith community only has room for your highlight reel, that is not community - it is an audience. And you deserve more than applause. You deserve witnesses.
 
-**Restoration Circles** at D'Oasis offers a monthly gathering where "I'm not okay" is a complete sentence. In the circle, your struggle is not a sign of spiritual failure—it is a sign of your humanity. Surrounded by women who refuse to perform, you'll find the authentic community that toxic positivity stole from you.
+**Restoration Circles** at D'Oasis offers a monthly gathering where "I'm not okay" is a complete sentence. In the circle, your struggle is not a sign of spiritual failure - it is a sign of your humanity. Surrounded by women who refuse to perform, you'll find the authentic community that toxic positivity stole from you.
 
-*Prefer one-on-one support? [Book a free 15-minute consultation](/booking)—we'll find the right fit for where you are.*
+*Prefer one-on-one support? [Book a free 15-minute consultation](/booking) - we'll find the right fit for where you are.*
 
-*The mask is heavy. You can set it down here.*`
+*The mask is heavy. You can set it down here.*`,
   },
   {
     slug: 'purity-culture-aftermath',
-    title: 'The Aftermath of Purity Culture on a Woman\'s Soul',
-    excerpt: 'The damage doesn\'t end when you leave the youth group. How purity culture rewires shame into your body and what it takes to heal.',
+    title: "The Aftermath of Purity Culture on a Woman's Soul",
+    excerpt:
+      "The damage doesn't end when you leave the youth group. How purity culture rewires shame into your body and what it takes to heal.",
     category: 'Faith Deconstruction',
     date: 'November 15, 2025',
     readTime: '12 min read',
-    image: '/images/external/blog-purity-culture-glass.jpg',
+    image: '/images/external/blog-purity-culture-glass.avif',
     content: `
 # The Aftermath of Purity Culture on a Woman's Soul
 
 They gave you a rose and passed it around the room until the petals fell off. They told you that each sexual experience would take a piece of you until there was nothing left to give. They made you sign a pledge card at fourteen, promising your body to a future husband you hadn't yet met.
 
-And now, years later—married or not—you carry the wreckage.
+And now, years later - married or not - you carry the wreckage.
 
 **Purity culture didn't protect you. It branded you.** And the scars are still showing up in your relationships, your body image, your sexuality, and your relationship with God.
 
@@ -1583,7 +1582,7 @@ And now, years later—married or not—you carry the wreckage.
 
 ## What Was "Purity Culture"?
 
-Purity culture refers to the evangelical movement of the 1990s and 2000s that emphasized sexual abstinence before marriage—not merely as a moral guideline, but as a **central measure of a woman's worth.** Books like *I Kissed Dating Goodbye* and programs like "True Love Waits" taught an entire generation that:
+Purity culture refers to the evangelical movement of the 1990s and 2000s that emphasized sexual abstinence before marriage - not merely as a moral guideline, but as a **central measure of a woman's worth.** Books like *I Kissed Dating Goodbye* and programs like "True Love Waits" taught an entire generation that:
 
 - A woman's value was directly tied to her sexual history
 - Any sexual thought, feeling, or experience outside of marriage was sinful
@@ -1596,30 +1595,30 @@ Purity culture refers to the evangelical movement of the 1990s and 2000s that em
 Researcher Dr. Linda Kay Klein, in her book *Pure*, documented the lasting effects of purity culture on women. Her findings include:
 
 ### Chronic Shame
-Purity culture teaches that the body—especially the female body—is a source of temptation and sin. This creates a **shame architecture** that becomes foundational to identity. You don't just feel ashamed of certain actions—you feel ashamed of being a sexual being at all.
+Purity culture teaches that the body - especially the female body - is a source of temptation and sin. This creates a **shame architecture** that becomes foundational to identity. You don't just feel ashamed of certain actions - you feel ashamed of being a sexual being at all.
 
 ### Sexual Dysfunction
 Many women raised in purity culture experience difficulty with sexual intimacy even within marriage. The brain was trained for years to associate sexuality with danger, sin, and shame. A wedding ceremony cannot undo decades of neurological conditioning.
 
 ### Anxiety and Hypervigilance
-Constant monitoring of your own body, clothing, thoughts, and boundaries creates a state of chronic hypervigilance. You learned to scan every situation for sexual danger—not from others, but from yourself.
+Constant monitoring of your own body, clothing, thoughts, and boundaries creates a state of chronic hypervigilance. You learned to scan every situation for sexual danger - not from others, but from yourself.
 
 ### Loss of Bodily Autonomy
 When you're taught that your body belongs to God, then to your future husband, and that its primary purpose is to avoid causing men to sin, you lose the sense that **your body is yours.** This loss of ownership can make it difficult to set boundaries, recognize your own desires, or say "no."
 
 ### Distorted View of God
-Perhaps most devastatingly, purity culture distorted the image of God into a cosmic scorekeeper—one who is primarily concerned with your sexual behavior. This replaces a God of grace with a God of surveillance.
+Perhaps most devastatingly, purity culture distorted the image of God into a cosmic scorekeeper - one who is primarily concerned with your sexual behavior. This replaces a God of grace with a God of surveillance.
 
-## The Theology of the Body—Reclaimed
+## The Theology of the Body-Reclaimed
 
 Here is a radical truth that purity culture never taught you: **Your body is not a problem to be solved. It is a gift to be inhabited.**
 
 Scripture speaks of the body with far more tenderness than the purity movement allowed:
 
-- **Song of Solomon** celebrates sexual desire, mutual pleasure, and bodily delight between partners—without shame
-- **Genesis 1:31** declares that God looked at everything He had made—including the human body—and called it *very good*
-- **1 Corinthians 6:19-20** calls the body a temple—not a cage. Temples are honored, not controlled through fear
-- **Psalm 139:14** proclaims, "I am fearfully and wonderfully made"—all of you, including the parts you were taught to hide
+- **Song of Solomon** celebrates sexual desire, mutual pleasure, and bodily delight between partners - without shame
+- **Genesis 1:31** declares that God looked at everything He had made - including the human body - and called it *very good*
+- **1 Corinthians 6:19-20** calls the body a temple - not a cage. Temples are honored, not controlled through fear
+- **Psalm 139:14** proclaims, "I am fearfully and wonderfully made" - all of you, including the parts you were taught to hide
 
 God is not disgusted by your body. He designed it. He lives in it. And He delights in it.
 
@@ -1627,7 +1626,7 @@ God is not disgusted by your body. He designed it. He lives in it. And He deligh
 
 Try this practice of reclamation:
 
-**Stand in front of a mirror. Look at your body—not critically, not sexually, but with the same compassion you would offer a friend.**
+**Stand in front of a mirror. Look at your body - not critically, not sexually, but with the same compassion you would offer a friend.**
 
 Place your hand over your heart and say:
 
@@ -1637,29 +1636,30 @@ If tears come, let them. They are the release of a burden you were never meant t
 
 ## The Road to Healing
 
-Healing from purity culture is not a rejection of faith—it is a **reclamation of it.** It involves:
+Healing from purity culture is not a rejection of faith - it is a **reclamation of it.** It involves:
 
-1. **Naming the harm**: Acknowledging that purity culture was not just conservative values—it was a system that caused measurable psychological damage
+1. **Naming the harm**: Acknowledging that purity culture was not just conservative values - it was a system that caused measurable psychological damage
 2. **Separating God from the system**: The God who created pleasure, desire, and connection is not the same God who was used to suppress them
 3. **Reconnecting with your body**: Learning to listen to your body's signals with curiosity instead of fear
 4. **Educating yourself**: Reading work by Dr. Tina Schermer Sellers (*Shameless*), Nadia Bolz-Weber (*Shameless*), and Linda Kay Klein (*Pure*)
 5. **Seeking therapy**: A therapist trained in religious trauma and sexuality can help rewire shame-based neural pathways
 
 `,
-    cta: `If you need a space where your body is not policed, where your sexuality is not shamed, and where your questions about purity culture are met with compassion instead of correction—**Becoming: 1:1 Coaching** at D'Oasis offers deep, personalized mentorship for women healing from shame that was woven into their bodies. Over 6 or 12 weeks, you'll have a companion who understands that this work is not surface-level—it's cellular.
+    cta: `If you need a space where your body is not policed, where your sexuality is not shamed, and where your questions about purity culture are met with compassion instead of correction - **Becoming: 1:1 Coaching** at D'Oasis offers deep, personalized mentorship for women healing from shame that was woven into their bodies. Over 6 or 12 weeks, you'll have a companion who understands that this work is not surface-level - it's cellular.
 
-*Not sure where to begin? [Book a free 15-minute consultation](/booking)—your body is welcome here. All of it.*
+*Not sure where to begin? [Book a free 15-minute consultation](/booking) - your body is welcome here. All of it.*
 
-*You were never dirty. You were always whole.*`
+*You were never dirty. You were always whole.*`,
   },
   {
     slug: 'forgiving-god',
     title: 'The Prayer Nobody Teaches You: Forgiving God',
-    excerpt: 'What happens when God is the one who disappointed you? The sacred, terrifying work of rebuilding trust with the Almighty.',
+    excerpt:
+      'What happens when God is the one who disappointed you? The sacred, terrifying work of rebuilding trust with the Almighty.',
     category: 'Faith Deconstruction',
     date: 'November 10, 2025',
     readTime: '11 min read',
-    image: '/images/external/blog-forgiving-god-sky.jpg',
+    image: '/images/external/blog-forgiving-god-sky.avif',
     content: `
 # The Prayer Nobody Teaches You: Forgiving God
 
@@ -1673,7 +1673,7 @@ But here it is, the prayer that millions of believers carry silently:
 
 ## The Unspoken Disappointment
 
-They taught you that God is good. That He has a plan. That He works all things together for good. And you believed it—deeply, completely, with the full faith of someone who had not yet been devastated.
+They taught you that God is good. That He has a plan. That He works all things together for good. And you believed it - deeply, completely, with the full faith of someone who had not yet been devastated.
 
 And then the devastation came.
 
@@ -1683,13 +1683,13 @@ And in the rubble, lying next to your shattered expectations, was a question you
 
 ## The Problem of Theodicy
 
-Theologians call this the **problem of theodicy**—the attempt to reconcile the existence of a good, all-powerful God with the reality of suffering. It's one of the oldest philosophical questions in human history, and it remains one of the most agonizing.
+Theologians call this the **problem of theodicy** - the attempt to reconcile the existence of a good, all-powerful God with the reality of suffering. It's one of the oldest philosophical questions in human history, and it remains one of the most agonizing.
 
 The classic formulation, attributed to Epicurus:
 
 *"Is God willing to prevent evil, but not able? Then He is not omnipotent. Is He able, but not willing? Then He is malevolent. Is He both able and willing? Then whence comes evil?"*
 
-For the person in the pew, theodicy isn't philosophical—it's personal. It's the mother burying her child. It's the woman who prayed faithfully for healing and watched her husband die anyway. It's the girl who asked God to protect her and was abused by the man in the pulpit.
+For the person in the pew, theodicy isn't philosophical - it's personal. It's the mother burying her child. It's the woman who prayed faithfully for healing and watched her husband die anyway. It's the girl who asked God to protect her and was abused by the man in the pulpit.
 
 **Your disappointment with God is not a failure of faith. It is the natural consequence of loving a God whose ways you cannot always understand.**
 
@@ -1721,7 +1721,7 @@ These are not the words of people who lacked faith. These are the words of peopl
 
 If you are carrying anger toward God, try this practice:
 
-**Write a letter to God. Not a prayer—a letter.**
+**Write a letter to God. Not a prayer - a letter.**
 
 Tell Him exactly what you're feeling. Be specific. Be angry. Be devastated. Hold nothing back.
 
@@ -1736,33 +1736,34 @@ You may find that the honesty opens a door you thought was sealed shut.
 Rebuilding trust with God after disappointment is the hardest spiritual work there is. It requires:
 
 - **Sitting in the dark**: Resisting the urge to rush toward certainty. Sometimes faith lives in the question, not the answer.
-- **Lowering your theology**: Releasing the need for God to be explainable. The God of the Bible is mysterious, wild, and un-containable—and that is both terrifying and true.
+- **Lowering your theology**: Releasing the need for God to be explainable. The God of the Bible is mysterious, wild, and un-containable - and that is both terrifying and true.
 - **Finding God in the wreckage**: Looking for divine presence not in the miracle that didn't happen, but in the sustaining grace that kept you breathing through it.
 - **Accepting a different relationship**: The God you trusted before the crisis may not be the God you know after it. And the after-God may be more real, more rugged, and more reliable than the before-God ever was.
 
 `,
-    cta: `If you need a space where disappointment with God is not treated as blasphemy—**The Clarity Session** at D'Oasis offers a focused, 90-minute space to process what's burning in you. Name the anger. Sit in the questions. Find the God who can handle your honesty.
+    cta: `If you need a space where disappointment with God is not treated as blasphemy - **The Clarity Session** at D'Oasis offers a focused, 90-minute space to process what's burning in you. Name the anger. Sit in the questions. Find the God who can handle your honesty.
 
-*Not sure if you're ready? [Book a free 15-minute consultation](/booking)—your anger is welcome here, and so are your questions.*
+*Not sure if you're ready? [Book a free 15-minute consultation](/booking) - your anger is welcome here, and so are your questions.*
 
-*You have not lost your faith. You have outgrown the container it was in.*`
+*You have not lost your faith. You have outgrown the container it was in.*`,
   },
   {
     slug: 'faith-after-trauma',
     title: 'When Trauma Rewrites Your Theology',
-    excerpt: 'You used to believe certain things about God. Then life happened. How to rebuild faith on the other side of devastation.',
+    excerpt:
+      'You used to believe certain things about God. Then life happened. How to rebuild faith on the other side of devastation.',
     category: 'Faith Deconstruction',
     date: 'November 5, 2025',
     readTime: '11 min read',
-    image: '/images/external/blog-faith-after-trauma-crack.jpg',
+    image: '/images/external/blog-faith-after-trauma-crack.avif',
     content: `
 # When Trauma Rewrites Your Theology
 
-Before the trauma, your faith had a shape. It was organized, predictable, comforting. You knew where God was. You knew what He expected. You knew the rules, and you followed them—confident that the rules would protect you.
+Before the trauma, your faith had a shape. It was organized, predictable, comforting. You knew where God was. You knew what He expected. You knew the rules, and you followed them - confident that the rules would protect you.
 
 And then something happened that the rules couldn't prevent. Something that your theology had no answer for. Something that broke the container of everything you believed.
 
-**Trauma doesn't just change what happened to you. It changes what you believe about everything—including God.**
+**Trauma doesn't just change what happened to you. It changes what you believe about everything - including God.**
 
 ---
 
@@ -1790,17 +1791,17 @@ The old framework crumbles. You can't pray the way you used to. Scripture that o
 This is not backsliding. This is your theology honestly responding to new data.
 
 ### Stage 2: The Wilderness
-You may walk away from church, from prayer, from everything that once defined your spiritual identity. This season can last weeks, months, or years. It feels like God has disappeared—but often, what has disappeared is the *image* of God you constructed before the trauma.
+You may walk away from church, from prayer, from everything that once defined your spiritual identity. This season can last weeks, months, or years. It feels like God has disappeared - but often, what has disappeared is the *image* of God you constructed before the trauma.
 
 ### Stage 3: Excavation
 You begin to sift through the rubble. What do you still believe? What was never yours to believe? What was cultural? What was personal? What was God, and what was the system built around God?
 
 ### Stage 4: Reconstruction
-Slowly, a new faith emerges—one that is less certain but more honest. Less performative but more resilient. Less comfortable but more real. The God on the other side of trauma is often quieter, gentler, and far more mysterious than the one before.
+Slowly, a new faith emerges - one that is less certain but more honest. Less performative but more resilient. Less comfortable but more real. The God on the other side of trauma is often quieter, gentler, and far more mysterious than the one before.
 
 ## Post-Traumatic Growth and Faith
 
-Psychologists Dr. Richard Tedeschi and Dr. Lawrence Calhoun coined the concept of **Post-Traumatic Growth (PTG)**—the idea that significant psychological struggle can lead to profound personal development. PTG includes:
+Psychologists Dr. Richard Tedeschi and Dr. Lawrence Calhoun coined the concept of **Post-Traumatic Growth (PTG)** - the idea that significant psychological struggle can lead to profound personal development. PTG includes:
 
 - Greater appreciation for life
 - Deeper relationships
@@ -1808,13 +1809,13 @@ Psychologists Dr. Richard Tedeschi and Dr. Lawrence Calhoun coined the concept o
 - Discovery of new possibilities
 - *Spiritual change*
 
-Note that spiritual change is listed—not spiritual destruction. Many trauma survivors report that while their theology changed dramatically, their **spirituality deepened.** They lost the religion but kept the relationship. They lost the certainty but found mystery. They lost the performance but found presence.
+Note that spiritual change is listed - not spiritual destruction. Many trauma survivors report that while their theology changed dramatically, their **spirituality deepened.** They lost the religion but kept the relationship. They lost the certainty but found mystery. They lost the performance but found presence.
 
 ## Re-reading Scripture Through Trauma
 
 After trauma, you may need to re-read the Bible not as a textbook with answers, but as a **story full of wounded people who kept reaching for God.**
 
-- **Job** questioned God's justice and was never given an explanation—only presence
+- **Job** questioned God's justice and was never given an explanation - only presence
 - **David** wrote psalms from caves, on the run, betrayed and bleeding
 - **Elijah** ran from threats, collapsed under a tree, and asked God to let him die
 - **Paul** begged three times for his "thorn" to be removed. It wasn't. God said, "My grace is sufficient."
@@ -1826,9 +1827,9 @@ After trauma, you may need to re-read the Bible not as a textbook with answers, 
 
 If your theology has been rewritten by trauma, try this:
 
-**Take a blank piece of paper. Write at the top: "What I Used to Believe." List everything—about God, about life, about yourself—that you believed before the trauma.**
+**Take a blank piece of paper. Write at the top: "What I Used to Believe." List everything-about God, about life, about yourself-that you believed before the trauma.**
 
-Then take a second page. Write: "What I Know Now." Fill it in with whatever comes—even if it's short, fragmented, or uncertain.
+Then take a second page. Write: "What I Know Now." Fill it in with whatever comes-even if it's short, fragmented, or uncertain.
 
 Now look at the second list. Those fragments are not the ashes of your faith. They are the **foundation** of what comes next.
 
@@ -1841,24 +1842,25 @@ The faith that survives trauma is not the same faith that existed before it. And
 The God who meets you in the aftermath is not the God of power anthems and triumphant worship songs. He is the God of the whisper (1 Kings 19:12). The God who sits with you in the ashes (Job 2:13). The God who weeps at the grave even though He has the power to resurrect (John 11:35).
 
 `,
-    cta: `If your theology has been rewritten and you need help reading the new text—**Becoming: 1:1 Coaching** at D'Oasis offers sustained mentorship for women rebuilding faith after trauma. Over 6 or 12 weeks, you'll have a companion who knows that doubt is discipleship and questions are holy—and who won't rush you toward certainty before you're ready.
+    cta: `If your theology has been rewritten and you need help reading the new text-**Becoming: 1:1 Coaching** at D'Oasis offers sustained mentorship for women rebuilding faith after trauma. Over 6 or 12 weeks, you'll have a companion who knows that doubt is discipleship and questions are holy-and who won't rush you toward certainty before you're ready.
 
-*Not sure where to start? [Book a free 15-minute consultation](/booking)—the first step is just showing up.*
+*Not sure where to start? [Book a free 15-minute consultation](/booking)-the first step is just showing up.*
 
-*The faith that emerges from the fire is the faith that lasts.*`
+*The faith that emerges from the fire is the faith that lasts.*`,
   },
   {
     slug: 'motherhood-identity-loss',
     title: 'The Woman I Was Before Children: Motherhood and Identity Loss',
-    excerpt: 'Nobody told you that becoming a mother would mean losing the woman you were. The psychology of matrescence and the sacred work of reclaiming yourself.',
+    excerpt:
+      'Nobody told you that becoming a mother would mean losing the woman you were. The psychology of matrescence and the sacred work of reclaiming yourself.',
     category: 'Identity',
     date: 'October 28, 2025',
     readTime: '11 min read',
-    image: '/images/external/blog-motherhood-identity-mirror.jpg',
+    image: '/images/external/blog-motherhood-identity-mirror.avif',
     content: `
 # The Woman I Was Before Children
 
-There is a photo of you somewhere—taken before the children. Your eyes are different in it. Not necessarily happier. Just... freer. There is a lightness there, an unencumbered quality that you can barely remember.
+There is a photo of you somewhere-taken before the children. Your eyes are different in it. Not necessarily happier. Just... freer. There is a lightness there, an unencumbered quality that you can barely remember.
 
 You love your children. Fiercely, completely, without reservation. But sometimes, late at night or in the stolen minutes of a locked bathroom, you feel a grief that has no name. A mourning for the woman you were before you became "Mom."
 
@@ -1868,20 +1870,20 @@ You love your children. Fiercely, completely, without reservation. But sometimes
 
 ## What Is Matrescence?
 
-The term **matrescence** was coined by anthropologist Dana Raphael in the 1970s and has been revived by reproductive psychiatrist **Dr. Alexandra Sacks.** It describes the developmental transition a woman undergoes when she becomes a mother—comparable in scope and intensity to adolescence.
+The term **matrescence** was coined by anthropologist Dana Raphael in the 1970s and has been revived by reproductive psychiatrist **Dr. Alexandra Sacks.** It describes the developmental transition a woman undergoes when she becomes a mother-comparable in scope and intensity to adolescence.
 
 Just as adolescence transforms a child into an adult through hormonal shifts, identity confusion, and social renegotiation, matrescence transforms a woman into a mother. And just like adolescence, it is **messy, disorienting, and profoundly identity-altering.**
 
 The key dimensions of matrescence include:
 
 ### Neurological Rewiring
-Research by Dr. Elseline Hoekzema found that pregnancy literally restructures the brain. Gray matter changes in regions associated with social cognition—the ability to understand others' needs and emotions. These changes persist for at least two years postpartum. Your brain is not the same brain you had before. It was redesigned for attachment.
+Research by Dr. Elseline Hoekzema found that pregnancy literally restructures the brain. Gray matter changes in regions associated with social cognition-the ability to understand others' needs and emotions. These changes persist for at least two years postpartum. Your brain is not the same brain you had before. It was redesigned for attachment.
 
 ### Hormonal Upheaval
-The hormonal shifts of pregnancy, birth, and postpartum are among the most dramatic the body ever experiences—rivaling puberty and menopause. Estrogen, progesterone, oxytocin, and cortisol are in constant flux, affecting mood, cognition, sleep, and sense of self.
+The hormonal shifts of pregnancy, birth, and postpartum are among the most dramatic the body ever experiences-rivaling puberty and menopause. Estrogen, progesterone, oxytocin, and cortisol are in constant flux, affecting mood, cognition, sleep, and sense of self.
 
 ### Identity Ambivalence
-This is the core wound of matrescence: the tension between loving your child and missing yourself. It does not mean you regret becoming a mother. It means two things are true simultaneously—and our culture has no language for that.
+This is the core wound of matrescence: the tension between loving your child and missing yourself. It does not mean you regret becoming a mother. It means two things are true simultaneously-and our culture has no language for that.
 
 ### Relational Shifts
 Friendships change. Marriage changes. Your relationship with your own mother changes. Some relationships deepen; others fade. The social renegotiation can feel like a second loss.
@@ -1899,9 +1901,9 @@ Maternal identity loss is one of the most silenced experiences in modern culture
 
 Scripture honors the transformations of motherhood while also acknowledging its costs:
 
-- **Hannah** wept in the temple, and her grief was so raw that Eli mistook her for drunk (1 Samuel 1:13). Her desire for a child consumed her—and after she received Samuel, she gave him back to God. The giving and the aching coexisted.
-- **Mary** was told she would bear the Savior, and her response was courageous—but Simeon also warned her: "A sword will pierce your own soul too" (Luke 2:35). Motherhood, even at its most sacred, costs something.
-- **The Proverbs 31 woman**—so often used to pressure mothers—is actually a poem of celebration, not a job description. She is praised for her enterprise, her wisdom, her strength—not just her caregiving.
+- **Hannah** wept in the temple, and her grief was so raw that Eli mistook her for drunk (1 Samuel 1:13). Her desire for a child consumed her-and after she received Samuel, she gave him back to God. The giving and the aching coexisted.
+- **Mary** was told she would bear the Savior, and her response was courageous-but Simeon also warned her: "A sword will pierce your own soul too" (Luke 2:35). Motherhood, even at its most sacred, costs something.
+- **The Proverbs 31 woman**-so often used to pressure mothers-is actually a poem of celebration, not a job description. She is praised for her enterprise, her wisdom, her strength-not just her caregiving.
 
 **God does not ask you to disappear into motherhood. He asks you to bring your whole self to it.**
 
@@ -1922,26 +1924,28 @@ Read the list back to yourself and say:
 The woman you were before children is not gone. She is buried under diapers and school schedules and meal plans and mental loads. But she is there. And she deserves to be found.
 
 `,
-    cta: `If you need a space where you can grieve the identity you lost without being told you should be grateful—**Becoming: 1:1 Coaching** at D'Oasis offers a personalized, 6- or 12-week journey for mothers navigating the sacred and terrifying work of reclaiming themselves. Here, the complexity of motherhood is honored, not flattened—and you are seen as a whole woman, not just a role.
+    cta: `If you need a space where you can grieve the identity you lost without being told you should be grateful-**Becoming: 1:1 Coaching** at D'Oasis offers a personalized, 6- or 12-week journey for mothers navigating the sacred and terrifying work of reclaiming themselves. Here, the complexity of motherhood is honored, not flattened-and you are seen as a whole woman, not just a role.
 
-*Not sure where to start? [Book a free 15-minute consultation](/booking)—the first act of reclamation is asking for space.*
+*Not sure where to start? [Book a free 15-minute consultation](/booking)-the first act of reclamation is asking for space.*
 
-*You did not lose yourself. You are becoming someone new. And you get to decide who that is.*`
+*You did not lose yourself. You are becoming someone new. And you get to decide who that is.*`,
   },
   {
     slug: 'people-pleasing-as-survival',
-    title: 'People-Pleasing Is Not a Personality Trait—It\'s a Survival Strategy',
-    excerpt: 'You call yourself a people-pleaser like it\'s a quirk. But what if it\'s not a personality trait—it\'s a trauma response?',
+    title:
+      "People-Pleasing Is Not a Personality Trait—It's a Survival Strategy",
+    excerpt:
+      "You call yourself a people-pleaser like it's a quirk. But what if it's not a personality trait—it's a trauma response?",
     category: 'Identity',
     date: 'October 20, 2025',
     readTime: '10 min read',
-    image: '/images/external/blog-people-pleasing-hands.jpg',
+    image: '/images/external/blog-people-pleasing-hands.avif',
     content: `
-# People-Pleasing Is Not a Personality Trait—It's a Survival Strategy
+# People-Pleasing Is Not a Personality Trait-It's a Survival Strategy
 
 You say yes when you mean no. You apologize for things that aren't your fault. You anticipate other people's needs before they even ask. You rearrange your life to make others comfortable, and you do it all with a smile that nobody questions.
 
-You call yourself a "people-pleaser" like it's a cute quirk—something to put on a dating profile or joke about at brunch.
+You call yourself a "people-pleaser" like it's a cute quirk-something to put on a dating profile or joke about at brunch.
 
 But what if it's not a personality trait at all? **What if it's a survival strategy your nervous system built to keep you safe?**
 
@@ -1949,7 +1953,7 @@ But what if it's not a personality trait at all? **What if it's a survival strat
 
 ## The Fawn Response
 
-Most people know about fight, flight, and freeze—the three classic trauma responses. But therapist **Pete Walker** identified a fourth: **fawn.**
+Most people know about fight, flight, and freeze-the three classic trauma responses. But therapist **Pete Walker** identified a fourth: **fawn.**
 
 The fawn response is the survival strategy of **appeasing the threat.** When fighting is too dangerous, fleeing is impossible, and freezing doesn't work, the nervous system learns to survive by becoming whatever the threatening person needs.
 
@@ -1982,7 +1986,7 @@ This becomes wired into the nervous system. Even decades later, even in safe rel
 In many faith communities, the fawn response is not only accepted—it is celebrated:
 
 - **"Deny yourself, take up your cross, and follow me"** (Matthew 16:24) is used to validate self-erasure
-- **Servanthood** is elevated to the highest virtue—but when servanthood costs you your identity, it has become slavery
+- **Servanthood** is elevated to the highest virtue-but when servanthood costs you your identity, it has become slavery
 - **"The greatest among you shall be your servant"** (Matthew 23:11) is weaponized to keep women small, quiet, and compliant
 - **Submission** is taught as a spiritual discipline without distinguishing between healthy deference and pathological self-abandonment
 
@@ -1994,7 +1998,7 @@ Long-term people-pleasing exacts a severe psychological toll:
 
 - **Resentment**: You give and give until resentment builds. But because you can't express anger (that was never safe), the resentment turns inward and becomes depression.
 - **Identity erosion**: You've spent so long being what others need that you've lost track of who you actually are. When asked "What do you want?" you go blank.
-- **Burnout**: You are exhausted because you are running two operating systems simultaneously—your own needs and everyone else's. The machine was never built for this load.
+- **Burnout**: You are exhausted because you are running two operating systems simultaneously-your own needs and everyone else's. The machine was never built for this load.
 - **Relational dysfunction**: Relationships built on fawning are inherently unequal. You attract people who take, because your nervous system is calibrated for givers-who-lose.
 
 ## A Moment of Sanctuary
@@ -2018,20 +2022,21 @@ Recovery from people-pleasing is not about becoming selfish. It is about becomin
 Dr. Murray Bowen's concept of **self-differentiation** describes the ability to maintain your own sense of self while remaining emotionally connected to others. It is the opposite of enmeshment. And it is the work of a lifetime.
 
 `,
-    cta: `If you are ready to stop performing safety and start living freely—**Becoming: 1:1 Coaching** at D'Oasis offers sustained mentorship for women unlearning the fawn response. Over 6 or 12 weeks, you'll have a companion who honors your "no" and helps you build an identity that is not contingent on your usefulness.
+    cta: `If you are ready to stop performing safety and start living freely-**Becoming: 1:1 Coaching** at D'Oasis offers sustained mentorship for women unlearning the fawn response. Over 6 or 12 weeks, you'll have a companion who honors your "no" and helps you build an identity that is not contingent on your usefulness.
 
-*Not sure if you're ready? [Book a free 15-minute consultation](/booking)—saying yes to this call is already a different kind of yes.*
+*Not sure if you're ready? [Book a free 15-minute consultation](/booking)-saying yes to this call is already a different kind of yes.*
 
-*You are not your usefulness. You are not your compliance. You are yourself. And that is enough.*`
+*You are not your usefulness. You are not your compliance. You are yourself. And that is enough.*`,
   },
   {
     slug: 'reclaiming-your-story',
     title: 'Reclaiming Your Story When Others Have Written It for You',
-    excerpt: 'Your family named you. Your culture defined you. Your trauma limited you. But you are the author now. And the pen is in your hand.',
+    excerpt:
+      'Your family named you. Your culture defined you. Your trauma limited you. But you are the author now. And the pen is in your hand.',
     category: 'Identity',
     date: 'October 15, 2025',
     readTime: '10 min read',
-    image: '/images/external/blog-reclaiming-story-book.jpg',
+    image: '/images/external/blog-reclaiming-story-book.avif',
     content: `
 # Reclaiming Your Story When Others Have Written It for You
 
@@ -2039,7 +2044,7 @@ You have been told who you are your entire life.
 
 Your family gave you a role: the responsible one, the quiet one, the strong one, the difficult one. Your culture gave you a script: how to behave, what to want, who to become. Your trauma gave you a label: damaged, broken, too much, not enough.
 
-And somewhere along the way, you started believing the story other people wrote about you—even when it didn't fit. Even when it hurt. Even when it buried the truest parts of who you are.
+And somewhere along the way, you started believing the story other people wrote about you-even when it didn't fit. Even when it hurt. Even when it buried the truest parts of who you are.
 
 **But here is the truth no one told you: you are not a character in someone else's narrative. You are the author of your own.**
 
@@ -2047,7 +2052,7 @@ And somewhere along the way, you started believing the story other people wrote 
 
 ## Narrative Identity Theory
 
-Psychologist **Dr. Dan McAdams** has spent decades researching what he calls **narrative identity**—the internalized, evolving story you construct about your life. According to McAdams, we all create a personal mythology that gives our life meaning, coherence, and purpose.
+Psychologist **Dr. Dan McAdams** has spent decades researching what he calls **narrative identity**-the internalized, evolving story you construct about your life. According to McAdams, we all create a personal mythology that gives our life meaning, coherence, and purpose.
 
 The problem is that much of this story was written before we had the power to write it ourselves. Key elements of our identity narrative are inherited from:
 
@@ -2056,22 +2061,22 @@ The problem is that much of this story was written before we had the power to wr
 - **Religious messaging**: "You are a sinner saved by grace." "Your purpose is to serve." "Who are you to question?"
 - **Traumatic experiences**: "I am what happened to me." "I am defined by my worst moment." "I am beyond repair."
 
-These narratives become **dominant stories**—the loudest voices in the room of your identity. And they can drown out the quieter, truer story trying to emerge.
+These narratives become **dominant stories**-the loudest voices in the room of your identity. And they can drown out the quieter, truer story trying to emerge.
 
 ## Narrative Therapy: Reauthoring Your Life
 
-**Michael White** and **David Epston**, founders of **Narrative Therapy**, developed a revolutionary approach: the idea that the person is not the problem—the problem is the problem. And the solution begins with separating yourself from the stories that have been imposed on you.
+**Michael White** and **David Epston**, founders of **Narrative Therapy**, developed a revolutionary approach: the idea that the person is not the problem-the problem is the problem. And the solution begins with separating yourself from the stories that have been imposed on you.
 
 Key principles:
 
 ### Externalization
-Instead of saying "I am anxious," you learn to say "Anxiety visits me." This distinction is powerful. It takes the problem out of your identity and puts it beside you—where you can examine it, question it, and eventually choose how to respond to it.
+Instead of saying "I am anxious," you learn to say "Anxiety visits me." This distinction is powerful. It takes the problem out of your identity and puts it beside you-where you can examine it, question it, and eventually choose how to respond to it.
 
 ### Unique Outcomes
 These are moments in your life when the dominant story was contradicted. Times when you were brave, even though the family narrative said you were weak. Times when you spoke up, even though you were told to be quiet. These moments are evidence that the dominant story is not the whole story.
 
 ### Re-authoring
-Using unique outcomes as proof, you begin writing a new narrative—one that is more accurate, more compassionate, and more aligned with who you actually are. This is not denial. It is **correction.** The old story was incomplete. The new story includes the parts that were left out.
+Using unique outcomes as proof, you begin writing a new narrative-one that is more accurate, more compassionate, and more aligned with who you actually are. This is not denial. It is **correction.** The old story was incomplete. The new story includes the parts that were left out.
 
 ## When Religion Wrote Your Story
 
@@ -2082,9 +2087,9 @@ For many women of faith, the most powerful narratives were written by religious 
 - "Ambition in a woman is pride. Contentment is godliness."
 - "Your body is a stumbling block. Cover it. Control it. Apologize for it."
 
-These stories are not just cultural—they feel **divine.** And confronting them feels like confronting God Himself.
+These stories are not just cultural-they feel **divine.** And confronting them feels like confronting God Himself.
 
-But God did not write those stories. **People did.** And the God who knit you together in the womb (Psalm 139:13) did not make a mistake in your design. The creativity, the ambition, the fire, the questions—those are not flaws. They are features.
+But God did not write those stories. **People did.** And the God who knit you together in the womb (Psalm 139:13) did not make a mistake in your design. The creativity, the ambition, the fire, the questions-those are not flaws. They are features.
 
 ## A Moment of Sanctuary
 
@@ -2095,10 +2100,10 @@ Try this re-authoring exercise:
 - "I am not leadership material."
 - "I will always struggle."
 
-Now, for each one, find a **unique outcome**—a time when that story was proven wrong:
-- "I am too sensitive" → "My sensitivity allowed me to notice my friend was in pain when no one else did."
-- "I am not leadership material" → "I organized the entire family reunion when no one else stepped up."
-- "I will always struggle" → "I survived something that should have broken me, and I'm still here."
+Now, for each one, find a **unique outcome**-a time when that story was proven wrong:
+- "I am too sensitive" -> "My sensitivity allowed me to notice my friend was in pain when no one else did."
+- "I am not leadership material" -> "I organized the entire family reunion when no one else stepped up."
+- "I will always struggle" -> "I survived something that should have broken me, and I'm still here."
 
 Now rewrite each story:
 
@@ -2109,20 +2114,21 @@ Now rewrite each story:
 The stories you inherited are not your destiny. They are your starting point. And starting points can be revised.
 
 `,
-    cta: `If you need a space where the old narratives can be examined without judgment—**The Clarity Session** at D'Oasis offers a focused, 90-minute space to name the stories that were written for you, identify the ones that no longer serve you, and begin the sacred work of reauthoring.
+    cta: `If you need a space where the old narratives can be examined without judgment-**The Clarity Session** at D'Oasis offers a focused, 90-minute space to name the stories that were written for you, identify the ones that no longer serve you, and begin the sacred work of reauthoring.
 
-*Not sure where to start? [Book a free 15-minute consultation](/booking)—the pen is already in your hand.*
+*Not sure where to start? [Book a free 15-minute consultation](/booking)-the pen is already in your hand.*
 
-*You are not who they said you were. You are who you are becoming. And that story is yours to write.*`
+*You are not who they said you were. You are who you are becoming. And that story is yours to write.*`,
   },
   {
     slug: 'boundaries-are-holy',
     title: 'The Holiness of No: Why Boundaries Are Sacred',
-    excerpt: 'You were taught that saying no is selfish. What if it\'s actually the most sacred word you can speak?',
+    excerpt:
+      "You were taught that saying no is selfish. What if it's actually the most sacred word you can speak?",
     category: 'The Practice of Rest',
     date: 'October 10, 2025',
     readTime: '10 min read',
-    image: '/images/external/blog-boundaries-door.jpg',
+    image: '/images/external/blog-boundaries-door.avif',
     content: `
 # The Holiness of No: Why Boundaries Are Sacred
 
@@ -2139,9 +2145,9 @@ But what if "no" is not a rejection of love? **What if "no" is the beginning of 
 Dr. Henry Cloud and Dr. John Townsend, in their landmark book *Boundaries*, made a claim that shook the faith community: **boundaries are not just psychologically healthy—they are biblically grounded.**
 
 Consider:
-- **God sets boundaries.** He sets limits on the sea (Job 38:11). He establishes moral boundaries through the Ten Commandments. He even sets boundaries on His own patience (Genesis 6:3). If God—who is love itself—sets boundaries, then boundaries are not the opposite of love. They are an expression of it.
+- **God sets boundaries.** He sets limits on the sea (Job 38:11). He establishes moral boundaries through the Ten Commandments. He even sets boundaries on His own patience (Genesis 6:3). If God-who is love itself-sets boundaries, then boundaries are not the opposite of love. They are an expression of it.
 - **Jesus set boundaries.** He withdrew from crowds to pray alone (Mark 1:35). He said no to requests that didn't align with His mission (John 6:15). He slept during a storm when others panicked (Mark 4:38). He was deeply compassionate but never codependent.
-- **The Garden of Eden** was a bounded space. "You may eat from any tree in the garden, but..." (Genesis 2:16-17). Freedom existed within limits. Without boundaries, there is no garden—there is chaos.
+- **The Garden of Eden** was a bounded space. "You may eat from any tree in the garden, but..." (Genesis 2:16-17). Freedom existed within limits. Without boundaries, there is no garden-there is chaos.
 
 **The word "no" is not a wall. It is a gate.** It determines what gets in and what stays out. And only a tended garden produces fruit.
 
@@ -2205,16 +2211,17 @@ When you begin to say no to what drains you, you create space to say yes to what
 
 *Not sure where to begin? [Book a free 15-minute consultation](/booking)—your first boundary might be asking for help.*
 
-*Your "no" is holy ground. Stand on it.*`
+*Your "no" is holy ground. Stand on it.*`,
   },
   {
     slug: 'silence-as-medicine',
     title: 'When Silence Becomes Medicine',
-    excerpt: 'In a world that never stops talking, the most radical thing you can do is stop. The neuroscience of silence and the theology of stillness.',
+    excerpt:
+      'In a world that never stops talking, the most radical thing you can do is stop. The neuroscience of silence and the theology of stillness.',
     category: 'The Practice of Rest',
     date: 'October 5, 2025',
     readTime: '10 min read',
-    image: '/images/external/blog-silence-stillwater.jpg',
+    image: '/images/external/blog-silence-stillwater.avif',
     content: `
 # When Silence Becomes Medicine
 
@@ -2237,12 +2244,12 @@ Noise is processed by the brain as stress—even when we don't consciously perce
 Silence reverses this process. Research shows that intentional silence:
 
 - **Reduces cortisol** and calms the nervous system
-- **Activates the Default Mode Network (DMN)**—the brain network responsible for self-reflection, creativity, memory consolidation, and making meaning of experience
+- **Activates the Default Mode Network (DMN)**-the brain network responsible for self-reflection, creativity, memory consolidation, and making meaning of experience
 - **Enhances emotional regulation** by giving the prefrontal cortex space to function
 - **Improves sleep quality** by lowering baseline arousal levels
 - **Increases self-awareness** by allowing the inner voice to surface
 
-**Your brain was designed for rhythm—input and rest, noise and silence, activity and stillness.** Modern life has broken that rhythm. Silence restores it.
+**Your brain was designed for rhythm-input and rest, noise and silence, activity and stillness.** Modern life has broken that rhythm. Silence restores it.
 
 ## Solitude vs. Isolation
 
@@ -2298,16 +2305,17 @@ In the quiet, you may discover that God has been speaking the whole time. Not in
 
 *Prefer private support? [Book a free 15-minute consultation](/booking)—we'll find the right rhythm for your soul.*
 
-*Be still. Not because the world has stopped, but because your soul needs you to.*`
+*Be still. Not because the world has stopped, but because your soul needs you to.*`,
   },
   {
     slug: 'joy-is-resistance',
     title: 'Joy as an Act of Resistance',
-    excerpt: 'In a world designed to steal your peace, choosing joy is not naive\u2014it is radical. The theology and psychology of defiant gladness.',
+    excerpt:
+      'In a world designed to steal your peace, choosing joy is not naive\u2014it is radical. The theology and psychology of defiant gladness.',
     category: 'The Practice of Rest',
     date: 'September 28, 2025',
     readTime: '10 min read',
-    image: '/images/external/blog-joy-resistance-light.jpg',
+    image: '/images/external/blog-joy-resistance-light.avif',
     content: `
 # Joy as an Act of Resistance
 
@@ -2315,7 +2323,7 @@ Joy is not what happens when everything is going well. That is happiness—a ple
 
 **Joy is what you choose when you have every reason not to.** It is the defiant gladness of a soul that refuses to let suffering have the final word. It is the sunrise that comes not because the night wasn't real, but because the night does not get to decide.
 
-In a world designed to steal your peace—through grief, through injustice, through exhaustion, through fear—choosing joy is not naive. **It is the most radical thing you can do.**
+In a world designed to steal your peace-through grief, through injustice, through exhaustion, through fear-choosing joy is not naive. **It is the most radical thing you can do.**
 
 ---
 
@@ -2331,7 +2339,7 @@ Happiness and joy are often used interchangeably, but they are fundamentally dif
 | **Nature** | Reactive | Chosen |
 | **Biblical model** | Blessed (makarios) | Joyful (chara) |
 
-Paul wrote about joy from a prison cell (Philippians 4:4). James told believers to "count it all joy" when facing trials (James 1:2). Nehemiah declared that "the joy of the Lord is your strength" (Nehemiah 8:10)—not the happiness of the Lord, not the comfort of the Lord—the joy.
+Paul wrote about joy from a prison cell (Philippians 4:4). James told believers to "count it all joy" when facing trials (James 1:2). Nehemiah declared that "the joy of the Lord is your strength" (Nehemiah 8:10)-not the happiness of the Lord, not the comfort of the Lord-the joy.
 
 **Joy is not the absence of pain. It is the presence of something stronger than pain.**
 
@@ -2378,7 +2386,7 @@ Joy is a practice, not an accident. Research-backed strategies include:
 
 4. **Community**: Joy is amplified in connection. Laugh with someone. Share a meal. Tell a ridiculous story. Joy shared is joy multiplied.
 
-5. **Creative expression**: Make something. Paint, write, garden, cook. Creation is joy in its most embodied form—and you were made in the image of a Creator.
+5. **Creative expression**: Make something. Paint, write, garden, cook. Creation is joy in its most embodied form-and you were made in the image of a Creator.
 
 ## A Moment of Sanctuary
 
@@ -2395,12 +2403,18 @@ Hold it in your mind. Let yourself feel it. And say:
 Joy is not waiting for you at the end of the healing journey. It is available to you right now—in the middle of the mess, in the middle of the grief, in the middle of the questions.
 
 `,
-    cta: `If you need help rediscovering joy—or if you need permission to experience it without guilt—**Restoration Circles** at D'Oasis offers a monthly gathering where gladness is not dismissed as denial but honored as resilience. Where laughter and tears sit side by side. Where the heaviness is acknowledged and the lightness is amplified by women who choose life together.
+    cta: `If you need help rediscovering joy-or if you need permission to experience it without guilt-**Restoration Circles** at D'Oasis offers a monthly gathering where gladness is not dismissed as denial but honored as resilience. Where laughter and tears sit side by side. Where the heaviness is acknowledged and the lightness is amplified by women who choose life together.
 
-*Not sure if a group setting is right for you? [Book a free 15-minute consultation](/booking)—joy is better when it's shared.*
+*Not sure if a group setting is right for you? [Book a free 15-minute consultation](/booking)-joy is better when it's shared.*
 
-*Joy is not the destination. It is the defiance that gets you there.*`
+*Joy is not the destination. It is the defiance that gets you there.*`,
   },
 ];
 
-export const BLOG_CATEGORIES = ['All', 'Faith Deconstruction', 'Grief & Loss', 'Identity', 'The Practice of Rest'];
+export const BLOG_CATEGORIES = [
+  'All',
+  'Faith Deconstruction',
+  'Grief & Loss',
+  'Identity',
+  'The Practice of Rest',
+];

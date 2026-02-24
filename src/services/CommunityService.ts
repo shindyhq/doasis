@@ -1,9 +1,9 @@
-import { createClient } from '@/lib/supabase/client';
+import { createClient } from '@/lib/supabase/server';
 import { CommunityPost } from '@/types/custom';
 
 export const CommunityService = {
   async getPosts() {
-    const supabase = createClient();
+    const supabase = await createClient();
     const { data, error } = await supabase
       .from('community_posts')
       .select('*, author:author_id(*)')
@@ -14,7 +14,7 @@ export const CommunityService = {
   },
 
   async createPost(authorId: string, content: string, category: string = 'General') {
-    const supabase = createClient();
+    const supabase = await createClient();
     const { data, error } = await supabase
       .from('community_posts')
       .insert({ author_id: authorId, content, category })
@@ -26,7 +26,7 @@ export const CommunityService = {
   },
 
   async toggleLike(postId: string, currentLikes: number) {
-    const supabase = createClient();
+    const supabase = await createClient();
     // Simplified like logic (just incrementing for now, real app needs like table)
     const { error } = await supabase
       .from('community_posts')

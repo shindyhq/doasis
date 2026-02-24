@@ -48,7 +48,7 @@ const BOOKING_OPTIONS = [
   {
     id: 'restoration-circles',
     title: 'Restoration Circles',
-    desc: 'Monthly virtual gatherings where we practice being human together—witnessing and being witnessed.',
+    desc: 'Monthly virtual gatherings where we practice being human together - witnessing and being witnessed.',
     bestFor: 'Community connection',
     duration: 90,
     durationLabel: '90 Minutes',
@@ -61,7 +61,7 @@ const BOOKING_OPTIONS = [
   {
     id: 'consultation',
     title: 'Free 15-Minute Consultation',
-    desc: 'A low-pressure conversation to discuss where you are and how I might support you. No obligation—just clarity.',
+    desc: 'A low-pressure conversation to discuss where you are and how I might support you. No obligation - just clarity.',
     bestFor: 'Exploring the fit',
     duration: 15,
     durationLabel: '15 Minutes',
@@ -198,7 +198,7 @@ export default function Booking() {
                 <div className="text-center mb-24 max-w-3xl mx-auto">
                     <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-accent mb-8 block">The Gateway</span>
                     <h1 className="text-6xl md:text-8xl font-display font-medium text-primary mb-12 tracking-tighter leading-none">Your next chapter <br /><span className="font-serif-italic text-secondary italic">starts here.</span></h1>
-                    <p className="text-xl text-primary/60 font-serif-italic italic max-w-xl mx-auto leading-relaxed">Choose the container that feels right for where you are. Every option is designed to honor your pace and your story.</p>
+                    <p className="text-xl text-primary/60 font-serif-italic italic max-w-xl mx-auto leading-relaxed"><em>Choose the container that feels right for where you are. Every option is designed to honor your pace and your story.</em></p>
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">

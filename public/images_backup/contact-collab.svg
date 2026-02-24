@@ -1,0 +1,39 @@
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="800" fill="#14231B" fill-opacity="0.03"/>
+  
+  <!-- Abstract Sanctuary Shapes -->
+  <circle cx="400" cy="400" r="300" stroke="#969A7B" stroke-opacity="0.1" stroke-width="0.5"/>
+  <circle cx="400" cy="400" r="250" stroke="#969A7B" stroke-opacity="0.15" stroke-width="0.5"/>
+  <circle cx="400" cy="400" r="200" stroke="#969A7B" stroke-opacity="0.2" stroke-width="0.5"/>
+
+  <!-- Symbolic Microphone / Connection Icon -->
+  <g transform="translate(400, 400)">
+    <!-- Radiating Light Rays -->
+    <path d="M0 -120 L0 -150" stroke="#969A7B" stroke-width="2" stroke-linecap="round"/>
+    <path d="M84.85 -84.85 L106.07 -106.07" stroke="#969A7B" stroke-width="2" stroke-linecap="round"/>
+    <path d="M120 0 L150 0" stroke="#969A7B" stroke-width="2" stroke-linecap="round"/>
+    <path d="M84.85 84.85 L106.07 106.07" stroke="#969A7B" stroke-width="2" stroke-linecap="round"/>
+    <path d="M0 120 L0 150" stroke="#969A7B" stroke-width="2" stroke-linecap="round"/>
+    <path d="M-84.85 84.85 L-106.07 106.07" stroke="#969A7B" stroke-width="2" stroke-linecap="round"/>
+    <path d="M-120 0 L-150 0" stroke="#969A7B" stroke-width="2" stroke-linecap="round"/>
+    <path d="M-84.85 -84.85 L-106.07 -106.07" stroke="#969A7B" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Inner Core -->
+    <circle r="60" stroke="#C5A880" stroke-width="1" fill="none"/>
+    <circle r="40" fill="#C5A880" fill-opacity="0.1"/>
+    
+    <!-- Stylized Voice/Waveform -->
+    <path d="M-30 0 Q-15 -20, 0 0 T30 0" stroke="#14231B" stroke-width="2" fill="none" stroke-opacity="0.4"/>
+    <path d="M-20 15 Q-10 -5, 0 15 T20 15" stroke="#14231B" stroke-width="1.5" fill="none" stroke-opacity="0.3"/>
+    <path d="M-20 -15 Q-10 -35, 0 -15 T20 -15" stroke="#14231B" stroke-width="1.5" fill="none" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- Decorative Grain Overlay Effect (Simulation) -->
+  <rect width="800" height="800" fill="url(#grainPattern)" opacity="0.05" pointer-events="none"/>
+  
+  <defs>
+    <pattern id="grainPattern" width="2" height="2" patternUnits="userSpaceOnUse">
+      <rect width="1" height="1" fill="#000" opacity="0.5"/>
+    </pattern>
+  </defs>
+</svg>

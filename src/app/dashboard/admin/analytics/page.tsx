@@ -1,48 +1,72 @@
-import { BarChart3, PieChart, TrendingUp, Users } from 'lucide-react';
+import { AnalyticsService } from '@/services/AnalyticsService';
+import { RevenueChart } from '@/components/dashboard/admin/analytics/RevenueChart';
+import { ClientGrowthChart } from '@/components/dashboard/admin/analytics/ClientGrowthChart';
+import { SessionStats } from '@/components/dashboard/admin/analytics/SessionStats';
+import { TopClientsTable } from '@/components/dashboard/admin/analytics/TopClientsTable';
+import { Download } from 'lucide-react';
+import { ComingSoonButton } from '@/components/ui/ComingSoonButton';
 
-export default function AnalyticsPage() {
+export const dynamic = 'force-dynamic';
+
+export default async function AnalyticsPage() {
+  // Fetch all analytics data in parallel
+  const [revenueMetrics, clientGrowthMetrics, sessionStats, topClients] = await Promise.all([
+    AnalyticsService.getRevenueMetrics(),
+    AnalyticsService.getClientGrowthMetrics(),
+    AnalyticsService.getSessionStats(),
+    AnalyticsService.getTopClients(5)
+  ]);
+
   return (
-    <div className="space-y-8">
-      <header>
-        <p className="text-xs uppercase tracking-[0.4em] font-bold text-accent mb-4">
-          Insights & Data
-        </p>
-        <h1 className="text-5xl font-display font-medium text-primary tracking-tight">
-          Analytics
-        </h1>
-      </header>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-         <div className="bg-white/50 border border-white/60 p-8 rounded-[32px] h-80 flex items-center justify-center text-primary/20">
-            <div className="text-center">
-               <BarChart3 size={48} className="mx-auto mb-2 opacity-50" />
-               <p className="font-display text-lg">Client Retention Chart</p>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="flex justify-between items-center mb-8">
+            <div>
+                <h1 className="text-2xl font-bold text-slate-900 font-display">Analytics & Insights</h1>
+                <p className="text-slate-500 mt-1">Performance metrics and client engagement data.</p>
             </div>
-         </div>
-         <div className="bg-white/50 border border-white/60 p-8 rounded-[32px] h-80 flex items-center justify-center text-primary/20">
-            <div className="text-center">
-               <TrendingUp size={48} className="mx-auto mb-2 opacity-50" />
-               <p className="font-display text-lg">Revenue Growth</p>
-            </div>
-         </div>
-      </div>
+            
+            <ComingSoonButton 
+                title="Export Report"
+                className="flex items-center gap-2 bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 px-4 py-2.5 rounded-xl font-medium transition-colors shadow-sm"
+            >
+                <Download className="w-4 h-4" />
+                <span>Export Report</span>
+            </ComingSoonButton>
+        </div>
 
-      <div className="bg-white/50 border border-white/60 p-8 rounded-[32px]">
-         <h2 className="text-xl font-display font-medium text-primary mb-6">Key Metrics</h2>
-         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[ 
-              { label: 'Avg Session Rating', value: '4.9/5' },
-              { label: 'Client Churn Rate', value: '2.1%' },
-              { label: 'New Inquiries', value: '15/mo' },
-              { label: 'Website Visits', value: '1.2k' }
-            ].map(stat => (
-               <div key={stat.label}>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-primary/40 mb-1">{stat.label}</p>
-                  <p className="text-3xl font-display font-bold text-primary">{stat.value}</p>
-               </div>
-            ))}
-         </div>
-      </div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+            <div className="lg:col-span-2 space-y-6">
+                <RevenueChart data={revenueMetrics} />
+                <TopClientsTable clients={topClients} />
+            </div>
+            <div className="space-y-6">
+                <ClientGrowthChart data={clientGrowthMetrics} />
+                <SessionStats data={sessionStats} />
+                
+                {/* Additional Detailed Stats Section */}
+                <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
+                    <h3 className="text-sm font-semibold text-slate-900 uppercase tracking-wider mb-4">Focus Areas Analysis</h3>
+                    <div className="space-y-4">
+                        {[
+                            { label: 'Anxiety & Stress', pct: 45, color: 'bg-primary' },
+                            { label: 'Relationship Issues', pct: 28, color: 'bg-rose-400' },
+                            { label: 'Career Guidance', pct: 15, color: 'bg-emerald-500' },
+                            { label: 'Other', pct: 12, color: 'bg-slate-300' }
+                        ].map((item, i) => (
+                            <div key={i}>
+                                <div className="flex justify-between text-sm mb-1">
+                                    <i className="font-medium text-slate-700 not-italic">{item.label}</i>
+                                    <span className="text-slate-500">{item.pct}%</span>
+                                </div>
+                                <div className="w-full bg-slate-100 rounded-full h-2">
+                                    <div className={`${item.color} h-2 rounded-full w-[var(--focus-width)]`} style={{ '--focus-width': `${item.pct}%` } as React.CSSProperties} />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
   );
 }

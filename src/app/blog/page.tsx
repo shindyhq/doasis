@@ -16,36 +16,69 @@ export default function Blog() {
     : BLOG_POSTS.filter(post => post.category === activeCategory);
 
   return (
-    <div className="bg-background pt-48 pb-16">
+    <div className="bg-background pt-32 pb-16">
       <div className="bg-grain fixed inset-0 opacity-[0.03] z-[100] pointer-events-none" />
 
-      {/* Hero Section - High-End Editorial */}
-      <Section className="mb-32">
-        <div className="max-w-5xl">
-          <Reveal>
-            <span className="text-xs uppercase tracking-[0.5em] font-display font-bold text-accent mb-12 block text-balance">
-              The Sanctuary Journal
-            </span>
-          </Reveal>
-          
-          <Reveal delay={0.2}>
-            <h1 className="text-[clamp(4rem,12vw,10rem)] font-serif italic text-primary leading-[0.85] tracking-tighter mb-16">
-              Words for the <br />
-              <span className="text-secondary opacity-80">becoming.</span>
-            </h1>
-          </Reveal>
+      {/* Editorial Hero - mirrors /about page layout */}
+      <section className="relative min-h-[90vh] flex items-center px-4 md:px-12 bg-[#fbfbf9] py-32 overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12" />
 
-          <Reveal delay={0.4}>
-            <p className="text-2xl font-serif font-light text-primary/50 leading-relaxed max-w-2xl border-l border-primary/10 pl-12 py-4">
-              A curated collection of reflections on faith deconstruction, 
-              embodied rest, and the sacred beauty of the messy middle.
-            </p>
-          </Reveal>
+        <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-16 relative z-10 items-center">
+          {/* LEFT - text */}
+          <div className="lg:col-span-7">
+            <Reveal>
+              <div className="flex items-center gap-4 mb-8">
+                <div className="h-[1px] w-12 bg-accent" />
+                <span className="text-xs uppercase tracking-[0.4em] font-display font-bold text-accent">
+                  The Sanctuary Journal
+                </span>
+              </div>
+              <h1 className="text-5xl md:text-[clamp(65px,8vw,110px)] leading-[0.9] font-serif italic text-primary tracking-tighter mb-12">
+                Words for the <br />
+                <span className="text-secondary opacity-80">becoming.</span>
+              </h1>
+              <p className="text-2xl font-serif font-light text-primary/60 leading-relaxed max-w-xl border-l-[3px] border-accent/20 pl-12 py-4 mb-16">
+                A curated collection of reflections on faith deconstruction,
+                embodied rest, and the sacred beauty of the messy middle.
+              </p>
+            </Reveal>
+
+            <Reveal delay={0.4}>
+              <div className="flex flex-wrap gap-12 items-center">
+                <a
+                  href="#journal"
+                  className="group flex items-center gap-8 text-[12px] uppercase tracking-[0.5em] font-display font-bold text-primary hover:text-accent transition-all"
+                >
+                  Explore the journal
+                  <div className="relative w-24 h-px bg-primary/10 group-hover:w-36 group-hover:bg-accent transition-all duration-700" />
+                </a>
+              </div>
+            </Reveal>
+          </div>
+
+          {/* RIGHT - image */}
+          <div className="lg:col-span-5 relative">
+            <Reveal delay={0.3}>
+              <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl relative group">
+                <motion.img
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 1.5 }}
+                  src="/images/external/blog-hero.avif"
+                  className="w-full h-full object-cover grayscale opacity-90 sepia-[0.2]"
+                  alt="A woman writing - words for the becoming"
+                />
+                <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
+                <div className="absolute inset-8 border border-white/20 rounded-[20px] pointer-events-none" />
+              </div>
+            </Reveal>
+            {/* Decorative large letter */}
+            <div className="absolute -top-12 -left-12 text-[180px] font-serif italic text-primary/5 select-none pointer-events-none">J</div>
+          </div>
         </div>
-      </Section>
+      </section>
 
       {/* Sticky Navigation / Filter */}
-      <div className="sticky top-[100px] z-40 mb-32">
+      <div id="journal" className="sticky top-[100px] z-40 mb-32 mt-20">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center gap-12 overflow-x-auto no-scrollbar pb-6 border-b border-primary/5">
             {BLOG_CATEGORIES.map((cat, i) => (
@@ -118,8 +151,8 @@ export default function Blog() {
                 </Link>
               </h2>
 
-              <p className="text-lg font-serif font-light text-primary/40 leading-relaxed max-w-md line-clamp-3 mb-10">
-                {post.excerpt}
+              <p className="text-lg font-serif font-light text-primary/40 leading-relaxed max-w-md line-clamp-3 mb-10 italic">
+                <em>{post.excerpt}</em>
               </p>
 
               <Link 

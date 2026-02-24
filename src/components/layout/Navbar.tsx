@@ -3,7 +3,7 @@
 // Navbar Component
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { PlaceholderLogo } from '../ui/PlaceholderLogo';
+import { Logo } from '../ui/Logo';
 import { Menu, X, User } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { usePathname } from 'next/navigation';
@@ -70,7 +70,7 @@ export const Navbar = () => {
           
           {/* Logo */}
           <Link href="/" className="z-50 relative group">
-            <PlaceholderLogo variant={isScrolled || !isHome ? "light" : "dark"} />
+            <Logo variant={isScrolled || !isHome ? "light" : "dark"} size="md" />
           </Link>
 
           {/* Desktop Navigation */}

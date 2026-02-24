@@ -12,7 +12,7 @@ export default function About() {
       <div className="bg-grain fixed inset-0 opacity-[0.03] z-[100] pointer-events-none" />
 
       {/* Editorial Hero / Brand Story Section */}
-      <section className="relative min-h-[90vh] flex items-center px-4 md:px-12 bg-[#FDFBF7] py-32 overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center px-4 md:px-12 bg-[#fbfbf9] py-32 overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12" />
         
         <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-16 relative z-10 items-center">
@@ -52,7 +52,7 @@ export default function About() {
                 <motion.img 
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 1.5 }}
-                  src="/images/external/hero-unbecoming-window.jpg" 
+                  src="/images/external/hero-unbecoming-window.avif" 
                   className="w-full h-full object-cover grayscale opacity-90 sepia-[0.2]" 
                   alt="Sophisticated sanctuary"
                 />
@@ -72,7 +72,7 @@ export default function About() {
             <Reveal x={-20} y={0}>
               <div className="aspect-[3/4] bg-primary/5 rounded-[100px] rounded-tl-none overflow-hidden relative shadow-2xl">
                  <img 
-                   src="/images/portrait-of-oluyemisi.jpg" 
+                   src="/images/portrait-of-oluyemisi.avif" 
                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
                    alt="Portrait of Oluyemisi"
                  />
@@ -84,9 +84,9 @@ export default function About() {
             {/* Sidebar Testimonial */}
             <div className="mt-12 p-8 bg-white border border-secondary/10 rounded-3xl shadow-sm relative z-10 hidden md:block">
                <p className="font-serif italic text-primary/80 mb-6 leading-relaxed">
-                 "Oluyemisi sees you—not the version you think you should be, but the person you actually are. And somehow, in that seeing, you start to see yourself differently too."
+                 <em>&quot;Oluyemisi sees you - not the version you think you should be, but the person you actually are. And somehow, in that seeing, you start to see yourself differently too.&quot;</em>
                </p>
-               <cite className="text-xs uppercase tracking-widest font-bold text-accent not-italic block">— M.T., Clarity Session Client</cite>
+               <cite className="text-xs uppercase tracking-widest font-bold text-accent not-italic block">- M.T., Clarity Session Client</cite>
             </div>
           </div>
 
@@ -103,13 +103,13 @@ export default function About() {
                 But here's what I learned through my own seasons of uncertainty:
               </p>
               <p className="text-xl font-medium text-primary italic border-l-2 border-accent/20 pl-6 py-2">
-                Holding space isn't just about listening—it's about creating room for transformation.
+                <em>Holding space isn&apos;t just about listening - it&apos;s about creating room for transformation.</em>
               </p>
               <p>
-                I've walked through my own wilderness—loss that reshaped me, transitions that terrified me, and the slow, sacred work of becoming someone I didn't know I was allowed to be. Those seasons taught me that healing doesn't follow a linear path. That strength can be soft. That sometimes the bravest thing you can do is ask for help.
+                I've walked through my own wilderness - loss that reshaped me, transitions that terrified me, and the slow, sacred work of becoming someone I didn't know I was allowed to be. Those seasons taught me that healing doesn't follow a linear path. That strength can be soft. That sometimes the bravest thing you can do is ask for help.
               </p>
               <p>
-                So I became certified. I studied trauma-informed care, coaching methodologies, and culturally sensitive practices. I built the frameworks to match the intuition. And I created D'Oasis—a place where women don't have to shrink, perform, or pretend.
+                So I became certified. I studied trauma-informed care, coaching methodologies, and culturally sensitive practices. I built the frameworks to match the intuition. And I created D'Oasis - a place where women don't have to shrink, perform, or pretend.
               </p>
               <p className="font-bold text-primary">
                 Because you deserve more than surface-level support. <br/>
@@ -122,7 +122,7 @@ export default function About() {
 
       {/* The Approach Section */}
       <Section className="bg-primary py-32 md:py-48 my-32 overflow-hidden relative">
-        <div className="absolute inset-0 opacity-10 bg-[url('/images/external/about-approach-stars.jpg')] bg-cover bg-fixed grayscale" />
+        <div className="absolute inset-0 opacity-10 bg-[url('/images/external/about-approach-stars.avif')] bg-cover bg-fixed grayscale" />
         
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-24">
@@ -176,7 +176,7 @@ export default function About() {
               What qualifies me to <br /> <span className="font-serif italic text-secondary">walk beside you.</span>
             </h3>
             <p className="text-primary/80 font-serif italic text-lg leading-relaxed">
-              "But more than credentials, I bring a lived understanding of what it means to rebuild yourself. A deep respect for your timeline. And an unshakable belief that your healing is not only possible—it's already beginning."
+              <em>&quot;But more than credentials, I bring a lived understanding of what it means to rebuild yourself. A deep respect for your timeline. And an unshakable belief that your healing is not only possible - it&apos;s already beginning.&quot;</em>
             </p>
           </div>
           
@@ -201,7 +201,7 @@ export default function About() {
 
       {/* Beyond The Sessions - New Section */}
       <Section className="mb-32">
-        <div className="bg-[#f8f6f2] rounded-[60px] p-12 md:p-24">
+        <div className="bg-[#f7f7f5] rounded-[60px] p-12 md:p-24">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-display text-primary mb-12 text-center">When I'm not in session...</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -230,7 +230,7 @@ export default function About() {
               <div className="relative">
                  <div className="aspect-square bg-white rounded-full overflow-hidden border border-secondary/5 rotate-3 hover:rotate-0 transition-all duration-700 shadow-xl group">
                     <img 
-                      src="/images/journal.jpg" 
+                      src="/images/journal.avif" 
                       className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000" 
                       alt="Journaling coffee moments"
                     />
@@ -238,7 +238,7 @@ export default function About() {
               </div>
             </div>
             <p className="text-center mt-16 text-primary font-medium italic">
-              "You can't pour from an empty cup, and healing work requires healers who are also committed to their own restoration."
+              <em>&quot;You can&apos;t pour from an empty cup, and healing work requires healers who are also committed to their own restoration.&quot;</em>
             </p>
           </div>
         </div>
@@ -269,7 +269,7 @@ export default function About() {
           <div className="bg-accent/10 rounded-[40px] p-12 border border-accent/20 shadow-sm group hover:bg-accent/20 transition-colors duration-700">
             <h2 className="text-2xl font-display font-medium text-primary mb-8 opacity-60">This space might not be for you if:</h2>
             <p className="text-primary/80 leading-relaxed font-serif text-lg">
-              You&apos;re seeking quick fixes, cookie-cutter advice, or someone to tell you what to do. My work is collaborative, reflective, and requires your active participation. We&apos;ll go at your pace—but we will go deep.
+              You&apos;re seeking quick fixes, cookie-cutter advice, or someone to tell you what to do. My work is collaborative, reflective, and requires your active participation. We&apos;ll go at your pace - but we will go deep.
             </p>
           </div>
         </div>
@@ -282,7 +282,7 @@ export default function About() {
             Still wondering if this is <br/> <span className="font-serif italic text-secondary">the right fit?</span>
           </h2>
           <p className="text-xl text-primary/80 mb-12 max-w-xl mx-auto font-light leading-relaxed">
-            Let's talk. No pressure, no sales pitch—just a genuine conversation about where you are and where you want to go.
+            Let's talk. No pressure, no sales pitch - just a genuine conversation about where you are and where you want to go.
           </p>
           <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
              <Link 

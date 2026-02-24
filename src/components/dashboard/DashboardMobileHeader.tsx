@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { Menu, X, User } from 'lucide-react';
-import { PlaceholderLogo } from '@/components/ui/PlaceholderLogo';
+import { Logo } from '@/components/ui/Logo';
 
 interface DashboardMobileHeaderProps {
   isOpen: boolean;
@@ -13,7 +13,7 @@ export const DashboardMobileHeader = ({ isOpen, toggle }: DashboardMobileHeaderP
   return (
     <header className="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-primary/5 flex items-center justify-between px-6 py-4 lg:hidden">
       <Link href="/" className="relative group">
-        <PlaceholderLogo variant="light" />
+        <Logo variant="light" size="sm" />
       </Link>
       
       <div className="flex items-center gap-3">

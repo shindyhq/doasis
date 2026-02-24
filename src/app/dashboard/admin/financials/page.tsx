@@ -1,59 +1,52 @@
-import { DollarSign, TrendingUp, Download } from 'lucide-react';
+import { InvoiceStats } from '@/components/dashboard/admin/InvoiceStats';
+import { InvoicesTable } from '@/components/dashboard/admin/InvoicesTable';
+import { FinancialService } from '@/services/FinancialService';
+import { Upload } from 'lucide-react';
+import { ComingSoonButton } from '@/components/ui/ComingSoonButton';
 
-export default function FinancialsPage() {
+export const dynamic = 'force-dynamic';
+
+interface PageProps {
+  searchParams: Promise<{
+    search?: string;
+    status?: string;
+    page?: string;
+  }>;
+}
+
+export default async function FinancialsPage(props: PageProps) {
+  const searchParams = await props.searchParams;
+
+  const page = Number(searchParams.page) || 1;
+  const search = searchParams.search || '';
+  const status = searchParams.status || 'All';
+
+  const stats = await FinancialService.getFinancialStats();
+  const { data, meta } = await FinancialService.getAllTransactions({ search, status, page });
+
   return (
-    <div className="space-y-8">
-      <header>
-        <p className="text-xs uppercase tracking-[0.4em] font-bold text-accent mb-4">
-          Revenue & Expenses
-        </p>
-        <h1 className="text-5xl font-display font-medium text-primary tracking-tight">
-          Financials
-        </h1>
-      </header>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-         <div className="bg-primary text-white p-8 rounded-[32px]">
-            <h3 className="text-xs font-bold uppercase tracking-widest opacity-60 mb-2">Total Revenue (YTD)</h3>
-            <div className="text-5xl font-display font-bold mb-4">$42,500</div>
-            <div className="flex items-center gap-2 text-emerald-300 font-bold text-sm">
-               <TrendingUp size={16} /> +15% vs last year
-            </div>
-         </div>
-         <div className="bg-white/50 border border-white/60 p-8 rounded-[32px]">
-            <h3 className="text-xs font-bold uppercase tracking-widest text-primary/40 mb-2">Outstanding Invoices</h3>
-            <div className="text-5xl font-display font-bold text-primary mb-4">$1,200</div>
-            <button className="text-xs font-bold uppercase tracking-widest text-accent underline">
-               View Details
-            </button>
-         </div>
-      </div>
-      
-      {/* Mock Transaction List */}
-       <div className="bg-white/50 border border-white/60 rounded-[32px] overflow-hidden">
-          <div className="p-6 border-b border-primary/5 flex justify-between items-center">
-             <h3 className="font-display font-medium text-xl text-primary">Recent Transactions</h3>
-             <button className="text-primary/40 hover:text-primary transition-colors">
-                <Download size={18} />
-             </button>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+       {/* Header */}
+       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+          <div>
+            <h1 className="text-2xl font-bold text-slate-900 font-display">Invoices & Payments</h1>
+            <p className="text-slate-500 mt-1">Track revenue, manage invoices, and view payment history.</p>
           </div>
-          <div className="divide-y divide-primary/5">
-             {[1,2,3,4,5].map(i => (
-                <div key={i} className="p-6 flex items-center justify-between hover:bg-white/60 transition-colors">
-                   <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
-                         $
-                      </div>
-                      <div>
-                         <div className="font-bold text-primary text-sm">Main Session Payment</div>
-                         <div className="text-[10px] text-primary/40 uppercase tracking-widest">Today, 2:30 PM</div>
-                      </div>
-                   </div>
-                   <div className="font-mono font-bold text-primary">+$150.00</div>
-                </div>
-             ))}
-          </div>
+          
+          <ComingSoonButton 
+            title="Export Report"
+            className="flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white px-4 py-2.5 rounded-xl font-medium transition-colors shadow-sm hover:shadow-md"
+          >
+             <Upload className="w-4 h-4" />
+             <span>Export Report</span>
+          </ComingSoonButton>
        </div>
+
+       {/* Stats Grid */}
+       <InvoiceStats stats={stats} />
+
+       {/* Invoices Table */}
+       <InvoicesTable data={data} meta={meta} />
     </div>
   );
 }

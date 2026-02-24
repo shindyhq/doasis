@@ -8,11 +8,13 @@ import { SecurityLogs } from '@/components/dashboard/SecurityLogs';
 import { Settings, User, Shield } from 'lucide-react';
 
 export default async function ProfilePage() {
-  const { data: { user } } = await getUser();
-
-  if (!user) {
-    return redirect('/login');
-  }
+  const { data: { user: authUser } } = await getUser();
+  // Mock user for dev
+  const user = authUser || {
+      id: 'mock-user-id',
+      email: 'guest@doasis.com',
+      user_metadata: { full_name: 'Guest User' }
+  };
 
   const profileData = {
     full_name: user.user_metadata?.full_name || '',

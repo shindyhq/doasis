@@ -102,7 +102,7 @@ export default function Disclaimer() {
         <li>We cannot provide physical presence or intervention</li>
         <li>Emergency services cannot be delivered remotely</li>
       </ul>
-      <p className="text-lg font-serif text-primary/80 leading-relaxed mb-6">See our <a href="/telehealth-consent" className="text-accent underline hover:text-primary transition-colors">Telehealth Consent</a> for complete details.</p>
+      <p className="text-lg font-serif text-primary/80 leading-relaxed mb-6">See our <a href="/telehealth-consent" className="text-primary underline hover:text-secondary transition-colors">Telehealth Consent</a> for complete details.</p>
 
       <h2 className="text-3xl md:text-4xl font-display font-semibold text-primary mt-12 mb-6 tracking-tight leading-tight">Scope of Practice</h2>
       <h3 className="text-2xl font-display font-semibold text-primary mt-10 mb-4 tracking-tight">WE PROVIDE:</h3>

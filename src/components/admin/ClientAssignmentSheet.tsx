@@ -17,7 +17,7 @@ export const ClientAssignmentSheet = ({ client, onClose, onSuccess }: ClientAssi
   const [isSuccess, setIsSuccess] = useState(false);
   
   // Form State
-  const [serviceName, setServiceName] = useState('The Becoming — Bi-Weekly Coaching');
+  const [serviceName, setServiceName] = useState('The Becoming - Bi-Weekly Coaching');
   const [price, setPrice] = useState('350.00');
   const [zoomLink, setZoomLink] = useState('');
   
@@ -186,8 +186,8 @@ export const ClientAssignmentSheet = ({ client, onClose, onSuccess }: ClientAssi
                     onChange={(e) => setServiceName(e.target.value)}
                     className="w-full bg-white border border-primary/10 rounded-2xl p-4 font-display text-sm text-primary outline-none focus:border-accent transition-colors appearance-none cursor-pointer"
                   >
-                    <option>The Becoming — Bi-Weekly Coaching</option>
-                    <option>The Stillness — Monthly Reflection</option>
+                    <option>The Becoming - Bi-Weekly Coaching</option>
+                    <option>The Stillness - Monthly Reflection</option>
                     <option>Introductory Sanctuary Consultation</option>
                     <option>Grief & Identity Workshop</option>
                   </select>

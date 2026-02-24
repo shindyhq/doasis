@@ -95,7 +95,7 @@ export default function TermsOfService() {
       <p className="text-lg font-serif text-primary/80 leading-relaxed mb-6">See our Cancellation & Refund Policy for details on cancellations and refunds.</p>
 
       <h2 className="text-3xl md:text-4xl font-display font-semibold text-primary mt-12 mb-6 tracking-tight leading-tight">7. Cancellation and Refunds</h2>
-      <p className="text-lg font-serif text-primary/80 leading-relaxed mb-6">See our separate <a href="/cancellation-policy" className="text-accent underline hover:text-primary transition-colors">Cancellation & Refund Policy</a>.</p>
+      <p className="text-lg font-serif text-primary/80 leading-relaxed mb-6">See our separate <a href="/cancellation-policy" className="text-primary underline hover:text-secondary transition-colors">Cancellation & Refund Policy</a>.</p>
       <p className="text-lg font-serif text-primary/80 leading-relaxed mb-6"><strong className="font-bold text-primary">Summary:</strong></p>
       <ul className="text-lg font-serif text-primary/80 leading-relaxed mb-6 pl-6 space-y-2 list-disc">
         <li>48+ hours notice: Full credit toward rescheduling</li>
@@ -115,7 +115,7 @@ export default function TermsOfService() {
         <li>Required by court order or law</li>
         <li>You provide written authorization</li>
       </ul>
-      <p className="text-lg font-serif text-primary/80 leading-relaxed mb-6">See our <a href="/privacy-policy" className="text-accent underline hover:text-primary transition-colors">Privacy Policy</a> for complete information on data handling.</p>
+      <p className="text-lg font-serif text-primary/80 leading-relaxed mb-6">See our <a href="/privacy-policy" className="text-primary underline hover:text-secondary transition-colors">Privacy Policy</a> for complete information on data handling.</p>
 
       <h2 className="text-3xl md:text-4xl font-display font-semibold text-primary mt-12 mb-6 tracking-tight leading-tight">9. Informed Consent</h2>
       <p className="text-lg font-serif text-primary/80 leading-relaxed mb-6">Before beginning services, you will receive and must sign an Informed Consent document that includes:</p>
@@ -145,7 +145,7 @@ export default function TermsOfService() {
         <li>Emergency services cannot be provided remotely</li>
         <li>Privacy cannot be guaranteed if you're in a public space</li>
       </ul>
-      <p className="text-lg font-serif text-primary/80 leading-relaxed mb-6">See our <a href="/telehealth-consent" className="text-accent underline hover:text-primary transition-colors">Telehealth Consent & Agreement</a> for complete details.</p>
+      <p className="text-lg font-serif text-primary/80 leading-relaxed mb-6">See our <a href="/telehealth-consent" className="text-primary underline hover:text-secondary transition-colors">Telehealth Consent & Agreement</a> for complete details.</p>
 
       <h2 className="text-3xl md:text-4xl font-display font-semibold text-primary mt-12 mb-6 tracking-tight leading-tight">11. Intellectual Property</h2>
       <p className="text-lg font-serif text-primary/80 leading-relaxed mb-6"><strong className="font-bold text-primary">All content on this website is owned by D'Oasis and protected by copyright.</strong></p>

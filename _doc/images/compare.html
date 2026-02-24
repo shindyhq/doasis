@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+        background: #eee;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+      }
+      .item {
+        background: white;
+        padding: 10px;
+        border-radius: 8px;
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto 10px;
+        background: #000;
+      }
+      .swatch {
+        height: 50px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+      }
+      .label {
+        font-size: 12px;
+        margin-top: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Logo vs Brand Color Comparison</h1>
+
+    <h2>Logos</h2>
+    <div class="grid">
+      <div class="item">
+        <img src="Logo - 1.webp" alt="Logo 1" />
+        <div class="label">Logo 1</div>
+      </div>
+      <div class="item">
+        <img src="Logo - 2.webp" alt="Logo 2" />
+        <div class="label">Logo 2</div>
+      </div>
+      <div class="item">
+        <img src="Logo - 3.webp" alt="Logo 3" />
+        <div class="label">Logo 3</div>
+      </div>
+      <div class="item">
+        <img src="Logo - 4.webp" alt="Logo 4" />
+        <div class="label">Logo 4</div>
+      </div>
+      <div class="item">
+        <img src="Logo - 5.webp" alt="Logo 5" />
+        <div class="label">Logo 5</div>
+      </div>
+    </div>
+
+    <h2>Brand Swatches</h2>
+    <div class="grid">
+      <div class="item">
+        <div class="swatch" style="background: #edf2ed"></div>
+        <div class="label">#EDF2ED (S-50)</div>
+      </div>
+      <div class="item">
+        <div class="swatch" style="background: #cdd9ce"></div>
+        <div class="label">#CDD9CE (S-100)</div>
+      </div>
+      <div class="item">
+        <div class="swatch" style="background: #a3b9a4"></div>
+        <div class="label">#A3B9A4 (S-200)</div>
+      </div>
+      <div class="item">
+        <div class="swatch" style="background: #638864"></div>
+        <div class="label">#638864 (S-300)</div>
+      </div>
+      <div class="item">
+        <div class="swatch" style="background: #235725"></div>
+        <div class="label">#235725 (Base)</div>
+      </div>
+      <div class="item">
+        <div class="swatch" style="background: #1d481f"></div>
+        <div class="label">#1D481F (T-600)</div>
+      </div>
+      <div class="item">
+        <div class="swatch" style="background: #173919"></div>
+        <div class="label">#173919 (T-700)</div>
+      </div>
+      <div class="item">
+        <div class="swatch" style="background: #0e230f"></div>
+        <div class="label">#0E230F (T-800)</div>
+      </div>
+    </div>
+  </body>
+</html>

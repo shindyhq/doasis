@@ -1,31 +1,74 @@
+'use client';
+
 import { Section } from '@/components/layout/Section';
 import { Button } from '@/components/ui/Button';
 import { Reveal } from '@/components/ui/Reveal';
 import { ArrowRight, Clock, Calendar, MessageCircle, Sparkles, Video, Compass, Mail } from 'lucide-react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export default function WorkWithMe() {
   return (
     <div className="bg-background pt-32 pb-16">
       <div className="bg-grain fixed inset-0 opacity-[0.03] z-[100] pointer-events-none" />
 
-      {/* Editorial Header */}
-      <Section className="">
-        <div className="max-w-5xl">
-          <Reveal>
-            <span className="text-xs uppercase tracking-[0.4em] font-bold text-accent mb-8 block">
-              The Portfolio of Presence
-            </span>
-            <h1 className="text-6xl md:text-[clamp(65px,8.5vw,120px)] font-display font-medium text-primary leading-[0.95] tracking-tighter">
-              Healing happens <br />
-              <span className="font-serif-italic text-secondary">in relationship.</span>
-            </h1>
-          </Reveal>
-           <p className="mt-12 text-2xl font-serif font-light text-primary/85 leading-relaxed max-w-2xl italic">
-            Choose the container that feels right for where you are. Every option is designed to honor your pace, your story, and your wholeness.
-          </p>
+      {/* Full Editorial Hero - mirrors /about hero pattern */}
+      <section className="relative min-h-[90vh] flex items-center px-4 md:px-12 bg-background py-32 overflow-hidden">
+        {/* Skewed bg accent shape */}
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12" />
+
+        <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-16 relative z-10 items-center">
+          {/* LEFT - copy */}
+          <div className="lg:col-span-7">
+            <Reveal>
+              <div className="flex items-center gap-4 mb-8">
+                <div className="h-[1px] w-12 bg-accent" />
+                <span className="text-xs uppercase tracking-[0.4em] font-display font-bold text-accent">
+                  The Portfolio of Presence
+                </span>
+              </div>
+              <h1 className="text-5xl md:text-[clamp(65px,8vw,110px)] leading-[0.9] font-serif italic text-primary tracking-tighter mb-12">
+                Healing happens <br />
+                <span className="text-secondary opacity-80">in relationship.</span>
+              </h1>
+              <p className="text-2xl font-serif font-light text-primary/60 leading-relaxed max-w-xl border-l-[3px] border-accent/20 pl-12 py-4 mb-16">
+                Choose the container that feels right for where you are. Every option is designed to honor your pace, your story, and your wholeness.
+              </p>
+            </Reveal>
+
+            <Reveal delay={0.4}>
+              <div className="flex flex-wrap gap-12 items-center">
+                <Link
+                  href="/booking"
+                  className="group flex items-center gap-8 text-[12px] uppercase tracking-[0.5em] font-display font-bold text-primary hover:text-accent transition-all"
+                >
+                  Begin your journey
+                  <div className="relative w-24 h-px bg-primary/10 group-hover:w-36 group-hover:bg-accent transition-all duration-700" />
+                </Link>
+              </div>
+            </Reveal>
+          </div>
+
+          {/* RIGHT - image */}
+          <div className="lg:col-span-5 relative">
+            <Reveal delay={0.3}>
+              <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl relative group">
+                <motion.img
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 1.5 }}
+                  src="/images/work-with-me.avif"
+                  className="w-full h-full object-cover grayscale opacity-90 sepia-[0.2]"
+                  alt="A sanctuary for transformation"
+                />
+                <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
+                <div className="absolute inset-8 border border-white/20 rounded-[20px] pointer-events-none" />
+              </div>
+            </Reveal>
+            {/* Decorative large letter */}
+            <div className="absolute -top-12 -left-12 text-[180px] font-serif italic text-primary/5 select-none pointer-events-none">W</div>
+          </div>
         </div>
-      </Section>
+      </section>
 
       {/* How to Choose Section */}
       <Section className="">
@@ -42,7 +85,7 @@ export default function WorkWithMe() {
                 <h3 className="text-xs uppercase tracking-[0.3em] font-bold text-accent mb-4">Focus</h3>
                 <h4 className="text-xl font-display font-medium text-primary mb-4">The Clarity Session</h4>
                 <p className="text-primary/85 leading-relaxed font-light font-serif italic">
-                  Choose this if you&apos;re feeling stuck and need immediate perspective, or if you want to test the waters before committing to a deeper path.
+                  <em>Choose this if you&apos;re feeling stuck and need immediate perspective, or if you want to test the waters before committing to a deeper path.</em>
                 </p>
               </div>
             </Reveal>
@@ -52,7 +95,7 @@ export default function WorkWithMe() {
                 <h3 className="text-xs uppercase tracking-[0.3em] font-bold text-accent mb-4">Depth</h3>
                 <h4 className="text-xl font-display font-medium text-primary mb-4">Becoming: 1:1</h4>
                 <p className="text-primary/85 leading-relaxed font-light font-serif italic">
-                  Choose this if you&apos;re ready for sustained transformation, want personalized support over months, or are navigating a major life transition.
+                  <em>Choose this if you&apos;re ready for sustained transformation, want personalized support over months, or are navigating a major life transition.</em>
                 </p>
               </div>
             </Reveal>
@@ -62,7 +105,7 @@ export default function WorkWithMe() {
                 <h3 className="text-xs uppercase tracking-[0.3em] font-bold text-accent mb-4">Community</h3>
                 <h4 className="text-xl font-display font-medium text-primary mb-4">Restoration Circles</h4>
                 <p className="text-primary/85 leading-relaxed font-light font-serif italic">
-                  Choose this if you thrive in collective spaces, want accessible support, or are looking for monthly nourishment and shared wisdom.
+                  <em>Choose this if you thrive in collective spaces, want accessible support, or are looking for monthly nourishment and shared wisdom.</em>
                 </p>
               </div>
             </Reveal>
@@ -71,7 +114,7 @@ export default function WorkWithMe() {
           {/* Consultation Prompt */}
           <div className="mt-24 text-center">
             <p className="text-2xl font-serif italic text-primary/80 leading-relaxed max-w-2xl mx-auto">
-              Still unsure? <Link href="/booking" className="text-accent hover:text-secondary underline underline-offset-8 decoration-accent/40 hover:decoration-secondary transition-all font-bold tracking-tight">Book a free 15-minute talk</Link>—and we&apos;ll explore the next step together.
+              <em>Still unsure? <Link href="/booking" className="text-primary hover:text-secondary underline underline-offset-8 decoration-primary/40 hover:decoration-secondary transition-all font-bold tracking-tight">Book a free 15-minute talk</Link> - and we&apos;ll explore the next step together.</em>
             </p>
           </div>
         </div>
@@ -108,7 +151,7 @@ export default function WorkWithMe() {
                 <div>
                   <h3 className="text-2xl font-display font-medium text-primary mb-6">The Approach</h3>
                   <p className="text-xl text-black leading-relaxed font-light font-serif italic">
-                    A focused, 90-minute breakthrough coaching session designed for women who need clarity <span className="italic font-bold">now</span>. Whether you&apos;re at a crossroads, carrying overwhelm, or craving fresh perspective, this session creates space to untangle what&apos;s heavy and illuminate what&apos;s next.
+                    <em>A focused, 90-minute breakthrough coaching session designed for women who need clarity <span className="italic font-bold">now</span>. Whether you&apos;re at a crossroads, carrying overwhelm, or craving fresh perspective, this session creates space to untangle what&apos;s heavy and illuminate what&apos;s next.</em>
                   </p>
                   <p className="text-lg text-primary/80 leading-relaxed font-light mt-6">
                     This isn&apos;t surface advice. It&apos;s soulful work compressed into one powerful, witnesses container.
@@ -126,7 +169,7 @@ export default function WorkWithMe() {
                     ].map((item) => (
                       <li key={item} className="flex gap-4 text-black italic font-serif">
                         <span className="text-accent mt-1">/</span>
-                        <span className="font-light">{item}</span>
+                        <span className="font-light"><em>{item}</em></span>
                       </li>
                     ))}
                   </ul>
@@ -148,7 +191,7 @@ export default function WorkWithMe() {
                     <item.icon className="w-6 h-6 text-accent/60 mt-1 shrink-0" />
                     <div>
                       <h4 className="font-display font-medium text-primary mb-2 text-lg">{item.title}</h4>
-                      <p className="text-sm text-primary/80 font-light leading-relaxed">{item.desc}</p>
+                      <p className="text-sm text-primary/80 font-light leading-relaxed"><em>{item.desc}</em></p>
                     </div>
                   </div>
                 ))}
@@ -160,7 +203,7 @@ export default function WorkWithMe() {
               <div className="border-l border-accent/30 pl-10">
                 <p className="text-[10px] uppercase tracking-[0.4em] font-bold text-accent mb-4">The Investment</p>
                 <p className="text-5xl font-display text-primary mb-6 tracking-tighter">$120 <span className="text-xl font-serif-italic text-primary/60 ml-2">USD</span></p>
-                <p className="text-black font-light font-serif italic text-lg mb-8 leading-relaxed">90 minutes • Interactive Zoom • Strictly Confidential</p>
+                <p className="text-black font-light font-serif italic text-lg mb-8 leading-relaxed"><em>90 minutes • Interactive Zoom • Strictly Confidential</em></p>
                 <Button href="/booking" variant="primary">
                   Begin Your Session
                 </Button>
@@ -169,7 +212,7 @@ export default function WorkWithMe() {
               <div className="bg-secondary/5 rounded-[30px] p-12 relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-accent/5 rounded-full blur-3xl group-hover:bg-accent/10 transition-colors" />
                 <p className="font-serif-italic text-xl text-black leading-relaxed mb-6 italic">
-                  &quot;I came in foggy and left with a map. Oluyemisi didn&apos;t just listen; she helped me see what I couldn&apos;t see on my own. One session literally changed my next six months.&quot;
+                  <em>&quot;I came in foggy and left with a map. Oluyemisi didn&apos;t just listen; she helped me see what I couldn&apos;t see on my own. One session literally changed my next six months.&quot;</em>
                 </p>
                 <div className="flex items-center gap-4">
                   <div className="h-[1px] w-8 bg-accent/20" />
@@ -197,10 +240,10 @@ export default function WorkWithMe() {
                 <div>
                   <h3 className="text-2xl font-display font-medium text-primary mb-6">The Journey</h3>
                   <p className="text-xl text-black leading-relaxed font-light font-serif italic">
-                    A personalized coaching journey designed for women ready to go beneath the surface. Over 6 or 12 weeks, we&apos;ll navigate transitions, align with your truth, and build the life that&apos;s been waiting for you.
+                    <em>A personalized coaching journey designed for women ready to go beneath the surface. Over 6 or 12 weeks, we&apos;ll navigate transitions, align with your truth, and build the life that&apos;s been waiting for you.</em>
                   </p>
                   <p className="text-lg text-primary/85 leading-relaxed font-light mt-6">
-                    This isn&apos;t a program you follow; it&apos;s a co-created container shaped around <span className="italic font-bold text-accent">your</span> story and <span className="italic font-bold text-accent">your</span> becoming.
+                    This isn&apos;t a program you follow; it&apos;s a co-created container shaped around <span className="italic font-bold text-primary">your</span> story and <span className="italic font-bold text-primary">your</span> becoming.
                   </p>
                 </div>
 
@@ -215,7 +258,7 @@ export default function WorkWithMe() {
                     ].map((item) => (
                       <li key={item} className="flex gap-4 text-primary/85 font-serif italic">
                         <span className="text-accent mt-1">/</span>
-                        <span className="font-light">{item}</span>
+                        <span className="font-light"><em>{item}</em></span>
                       </li>
                     ))}
                   </ul>
@@ -248,7 +291,7 @@ export default function WorkWithMe() {
                   ].map((item) => (
                     <div key={item} className="flex gap-4 items-center">
                       <div className="w-1.5 h-1.5 rounded-full bg-accent/30" />
-                      <span className="text-sm text-primary/85 font-light font-serif italic">{item}</span>
+                      <span className="text-sm text-primary/85 font-light font-serif italic"><em>{item}</em></span>
                     </div>
                   ))}
                 </div>
@@ -275,7 +318,7 @@ export default function WorkWithMe() {
                   ].map((item) => (
                     <div key={item} className="flex gap-4 items-center">
                       <div className="w-1.5 h-1.5 rounded-full bg-accent" />
-                      <span className="text-sm text-white/85 font-light font-serif italic">{item}</span>
+                      <span className="text-sm text-white/85 font-light font-serif italic"><em>{item}</em></span>
                     </div>
                   ))}
                 </div>
@@ -288,7 +331,7 @@ export default function WorkWithMe() {
 
             <div className="max-w-3xl mx-auto text-center">
               <p className="text-xl font-serif-italic text-primary/70 italic leading-relaxed mb-12">
-                &quot;Twelve weeks with Oluyemisi didn&apos;t just change my circumstances; it changed how I see myself. I finally feel like I&apos;m living my life, not performing someone else&apos;s version of it.&quot;
+                <em>&quot;Twelve weeks with Oluyemisi didn&apos;t just change my circumstances; it changed how I see myself. I finally feel like I&apos;m living my life, not performing someone else&apos;s version of it.&quot;</em>
               </p>
               <Button href="/booking" variant="primary">
                 Apply for Mentorship
@@ -341,7 +384,7 @@ export default function WorkWithMe() {
                     ].map((item) => (
                       <li key={item} className="flex gap-4 text-primary/80 font-serif italic">
                         <span className="text-accent mt-1">/</span>
-                        <span className="font-light">{item}</span>
+                        <span className="font-light"><em>{item}</em></span>
                       </li>
                     ))}
                   </ul>
@@ -360,7 +403,7 @@ export default function WorkWithMe() {
                   <p className="text-[10px] uppercase tracking-[0.4em] font-bold text-accent mb-6">{tier.label}</p>
                   <p className="text-5xl font-display text-primary mb-2 tracking-tighter">{tier.price}</p>
                   <p className="text-[10px] uppercase tracking-widest text-primary/60 font-bold mb-6">{tier.sub}</p>
-                  <p className="text-sm text-black font-serif italic">{tier.desc}</p>
+                  <p className="text-sm text-black font-serif italic"><em>{tier.desc}</em></p>
                 </div>
               ))}
             </div>
@@ -390,7 +433,7 @@ export default function WorkWithMe() {
              <div className="hidden md:block absolute top-[44px] left-[20%] right-[20%] h-[1px] bg-accent/20 -z-10" />
              
              {[
-               { icon: MessageCircle, label: "1. The Inquiry", desc: "You share your story. No performance needed—just tell me what's heavy." },
+               { icon: MessageCircle, label: "1. The Inquiry", desc: "You share your story. No performance needed - just tell me what's heavy." },
                { icon: Calendar, label: "2. The Discovery", desc: "We meet for 15 minutes to ensure our energies align for this season." },
                { icon: Clock, label: "3. The Work", desc: "We begin the steady, witnessed work of transformation and reclamation." }
              ].map((step) => (
@@ -417,7 +460,7 @@ export default function WorkWithMe() {
             <Reveal>
               <h2 className="text-5xl md:text-8xl font-display text-white mb-12 tracking-tighter">Still not sure? <br /><span className="font-serif-italic text-accent">Let&apos;s talk.</span></h2>
               <p className="text-xl text-white/85 mb-16 max-w-xl mx-auto font-light font-serif italic leading-relaxed">
-                Book a free 15-minute consultation and we&apos;ll explore the next step, together.
+                <em>Book a free 15-minute consultation and we&apos;ll explore the next step, together.</em>
               </p>
             </Reveal>
             <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">

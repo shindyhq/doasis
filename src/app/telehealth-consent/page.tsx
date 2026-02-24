@@ -5,7 +5,7 @@ export default function TelehealthConsent() {
     <LegalPageLayout title="Telehealth Consent & Agreement" lastUpdated="February 9, 2026">
       <h2>Introduction</h2>
       <p>
-        D'Oasis provides all counseling and coaching services exclusively through telehealth—secure video conferencing using Zoom or similar platforms.
+        D'Oasis provides all counseling and coaching services exclusively through telehealth - secure video conferencing using Zoom or similar platforms.
       </p>
       <p><strong>By participating in telehealth services, you acknowledge and consent to the following terms.</strong></p>
 

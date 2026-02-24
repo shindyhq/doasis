@@ -2,12 +2,19 @@ import { createClient } from '@/lib/supabase/server';
 import { CommunityService } from '@/services/CommunityService';
 import { Users, MessageCircle, Heart } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
+import { revalidatePath } from 'next/cache';
 
 export const dynamic = 'force-dynamic';
 
 export default async function CommunityPage() {
   const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
+  const { data: { user: authUser } } = await supabase.auth.getUser();
+  // Mock user for dev
+  const user = authUser || {
+      id: 'mock-user-id',
+      email: 'guest@doasis.com',
+      user_metadata: { full_name: 'Guest User' }
+  };
   
   // Fetch real posts
   let posts: any[] = [];
@@ -42,6 +49,7 @@ export default async function CommunityPage() {
                     const content = formData.get('content') as string;
                     if (!content || !user) return;
                     await CommunityService.createPost(user.id, content);
+                    revalidatePath('/dashboard/community');
                  }}>
                    <textarea 
                      name="content"

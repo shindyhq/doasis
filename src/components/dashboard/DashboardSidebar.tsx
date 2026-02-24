@@ -6,24 +6,39 @@ import {
   LayoutDashboard, 
   Calendar, 
   BookOpen, 
-  Video, 
+  Library, 
   CreditCard, 
   LogOut,
   User,
   Users,
   Settings,
-  Target
+  Target,
+  TrendingUp,
+  DollarSign,
+  BarChart3,
+  FileText,
+  Heart
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const NAV_ITEMS = [
+  // Client Navigation
   { name: 'Overview', href: '/dashboard', icon: LayoutDashboard },
-  { name: 'Clients', href: '/dashboard/admin', icon: Users, adminOnly: true },
   { name: 'Appointments', href: '/dashboard/appointments', icon: Calendar },
   { name: 'Goals', href: '/dashboard/goals', icon: Target },
   { name: 'Journal', href: '/dashboard/journal', icon: BookOpen },
-  { name: 'Library', href: '/dashboard/library', icon: Video },
+  { name: 'Library', href: '/dashboard/library', icon: Library },
+  { name: 'Community', href: '/dashboard/community', icon: Heart },
   { name: 'Billing', href: '/dashboard/billing', icon: CreditCard },
+
+  // Admin Navigation
+  { name: 'Clients', href: '/dashboard/admin', icon: Users, adminOnly: true },
+  { name: 'Calendar', href: '/dashboard/admin/calendar', icon: Calendar, adminOnly: true },
+  { name: 'Marketing', href: '/dashboard/admin/marketing', icon: TrendingUp, adminOnly: true },
+  { name: 'Financials', href: '/dashboard/admin/financials', icon: DollarSign, adminOnly: true },
+  { name: 'Analytics', href: '/dashboard/admin/analytics', icon: BarChart3, adminOnly: true },
+  { name: 'Forms', href: '/dashboard/admin/forms', icon: FileText, adminOnly: true },
+  { name: 'Library', href: '/dashboard/admin/library', icon: Library, adminOnly: true },
 ];
 
 interface DashboardSidebarProps {

@@ -6,6 +6,12 @@ export interface UserProfile {
   email: string | null;
   phone: string | null;
   avatar_url: string | null;
+  bio: string | null;
+  dob: string | null;
+  preferred_communication: string | null;
+  emergency_contact_name: string | null;
+  emergency_contact_phone: string | null;
+  location: string | null;
   role: UserRole;
   updated_at: string;
 }
@@ -154,4 +160,23 @@ export interface Payment {
   description: string | null;
   invoice_url: string | null;
   created_at: string;
+  date?: string;
+}
+
+export interface Form {
+  id: string;
+  title: string;
+  description: string | null;
+  schema: any;
+  is_published: boolean;
+  created_at: string;
+}
+
+export interface FormResponse {
+  id: string;
+  form_id: string;
+  user_id: string;
+  data: any;
+  submitted_at: string;
+  profile?: UserProfile;
 }

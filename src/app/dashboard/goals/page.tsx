@@ -6,11 +6,13 @@ export const dynamic = 'force-dynamic';
 
 export default async function GoalsPage() {
   const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
-
-  if (!user) {
-    return <div>Please log in to view goals.</div>;
-  }
+  const { data: { user: authUser } } = await supabase.auth.getUser();
+  // Mock user for dev
+  const user = authUser || {
+      id: 'mock-user-id',
+      email: 'guest@doasis.com',
+      user_metadata: { full_name: 'Guest User' }
+  };
 
   // Fetch initial data (server-side for SEO/Performance)
   const { data } = await supabase

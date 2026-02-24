@@ -14,15 +14,40 @@ export async function GET(req: NextRequest) {
     const apiKey = process.env.CALENDLY_API_KEY;
     if (!apiKey || apiKey === 'mock_token') {
       // Return mock data if no real token is provided
+      const start = new URLSearchParams(req.url.split('?')[1]).get('start_time');
+      const end = new URLSearchParams(req.url.split('?')[1]).get('end_time');
+      
+      const startTimeDate = new Date(start || '');
+      const endTimeDate = new Date(end || '');
+      
+      const mockSlots = [];
+      let currentDate = new Date(startTimeDate);
+      
+      // Generate slots for each day in the range
+      while (currentDate <= endTimeDate) {
+        // Only generate slots for weekdays (optional, but realistic)
+        const dayOfWeek = currentDate.getDay();
+        if (dayOfWeek >= 1 && dayOfWeek <= 5) { // Monday to Friday
+          // Generate slots between 9 AM and 5 PM
+          for (let hour = 9; hour <= 16; hour++) {
+            const slotDate = new Date(currentDate);
+            slotDate.setHours(hour, 0, 0, 0);
+            
+            // Only add if it's within the requested range and in the future
+            if (slotDate >= startTimeDate && slotDate <= endTimeDate && slotDate > new Date()) {
+              mockSlots.push({
+                start_time: slotDate.toISOString(),
+                status: 'available',
+                invitees_remaining: 1,
+              });
+            }
+          }
+        }
+        currentDate.setDate(currentDate.getDate() + 1);
+      }
+
       return NextResponse.json({
-        collection: [
-          {
-            start_time: startTime,
-            status: 'available',
-            invitees_remaining: 1,
-          },
-          // Add more mock slots if needed
-        ]
+        collection: mockSlots
       });
     }
 

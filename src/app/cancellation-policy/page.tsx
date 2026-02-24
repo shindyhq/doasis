@@ -33,7 +33,7 @@ export default function CancellationPolicy() {
       <ul>
         <li>One emergency reschedule per package is honored without penalty</li>
         <li>Additional emergencies will be reviewed case-by-case</li>
-        <li>Communication is key—let us know as soon as possible</li>
+        <li>Communication is key - let us know as soon as possible</li>
       </ul>
 
       <h2>Rescheduling Appointments</h2>

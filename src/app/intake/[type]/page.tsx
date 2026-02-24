@@ -16,7 +16,7 @@ export default function IntakePage() {
       <Section className="pt-32 min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-display text-primary">Intake type not found.</h1>
-          <p className="text-secondary/50 mt-2">Please check the link provided.</p>
+          <p className="text-primary/55 mt-2">Please check the link provided.</p>
         </div>
       </Section>
     );
@@ -36,7 +36,7 @@ export default function IntakePage() {
            className="mb-12 text-center"
         >
           <h1 className="text-3xl md:text-5xl font-display font-medium text-primary italic mb-4">{config.title}</h1>
-          <p className="text-secondary/60 max-w-2xl mx-auto italic">
+          <p className="text-primary/60 max-w-2xl mx-auto italic">
             "Your honest answers help me arrive prepared to hold space for exactly what you need."
           </p>
         </motion.div>

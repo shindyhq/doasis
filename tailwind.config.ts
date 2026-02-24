@@ -12,27 +12,27 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#3D2818', // Deep Brown (v2.0)
-          foreground: '#F5F2EB', // Cream
+          DEFAULT: '#2D4A3E', // Dark Sage Green
+          foreground: '#FBFBF9', // Milk White
         },
         secondary: {
-          DEFAULT: '#B5BF9E', // Sage Green (v2.0)
-          foreground: '#3D2818', // Deep Brown
+          DEFAULT: '#7A8C6E', // Mid Sage Green
+          foreground: '#FBFBF9', // Milk White
         },
         accent: {
-          DEFAULT: '#C17B5C', // Terracotta (v2.0)
-          foreground: '#F5F2EB', // Cream
+          DEFAULT: '#C3CB98', // Lime Sage (user-specified)
+          foreground: '#2D4A3E', // Dark Sage Green
         },
         muted: {
-          DEFAULT: '#8A9171', // Muted Olive
-          foreground: '#F5F2EB',
+          DEFAULT: '#6B7A5E', // Muted Forest
+          foreground: '#FBFBF9',
         },
         rose: {
           DEFAULT: '#D4A5A5', // Dusty Rose
-          foreground: '#3D2818',
+          foreground: '#2D4A3E',
         },
-        background: '#F5F2EB', // Cream
-        foreground: '#3D2818', // Deep Brown
+        background: '#FBFBF9', // Milk White
+        foreground: '#2D4A3E', // Dark Sage Green
       },
       fontFamily: {
         sans: ['var(--font-cormorant)', 'serif'],
@@ -51,11 +51,11 @@ const config: Config = {
     themes: [
       {
         doasis: {
-          primary: '#3D2818', // Deep Brown
-          secondary: '#B5BF9E', // Sage Green
-          accent: '#C17B5C', // Terracotta
-          neutral: '#4A4A4A', // Charcoal
-          'base-100': '#F5F2EB', // Cream
+          primary: '#2D4A3E', // Dark Sage Green
+          secondary: '#7A8C6E', // Mid Sage Green
+          accent: '#C3CB98', // Lime Sage
+          neutral: '#4A5E4A', // Forest Neutral
+          'base-100': '#FBFBF9', // Milk White
           info: '#3abff8',
           success: '#36d399',
           warning: '#fbbd23',

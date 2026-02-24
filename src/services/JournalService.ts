@@ -31,11 +31,55 @@ export class JournalService {
 
     if (error) {
       console.error('Error fetching journal stats:', error);
-      return { totalEntries: 0 };
+      return { totalEntries: 0, streak: 0 };
     }
 
+    // Calculate streak
+    const { data: entries } = await supabase
+      .from('journal_entries')
+      .select('created_at')
+      .eq('user_id', userId)
+      .order('created_at', { ascending: false });
+
+    const streak = this.calculateStreak(entries?.map((e: { created_at: string }) => new Date(e.created_at)) || []);
+
     return {
-      totalEntries: count || 0
+      totalEntries: count || 0,
+      streak
     };
+  }
+
+  private static calculateStreak(dates: Date[]): number {
+    if (dates.length === 0) return 0;
+
+    let streak = 0;
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const sortedDates = [...new Set(dates.map(d => {
+      const copy = new Date(d);
+      copy.setHours(0, 0, 0, 0);
+      return copy.getTime();
+    }))].sort((a, b) => b - a);
+
+    let currentDate = sortedDates[0];
+    const diff = Math.floor((today.getTime() - currentDate) / (1000 * 60 * 60 * 24));
+
+    if (diff > 1) return 0;
+
+    streak = 1;
+    for (let i = 1; i < sortedDates.length; i++) {
+        const prevDate = sortedDates[i-1];
+        const thisDate = sortedDates[i];
+        const dayDiff = Math.floor((prevDate - thisDate) / (1000 * 60 * 60 * 24));
+        
+        if (dayDiff === 1) {
+            streak++;
+        } else {
+            break;
+        }
+    }
+
+    return streak;
   }
 }

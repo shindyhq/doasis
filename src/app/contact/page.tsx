@@ -23,23 +23,59 @@ export default function Contact() {
     <div className="bg-background pt-32 pb-32 md:pb-48 selection:bg-accent/20">
       <div className="bg-grain fixed inset-0 opacity-[0.03] z-[100] pointer-events-none" />
 
-      {/* Hero Section - Sanctuary Style */}
-      <Section className="mb-20 md:mb-24">
-        <div className="max-w-5xl mx-auto text-center">
-          <Reveal>
-            <span className="text-[10px] sm:text-xs uppercase tracking-[0.5em] font-display font-medium text-accent mb-8 block">
-              The Conversation
-            </span>
-            <h1 className="text-6xl md:text-[clamp(65px,9vw,130px)] font-display font-medium text-primary leading-[0.9] tracking-tighter mb-10">
-              Let&apos;s <br />
-              <span className="font-playfair italic text-secondary font-light">connect.</span>
-            </h1>
-            <p className="text-xl md:text-2xl font-serif font-light text-primary/60 leading-relaxed max-w-2xl mx-auto italic text-balance">
-              Whether you have questions, want to book a session, or just need to reach out—I&apos;m here to listen.
-            </p>
-          </Reveal>
+      {/* Hero Section - Editorial Split Style */}
+      <section className="relative min-h-[90vh] flex items-center px-4 md:px-12 bg-[#fbfbf9] py-32 overflow-hidden mb-20 md:mb-24">
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12" />
+        
+        <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-16 relative z-10 items-center">
+          <div className="lg:col-span-7">
+            <Reveal>
+              <div className="flex items-center gap-4 mb-8">
+                <div className="h-[1px] w-12 bg-accent" />
+                <span className="text-xs uppercase tracking-[0.4em] font-display font-bold text-accent">
+                  The Conversation
+                </span>
+              </div>
+              <h1 className="text-6xl md:text-[clamp(65px,9vw,130px)] font-display font-medium text-primary leading-[0.9] tracking-tighter mb-10">
+                Let&apos;s <br />
+                <span className="font-serif italic text-secondary font-light">connect.</span>
+              </h1>
+              <p className="text-xl md:text-2xl font-serif font-light text-primary/60 leading-relaxed max-w-xl border-l-[3px] border-accent/20 pl-12 py-4 mb-16 italic text-balance">
+                Whether you have questions, want to book a session, or just need to reach out - I&apos;m here to listen.
+              </p>
+            </Reveal>
+
+            <Reveal delay={0.4}>
+              <div className="flex flex-wrap gap-12 items-center">
+                <Link 
+                  href="/booking" 
+                  className="group flex items-center gap-8 text-[12px] uppercase tracking-[0.5em] font-display font-bold text-primary hover:text-accent transition-all"
+                >
+                  Skip to Booking
+                  <div className="relative w-24 h-px bg-primary/10 group-hover:w-36 group-hover:bg-accent transition-all duration-700" />
+                </Link>
+              </div>
+            </Reveal>
+          </div>
+
+          <div className="lg:col-span-5 relative">
+            <Reveal delay={0.3}>
+              <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl relative group">
+                <motion.img 
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 1.5 }}
+                  src="/images/external/contact-hero.avif" 
+                  className="w-full h-full object-cover grayscale opacity-90 sepia-[0.1]" 
+                  alt="Peaceful sanctuary space"
+                />
+                <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
+                <div className="absolute inset-8 border border-white/20 rounded-[20px] pointer-events-none" />
+              </div>
+            </Reveal>
+            <div className="absolute -top-12 -left-12 text-[180px] font-serif italic text-primary/5 select-none pointer-events-none">C</div>
+          </div>
         </div>
-      </Section>
+      </section>
 
       {/* Main Content Grid */}
       <Section className="mb-32">
@@ -174,7 +210,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center">
             <div className="aspect-[4/3] md:aspect-square bg-primary/5 relative group order-2 md:order-1 overflow-hidden">
               <Image 
-                src="/images/contact-collab.jpg" 
+                src="/images/contact-collab.avif" 
                 alt="Collaboration and Speaking" 
                 fill 
                 className="object-cover transition-transform duration-[3000ms] ease-out group-hover:scale-110"

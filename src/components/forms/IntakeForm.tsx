@@ -90,7 +90,7 @@ export const IntakeForm = ({ steps, onComplete, title }: IntakeFormProps) => {
                 {field.label} {field.required && <span className="text-accent">*</span>}
                 </span>
             </label>
-            {field.description && <p className="text-sm text-secondary/60 italic leading-relaxed">{field.description}</p>}
+            {field.description && <p className="text-sm text-primary/55 italic leading-relaxed"><em>{field.description}</em></p>}
             
             {showWarning && (
                 <motion.div 
@@ -110,7 +110,7 @@ export const IntakeForm = ({ steps, onComplete, title }: IntakeFormProps) => {
                 <textarea
                 name={field.name}
                 placeholder={field.placeholder}
-                className="w-full bg-white border border-secondary/10 focus:border-accent focus:ring-1 focus:ring-accent rounded-xl p-4 min-h-[150px] text-secondary transition-all outline-none"
+                className="w-full bg-white border border-secondary/10 focus:border-accent focus:ring-1 focus:ring-accent rounded-xl p-4 min-h-[150px] text-primary transition-all outline-none"
                 required={field.required}
                 onChange={handleInputChange}
                 value={formData[field.name] || ''}
@@ -120,7 +120,7 @@ export const IntakeForm = ({ steps, onComplete, title }: IntakeFormProps) => {
                     <select
                         name={field.name}
                         title={field.label}
-                        className="w-full bg-white border border-secondary/10 focus:border-accent focus:ring-1 focus:ring-accent rounded-xl p-4 text-secondary transition-all outline-none appearance-none"
+                        className="w-full bg-white border border-secondary/10 focus:border-accent focus:ring-1 focus:ring-accent rounded-xl p-4 text-primary transition-all outline-none appearance-none"
                         required={field.required}
                         onChange={handleInputChange}
                         value={formData[field.name] || ''}
@@ -145,7 +145,7 @@ export const IntakeForm = ({ steps, onComplete, title }: IntakeFormProps) => {
                         onChange={handleInputChange}
                         checked={formData[field.name] === opt}
                     />
-                    <span className="text-secondary/80 group-hover:text-primary transition-colors leading-relaxed">{opt}</span>
+                    <span className="text-primary/80 group-hover:text-primary transition-colors leading-relaxed">{opt}</span>
                     </label>
                 ))}
                 </div>
@@ -163,7 +163,7 @@ export const IntakeForm = ({ steps, onComplete, title }: IntakeFormProps) => {
                                 onChange={handleInputChange}
                                 checked={isChecked}
                             />
-                            <span className="text-secondary/80 group-hover:text-primary transition-colors leading-relaxed">{opt}</span>
+                            <span className="text-primary/80 group-hover:text-primary transition-colors leading-relaxed">{opt}</span>
                         </label>
                     );
                 })}
@@ -181,7 +181,7 @@ export const IntakeForm = ({ steps, onComplete, title }: IntakeFormProps) => {
                         className="w-full accent-accent cursor-pointer"
                         aria-label={field.label}
                     />
-                    <div className="flex justify-between text-xs text-secondary/40 mt-2 font-bold uppercase tracking-widest">
+                    <div className="flex justify-between text-xs text-primary/40 mt-2 font-bold uppercase tracking-widest">
                         <span>{field.min || 1}</span>
                         <span>{formData[field.name] || (field.min || 1)} / {field.max || 10}</span>
                         <span>{field.max || 10}</span>
@@ -192,7 +192,7 @@ export const IntakeForm = ({ steps, onComplete, title }: IntakeFormProps) => {
                 type={field.type}
                 name={field.name}
                 placeholder={field.placeholder}
-                className="w-full bg-white border border-secondary/10 focus:border-accent focus:ring-1 focus:ring-accent rounded-xl p-4 text-secondary transition-all outline-none"
+                className="w-full bg-white border border-secondary/10 focus:border-accent focus:ring-1 focus:ring-accent rounded-xl p-4 text-primary transition-all outline-none"
                 required={field.required}
                 onChange={handleInputChange}
                 value={formData[field.name] || ''}
@@ -213,7 +213,7 @@ export const IntakeForm = ({ steps, onComplete, title }: IntakeFormProps) => {
           <CheckCircle2 size={48} />
         </div>
         <h2 className="text-4xl font-display font-medium text-primary mb-6 italic">Thank you, truly.</h2>
-        <p className="text-xl text-secondary/70 max-w-lg mx-auto leading-relaxed font-serif font-light">
+        <p className="text-xl text-primary/70 max-w-lg mx-auto leading-relaxed font-serif font-normal">
           Your responses have been received with care. I'll review them and get back to you within 24-48 hours.
         </p>
       </motion.div>
@@ -258,7 +258,7 @@ export const IntakeForm = ({ steps, onComplete, title }: IntakeFormProps) => {
             <button
               type="button"
               onClick={prevStep}
-              className={`font-display flex items-center text-secondary/60 hover:text-primary transition-colors font-medium px-4 py-2 rounded-full hover:bg-secondary/5 ${currentStep === 0 ? 'invisible' : ''}`}
+              className={`font-display flex items-center text-primary/60 hover:text-primary transition-colors font-medium px-4 py-2 rounded-full hover:bg-primary/5 ${currentStep === 0 ? 'invisible' : ''}`}
             >
               <ChevronLeft size={18} className="mr-2" />
               Back

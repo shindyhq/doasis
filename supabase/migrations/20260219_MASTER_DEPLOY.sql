@@ -66,6 +66,10 @@ create table if not exists public.client_resources (
   unique(user_id, resource_id)
 );
 
+-- Ensure columns exist (Idempotency fix for existing tables)
+alter table public.resources add column if not exists is_published boolean default false;
+alter table public.goals add column if not exists status text check (status in ('active', 'completed', 'paused')) default 'active';
+
 -- 4. COMMUNICATION: MESSAGES
 create table if not exists public.messages (
   id uuid default gen_random_uuid() primary key,

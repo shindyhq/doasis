@@ -12,7 +12,7 @@ const FAQS = [
     questions: [
       {
         q: "What's the difference between counseling and coaching?",
-        a: "Counseling typically focuses on healing from the past, addressing mental health diagnoses, and processing trauma. Coaching is often more future-oriented, focusing on specific goals and transitions. However, because I am trained in both, I bring a therapeutic lens to our coaching work—ensuring we don't just bypass the heavy stuff on the way to the new."
+        a: "Counseling typically focuses on healing from the past, addressing mental health diagnoses, and processing trauma. Coaching is often more future-oriented, focusing on specific goals and transitions. However, because I am trained in both, I bring a therapeutic lens to our coaching work - ensuring we don't just bypass the heavy stuff on the way to the new."
       },
       {
         q: "Is this only for Christians?",
@@ -20,7 +20,7 @@ const FAQS = [
       },
       {
         q: "What if I'm not in crisis, just stuck?",
-        a: "You don't have to be falling apart to deserve support. In fact, the 'stuck' place is often the most powerful place to begin. The Clarity Session was designed specifically for this—to help you find movement when you feel anchored in the fog."
+        a: "You don't have to be falling apart to deserve support. In fact, the 'stuck' place is often the most powerful place to begin. The Clarity Session was designed specifically for this - to help you find movement when you feel anchored in the fog."
       },
        {
         q: "How do I know which offering is right for me?",

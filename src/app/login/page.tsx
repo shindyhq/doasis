@@ -14,6 +14,7 @@ export default function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [fullName, setFullName] = useState('');
+  const [website, setWebsite] = useState(''); // Honeypot field
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
@@ -30,7 +31,28 @@ export default function LoginPage() {
     setLoading(true);
     setError(null);
 
-    // 1. Generic Error Message for Security (Anti-Enumeration)
+    // 0. Environment Check
+    const isProduction = process.env.NODE_ENV === 'production';
+
+    // 1. Honeypot Check (Anti-Bot)
+    if (isProduction && website) {
+      console.warn("Honeypot triggered. Bot detected.");
+      // Silent fail - don't show specific error, just stop
+      setLoading(false);
+      return;
+    }
+
+    // 1.5 Password Complexity Check (Production Sign-up only)
+    if (isProduction && !isLogin) {
+      const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+      if (!passwordRegex.test(password)) {
+        setError("Password must be at least 8 characters long and include an uppercase letter, a lowercase letter, a number, and a special character.");
+        setLoading(false);
+        return;
+      }
+    }
+
+    // 2. Generic Error Message for Security (Anti-Enumeration)
     const genericErrorMessage = "Invalid credentials. Please check your email and password and try again.";
 
     try {
@@ -173,6 +195,18 @@ export default function LoginPage() {
                 </motion.div>
               )}
             </AnimatePresence>
+
+            {/* Honeypot Field (Invisible to users) */}
+            <div className="hidden" aria-hidden="true">
+              <input 
+                type="text" 
+                name="website" 
+                value={website} 
+                onChange={(e) => setWebsite(e.target.value)} 
+                tabIndex={-1} 
+                autoComplete="off"
+              />
+            </div>
 
             <div className="space-y-3">
               <label className="text-[10px] uppercase tracking-[0.25em] font-display font-bold text-white/50 ml-1">

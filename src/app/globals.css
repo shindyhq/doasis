@@ -3,7 +3,7 @@
 @config "../../tailwind.config.ts";
 
 :root {
-  --background: #fdfbf7;
+  --background: #fbfbf9;
   --foreground: #2d3a2f;
 }
 
@@ -23,14 +23,44 @@
     @apply font-display tracking-tight leading-tight;
   }
 
-  p {
-    @apply font-serif font-light text-primary/85 leading-relaxed;
+  /* Global focus-visible ring for keyboard navigation (Fix 6) */
+  a:focus-visible,
+  button:focus-visible {
+    @apply outline-none ring-2 ring-offset-2 ring-accent rounded-sm;
   }
 
-  .font-serif-italic {
+  p {
+    @apply font-serif font-normal text-primary/85 leading-relaxed;
+  }
+
+  /* Global Italic/Script Font Adjustments */
+  .font-serif-italic,
+  .italic,
+  i,
+  em,
+  .italic-boost {
     font-family: var(--font-cormorant);
     font-style: italic;
     font-weight: 400;
+  }
+
+  /* 
+     Boost size of italics for better legibility. 
+     Using a nested selector pattern to ensure it multiplies the parent's size.
+  */
+  p i, p em, p .italic-boost, p.font-serif-italic, p.italic,
+  li i, li em, li .italic-boost, li.font-serif-italic, li.italic,
+  span.italic, span.font-serif-italic,
+  section i, section em, section .italic-boost,
+  .card i, .card em, .card .italic-boost, .card.italic, .card.font-serif-italic {
+    font-size: 1.15em;
+  }
+
+  /* Reset for headings to maintain intended visual weight */
+  h1 i, h1 em, h1.font-serif-italic, h1.italic,
+  h2 i, h2 em, h2.font-serif-italic, h2.italic,
+  h3 i, h3 em, h3.font-serif-italic, h3.italic {
+    font-size: 1em;
   }
 
   /* Global Image Hover Effect */
@@ -48,14 +78,6 @@
     text-wrap: balance;
   }
 
-  .bg-grain {
-    background-image: url("/images/noise.svg");
-    background-repeat: repeat;
-    background-size: 200px;
-    opacity: 0.05;
-    pointer-events: none;
-    z-index: 100;
-  }
 
   .glass {
     @apply bg-white/60 backdrop-blur-xl border border-white/60;

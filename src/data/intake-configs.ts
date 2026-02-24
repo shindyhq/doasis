@@ -54,7 +54,7 @@ export const INTAKE_CONFIGS: Record<string, IntakeConfig> = {
       {
         title: 'Your Current Season',
         fields: [
-          { name: 'currentSeason', label: 'In 2-3 sentences, where are you right now in your life?', type: 'textarea', required: true, description: 'What\'s the main thing you\'re navigating? No need to go deep—just give me the landscape.' },
+          { name: 'currentSeason', label: 'In 2-3 sentences, where are you right now in your life?', type: 'textarea', required: true, description: 'What\'s the main thing you\'re navigating? No need to go deep - just give me the landscape.' },
           { name: 'reasonForReachingOut', label: 'What made you reach out now?', type: 'textarea', required: true, description: 'What shifted or happened that brought you to D\'Oasis at this particular moment?' },
           { name: 'desiredOutcome', label: 'If you could walk away with one thing, what would it be?', type: 'textarea', required: true }
         ]
@@ -70,8 +70,8 @@ export const INTAKE_CONFIGS: Record<string, IntakeConfig> = {
       {
         title: 'Logistics & Preferences',
         fields: [
-          { name: 'interestArea', label: 'What are you most interested in?', type: 'radio', required: true, options: ['A single Clarity Session', 'Ongoing 1:1 coaching (6 or 12 weeks)', 'Restoration Circles (monthly group)', 'Not sure yet—want to explore options'] },
-          { name: 'costConcern', label: 'Is cost a concern?', type: 'radio', required: true, options: ['No, I can invest at full rate', 'Somewhat—I\'d like to hear about payment plans', 'Yes—I\'d need sliding scale or scholarship'] },
+          { name: 'interestArea', label: 'What are you most interested in?', type: 'radio', required: true, options: ['A single Clarity Session', 'Ongoing 1:1 coaching (6 or 12 weeks)', 'Restoration Circles (monthly group)', 'Not sure yet - want to explore options'] },
+          { name: 'costConcern', label: 'Is cost a concern?', type: 'radio', required: true, options: ['No, I can invest at full rate', 'Somewhat - I\'d like to hear about payment plans', 'Yes - I\'d need sliding scale or scholarship'] },
           { name: 'questions', label: 'Any questions you want to make sure we address in our consultation?', type: 'textarea' }
         ]
       }

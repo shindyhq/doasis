@@ -1,6 +1,6 @@
 'use client';
 
-import { PlaceholderLogo } from '../ui/PlaceholderLogo';
+import { Logo } from '../ui/Logo';
 import Link from 'next/link';
 import { Instagram, Facebook, Mail } from 'lucide-react';
 import { usePathname } from 'next/navigation';
@@ -18,6 +18,7 @@ export const Footer = () => {
     { label: 'Telehealth', href: '/telehealth-consent' },
     { label: 'Cookies', href: '/cookie-policy' },
     { label: 'Accessibility', href: '/accessibility-statement' },
+    { label: 'Brand Kit', href: '/brand-kit' },
   ];
 
   // Map routes to watermark titles
@@ -63,7 +64,7 @@ export const Footer = () => {
         {/* Level 1: Brand Identity */}
         <div className="flex flex-col items-center gap-8 w-full">
           <Link href="/" className="hover:opacity-90 transition-opacity">
-            <PlaceholderLogo variant="dark" />
+            <Logo variant="dark" size="lg" orientation="vertical" />
           </Link>
           
           <p className="font-serif italic text-xl text-background/60 max-w-2xl leading-relaxed">
@@ -94,7 +95,7 @@ export const Footer = () => {
         <div className="flex flex-col items-center gap-8 w-full">
           <div className="w-24 h-px bg-accent/30" />
           <nav aria-label="Legal">
-            <ul className="flex flex-wrap justify-center gap-x-6 gap-y-4 md:gap-x-10 lg:gap-x-16">
+            <ul className="flex flex-wrap justify-center gap-x-6 gap-y-4 md:gap-x-8 lg:gap-x-12">
               {legalLinks.map((link) => (
                 <li key={link.href}>
                   <Link 

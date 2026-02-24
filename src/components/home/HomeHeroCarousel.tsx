@@ -1,12 +1,12 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
 import { Reveal } from '@/components/ui/Reveal';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, Pause, Play } from 'lucide-react';
 
 const SLIDES = [
   {
@@ -15,17 +15,17 @@ const SLIDES = [
     subtitle: 'exhale.',
     description: 'A curated experience where faith meets psychology, designed for the woman who has spent too long carrying everything for everyone else.',
     cta: 'Hold Space for Me',
-    bg: '/images/external/hero-stillness-landscape.jpg',
+    bg: '/images/external/hero-stillness-landscape.avif',
     position: 'left',
     accent: 'stillness'
   },
   {
     id: 'healing',
-    title: 'Healing doesn\'t have to be loud.',
+    title: 'Your healing can be quiet.',
     subtitle: 'a sacred place for one.',
-    description: 'Faith-rooted counseling where your journey is witnessed, honored, and held in the quiet—because healing doesn\'t shout, it unfolds.',
+    description: 'Faith-rooted counseling where your journey is witnessed, honored, and held in the quiet - because healing doesn\'t shout, it unfolds.',
     cta: 'Enter the Sanctuary',
-    bg: '/images/external/hero-healing-forest.jpg',
+    bg: '/images/external/hero-healing-forest.avif',
     position: 'left',
     accent: 'witness'
   },
@@ -35,7 +35,7 @@ const SLIDES = [
     subtitle: 'reclaim your self.',
     description: 'A premium space for women navigating the deep waters of faith, grief, and the reclamation of who you truly are.',
     cta: 'Start your journey',
-    bg: '/images/external/hero-unbecoming-window.jpg',
+    bg: '/images/external/hero-unbecoming-window.avif',
     position: 'left',
     accent: 'reclaim'
   }
@@ -44,41 +44,51 @@ const SLIDES = [
 export function HomeHeroCarousel() {
   const [current, setCurrent] = useState(0);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [isPaused, setIsPaused] = useState(false);
+  const shouldReduceMotion = useReducedMotion();
+
+  const advance = useCallback(() => {
+    setCurrent((prev) => (prev + 1) % SLIDES.length);
+  }, []);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % SLIDES.length);
-    }, 8000);
+    // Don't auto-advance if paused or user prefers reduced motion
+    if (isPaused || shouldReduceMotion) return;
 
+    const timer = setInterval(advance, 8000);
+    return () => clearInterval(timer);
+  }, [isPaused, shouldReduceMotion, advance]);
+
+  useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      // Disable parallax on mobile to reduce TBT
-      if (window.innerWidth < 1024) return;
-      
-      setMousePos({ 
-        x: (e.clientX / window.innerWidth - 0.5) * 30, 
-        y: (e.clientY / window.innerHeight - 0.5) * 30 
+      // Disable parallax on mobile or when reduced motion is preferred
+      if (window.innerWidth < 1024 || shouldReduceMotion) return;
+      setMousePos({
+        x: (e.clientX / window.innerWidth - 0.5) * 30,
+        y: (e.clientY / window.innerHeight - 0.5) * 30
       });
     };
 
     window.addEventListener('mousemove', handleMouseMove);
-    return () => {
-      clearInterval(timer);
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, [shouldReduceMotion]);
 
   return (
-    <section className="relative min-h-[90vh] flex items-center bg-[#0A1B12] overflow-hidden">
+    <section
+      className="relative min-h-[90vh] flex items-center bg-[#0A1B12] overflow-hidden"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       {/* Background Parallax Layer */}
       <AnimatePresence mode="wait">
         <motion.div
           key={SLIDES[current].id + '-bg'}
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ opacity: 0.4, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.95 }}
-          transition={{ duration: 2, ease: "circOut" }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.4 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
           className="absolute inset-0 pointer-events-none"
-          style={{ 
+          style={{
             x: mousePos.x * 0.5,
             y: mousePos.y * 0.5
           }}
@@ -147,7 +157,7 @@ export function HomeHeroCarousel() {
                 <p className={`text-xl text-white/70 font-serif font-light leading-relaxed mb-16 max-w-xl italic text-balance ${
                   SLIDES[current].position === 'right' ? 'ml-auto' : ''
                 }`}>
-                  {SLIDES[current].description}
+                  <em>{SLIDES[current].description}</em>
                 </p>
               </Reveal>
 
@@ -196,8 +206,8 @@ export function HomeHeroCarousel() {
         </AnimatePresence>
       </div>
 
-      {/* Progress Indicators */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 flex gap-4">
+      {/* Progress Indicators + Pause/Play */}
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 flex items-center gap-4">
         {SLIDES.map((slide, i) => (
           <button
             key={slide.id + '-dot'}
@@ -211,6 +221,17 @@ export function HomeHeroCarousel() {
             }`} />
           </button>
         ))}
+        {/* Pause/Play - WCAG 2.2.2 compliance */}
+        {!shouldReduceMotion && (
+          <button
+            onClick={() => setIsPaused((p) => !p)}
+            aria-label={isPaused ? 'Play slideshow' : 'Pause slideshow'}
+            aria-pressed={isPaused}
+            className="ml-2 p-2 rounded-full text-white/40 hover:text-white/80 hover:bg-white/10 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+          >
+            {isPaused ? <Play className="w-3 h-3" /> : <Pause className="w-3 h-3" />}
+          </button>
+        )}
       </div>
     </section>
   );

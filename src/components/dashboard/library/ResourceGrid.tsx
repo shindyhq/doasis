@@ -1,35 +1,32 @@
 'use client';
 
 import { useState } from 'react';
-import { Resource, ClientResource } from '@/types/custom';
-import { ResourceService } from '@/services/ResourceService';
-import { ResourceViewerDialog } from './ResourceViewerDialog';
-import { Play, FileText, Headphones, Link as LinkIcon, CheckCircle, Clock } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-
-interface ResourceWithStatus extends Resource {
-  clientStatus?: ClientResource | null;
-}
+import { Play, Headphones, FileText, Link as LinkIcon, CheckCircle, Clock } from 'lucide-react';
+import { Resource, ClientResource } from '@/types/custom';
+import { markResourceComplete } from '@/actions/resources';
+import { ResourceViewerDialog } from './ResourceViewerDialog';
 
 interface ResourceGridProps {
-  initialResources: ResourceWithStatus[];
+  initialResources: (Resource & { clientStatus: ClientResource | null })[];
 }
 
-export function ResourceGrid({ initialResources }: ResourceGridProps) {
+export default function ResourceGrid({ initialResources }: ResourceGridProps) {
   const [resources, setResources] = useState(initialResources);
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [viewingResource, setViewingResource] = useState<Resource | null>(null);
+  const [viewingResource, setViewingResource] = useState<(Resource & { clientStatus: ClientResource | null }) | null>(null);
 
-  // Extract unique categories
-  const categories = ['All', ...Array.from(new Set(resources.map(r => r.category)))];
+  const categories = ['All', 'My Resources', ...Array.from(new Set(resources.map(r => r.category)))];
 
   const filteredResources = selectedCategory === 'All' 
     ? resources 
-    : resources.filter(r => r.category === selectedCategory);
+    : selectedCategory === 'My Resources'
+        ? resources.filter(r => r.clientStatus)
+        : resources.filter(r => r.category === selectedCategory);
 
   const handleComplete = async (resourceId: string) => {
     try {
-      const updatedStatus = await ResourceService.markAsAccessed(resourceId, true);
+      const updatedStatus = await markResourceComplete(resourceId);
       
       setResources(prev => prev.map(r => {
         if (r.id === resourceId && updatedStatus) {

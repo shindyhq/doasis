@@ -47,7 +47,7 @@ export function NewsletterSignup({ className = '' }: NewsletterSignupProps) {
           </div>
           <h3 className="text-xl font-serif italic text-primary mb-2">Welcome to the Sanctuary.</h3>
           <p className="text-sm font-serif font-light text-primary/60">
-            You've been successfully subscribed. Look for a note from me soon.
+            You&apos;ve been successfully subscribed. Look for a note from me soon.
           </p>
         </motion.div>
       </div>
