@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Shield, Mail, Lock, ArrowRight, User, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { Logo } from '@/components/ui/Logo';
 
 export default function LoginPage() {
   const [isLogin, setIsLogin] = useState(true);
@@ -124,23 +125,12 @@ export default function LoginPage() {
         className="max-w-md w-full relative z-10"
       >
         <div className="text-center mb-10">
-          <Link href="/" className="inline-block group border-none outline-none">
-            <motion.div
-              whileHover={{ y: -2 }}
-              className="space-y-1"
-            >
-              <h1 className="font-display text-2xl uppercase tracking-[0.4em] font-extrabold text-primary group-hover:text-accent transition-colors duration-500">
-                D'Oasis
-              </h1>
-              <div className="flex items-center justify-center gap-2">
-                <span className="h-px w-4 bg-accent/30" />
-                <p className="text-[8px] uppercase tracking-[0.6em] font-display font-medium text-accent">
-                  Sanctuary Portal
-                </p>
-                <span className="h-px w-4 bg-accent/30" />
-              </div>
-            </motion.div>
-          </Link>
+          <Logo 
+            size="md" 
+            orientation="vertical" 
+            variant="light" 
+            className="justify-center"
+          />
         </div>
 
         <div className="glass-dark p-8 md:p-12 rounded-[2rem] border border-white/5 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.5)] relative overflow-hidden transition-all duration-500">
