@@ -129,12 +129,12 @@ export default function LoginPage() {
               whileHover={{ y: -2 }}
               className="space-y-1"
             >
-              <h1 className="font-display text-3xl uppercase tracking-[0.4em] font-extrabold text-primary group-hover:text-accent transition-colors duration-500">
+              <h1 className="font-display text-2xl uppercase tracking-[0.4em] font-extrabold text-primary group-hover:text-accent transition-colors duration-500">
                 D'Oasis
               </h1>
               <div className="flex items-center justify-center gap-2">
                 <span className="h-px w-4 bg-accent/30" />
-                <p className="text-[9px] uppercase tracking-[0.6em] font-display font-medium text-accent">
+                <p className="text-[8px] uppercase tracking-[0.6em] font-display font-medium text-accent">
                   Sanctuary Portal
                 </p>
                 <span className="h-px w-4 bg-accent/30" />

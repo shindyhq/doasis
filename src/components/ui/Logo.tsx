@@ -43,10 +43,10 @@ export const Logo = ({
   };
 
   const sizes = {
-    sm: { mark: 40, markClass: 'w-10 h-10', name: 'text-[20px]', tagline: 'text-[8px]' },
-    md: { mark: 56, markClass: 'w-14 h-14', name: 'text-[28px]', tagline: 'text-[11.2px]' },
-    lg: { mark: 100, markClass: 'w-[100px] h-[100px]', name: 'text-[44px]', tagline: 'text-[17.5px]' },
-    xl: { mark: 160, markClass: 'w-[160px] h-[160px]', name: 'text-[72px]', tagline: 'text-[28.5px]' },
+    sm: { mark: 32, markClass: 'w-8 h-8', name: 'text-[16px]', tagline: 'text-[6.5px]' },
+    md: { mark: 44, markClass: 'w-11 h-11', name: 'text-[22px]', tagline: 'text-[8.8px]' },
+    lg: { mark: 80, markClass: 'w-[80px] h-[80px]', name: 'text-[34px]', tagline: 'text-[13.5px]' },
+    xl: { mark: 128, markClass: 'w-[128px] h-[128px]', name: 'text-[56px]', tagline: 'text-[22px]' },
   };
 
   const selectedSize = sizes[size];
