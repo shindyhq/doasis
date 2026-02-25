@@ -1,7 +1,7 @@
 ﻿import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "The Sanctuary Journal | Reflections on Faith, Grief & Becoming — D'Oasis",
+  title: "The Sanctuary Journal",
   description: "Curated reflections on faith deconstruction, embodied rest & the sacred beauty of the messy middle. Soul-nourishing reads from D'Oasis Counseling & Coaching.",
   keywords: [
     "faith deconstruction blog",

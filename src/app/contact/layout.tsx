@@ -1,7 +1,7 @@
 ﻿import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Contact D'Oasis | Book a Session or Send an Inquiry",
+  title: "Contact",
   description: "Reach out to D'Oasis Counseling & Coaching. Send an inquiry, book a session, or ask about speaking engagements. Confidential & compassionate response within 24–48 hrs.",
   keywords: [
     "contact D'Oasis",

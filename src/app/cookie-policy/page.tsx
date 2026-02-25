@@ -2,7 +2,7 @@
 import { LegalPageLayout } from '@/components/layout/LegalPageLayout';
 
 export const metadata: Metadata = {
-  title: "Cookie Policy | D'Oasis Counseling & Coaching",
+  title: "Cookie Policy",
   description: "D'Oasis Cookie Policy — how we use essential, analytics, and marketing cookies on our website and how you can manage your preferences.",
   robots: { index: false, follow: true },
 };

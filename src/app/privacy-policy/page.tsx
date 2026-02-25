@@ -2,7 +2,7 @@
 import { LegalPageLayout } from '@/components/layout/LegalPageLayout';
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | D'Oasis Counseling & Coaching",
+  title: "Privacy Policy",
   description: "How D'Oasis Counseling & Coaching collects, uses & protects your personal information. HIPAA-conscious data practices for coaching & counseling clients.",
   robots: { index: false, follow: true },
 };

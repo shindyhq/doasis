@@ -1,7 +1,7 @@
 ﻿import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Book a Session | D'Oasis Counseling & Coaching",
+  title: "Book a Session",
   description: "Book your D'Oasis session online: Clarity Session ($120), free 15-min consultation, Restoration Circles ($45) or apply for 1:1 coaching. Secure, confidential booking.",
   keywords: [
     "book online counseling session",

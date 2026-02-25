@@ -20,7 +20,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: {
     default: "D'Oasis Counseling & Coaching",
-    template: "%s | D'Oasis Counseling & Coaching",
+    template: "%s | D'Oasis",
   },
   description: "Faith-integrated counseling & coaching for women navigating grief, identity shifts & spiritual growth. Trauma-informed, culturally sensitive, virtual sessions.",
   keywords: [

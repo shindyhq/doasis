@@ -1,7 +1,7 @@
 ﻿import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "About Oluyemisi | The Heart Behind D'Oasis Counseling & Coaching",
+  title: "About Oluyemisi",
   description: "Meet Oluyemisi—certified counselor, faith-integrated coach & sacred witness to women's healing. Discover her story, approach & credentials at D'Oasis.",
   keywords: [
     "Oluyemisi counselor",

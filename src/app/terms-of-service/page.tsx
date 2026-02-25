@@ -2,7 +2,7 @@
 import { LegalPageLayout } from '@/components/layout/LegalPageLayout';
 
 export const metadata: Metadata = {
-  title: "Terms of Service | D'Oasis Counseling & Coaching",
+  title: "Terms of Service",
   description: "D'Oasis Counseling & Coaching Terms of Service — service descriptions, fees, cancellation policy, confidentiality, and client responsibilities.",
   robots: { index: false, follow: true },
 };

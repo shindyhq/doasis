@@ -2,7 +2,7 @@
 import { LegalPageLayout } from '@/components/layout/LegalPageLayout';
 
 export const metadata: Metadata = {
-  title: "Client Rights Statement | D'Oasis Counseling & Coaching",
+  title: "Client Rights Statement",
   description: "Your rights as a D'Oasis client: informed consent, confidentiality, respectful treatment, refusal of services, and access to professional ethical care.",
   robots: { index: false, follow: true },
 };
