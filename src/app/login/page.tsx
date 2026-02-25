@@ -130,6 +130,8 @@ export default function LoginPage() {
             orientation="vertical" 
             variant="light" 
             className="justify-center"
+            href="/"
+            ariaLabel="D'Oasis — Return to homepage"
           />
         </div>
 

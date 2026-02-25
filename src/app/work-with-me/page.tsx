@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/Button';
 import { Reveal } from '@/components/ui/Reveal';
 import { ArrowRight, Clock, Calendar, MessageCircle, Sparkles, Video, Compass, Mail } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export default function WorkWithMe() {
@@ -139,10 +140,12 @@ export default function WorkWithMe() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24 items-center">
               {/* Left Column - Image */}
               <div className="aspect-[4/5] rounded-[60px] overflow-hidden shadow-2xl relative grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer order-2 md:order-1">
-                <img 
+                <Image 
                   src="/images/services-clarity.svg"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                   alt="The Clarity Session - 90-minute breakthrough coaching"
+                  sizes="(max-width: 768px) 100vw, 40vw"
                 />
               </div>
 
@@ -267,10 +270,12 @@ export default function WorkWithMe() {
 
               {/* Right Column - Image */}
               <div className="aspect-[4/5] rounded-[60px] overflow-hidden shadow-2xl relative grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer">
-                <img 
+                <Image 
                   src="/images/services-becoming.svg"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                   alt="Becoming 1:1 Coaching - Deep mentorship"
+                  sizes="(max-width: 768px) 100vw, 40vw"
                 />
               </div>
             </div>
@@ -355,10 +360,12 @@ export default function WorkWithMe() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-20 mb-24 items-center">
                {/* Left Column - Image */}
                <div className="aspect-[4/5] rounded-[60px] overflow-hidden shadow-2xl relative grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer order-2 md:order-1">
-                <img 
+                <Image 
                   src="/images/services-circles.svg"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                   alt="Restoration Circles - Monthly group coaching"
+                  sizes="(max-width: 768px) 100vw, 40vw"
                 />
               </div>
 

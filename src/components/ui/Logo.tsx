@@ -13,6 +13,7 @@ interface LogoProps {
   orientation?: 'horizontal' | 'vertical';
   className?: string;
   href?: string;
+  ariaLabel?: string;
 }
 
 export const Logo = ({
@@ -21,8 +22,9 @@ export const Logo = ({
   showTagline = true,
   includeMark = true,
   orientation = 'horizontal',
+  ariaLabel,
   className,
-  href = '/'
+  href
 }: LogoProps) => {
   // Asset Mapping based on Brand Kit
   const logoAssets = {
@@ -55,7 +57,7 @@ export const Logo = ({
 
   const content = (
     <div className={cn(
-      'flex group cursor-pointer transition-opacity hover:opacity-90',
+      'flex group transition-opacity hover:opacity-90',
       orientation === 'vertical' ? 'flex-col items-center text-center' : 'flex-row items-center gap-4',
       className
     )}>
@@ -99,9 +101,13 @@ export const Logo = ({
     </div>
   );
 
-  return href ? (
-    <Link href={href}>
-      {content}
-    </Link>
-  ) : content;
+  if (href) {
+    return (
+      <Link href={href} aria-label={ariaLabel}>
+        {content}
+      </Link>
+    );
+  }
+
+  return content;
 };

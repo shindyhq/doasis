@@ -214,10 +214,12 @@ export default function Home() {
               <article className="group relative flex flex-col h-full">
                 <Link href={`/blog/${post.slug}`} className="aspect-[4/3] bg-primary/5 rounded-3xl mb-8 overflow-hidden relative block group-teaser">
                   {post.image ? (
-                    <img
+                    <Image
                       src={post.image}
                       alt={post.title}
+                      fill
                       className="absolute inset-0 w-full h-full object-cover grayscale opacity-90 mix-blend-multiply group-hover:grayscale-0 group-hover:opacity-100 group-hover:mix-blend-normal group-hover:scale-110 transition-all duration-1000 ease-in-out"
+                      sizes="(max-width: 768px) 100vw, 33vw"
                     />
                   ) : (
                     <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 opacity-60 group-hover:opacity-80 transition-opacity duration-500" />

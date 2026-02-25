@@ -4,6 +4,7 @@ import { Section } from '@/components/layout/Section';
 import { Reveal } from '@/components/ui/Reveal';
 import { ShieldCheck, ArrowRight, Heart, Sparkles, Coffee, BookOpen } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export default function About() {
@@ -49,13 +50,19 @@ export default function About() {
           <div className="lg:col-span-5 relative">
             <Reveal delay={0.3}>
               <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl relative group">
-                <motion.img 
+                <motion.div 
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 1.5 }}
-                  src="/images/external/hero-unbecoming-window.avif" 
-                  className="w-full h-full object-cover grayscale opacity-90 sepia-[0.2]" 
-                  alt="Sophisticated sanctuary"
-                />
+                  className="w-full h-full relative"
+                >
+                  <Image 
+                    src="/images/external/hero-unbecoming-window.avif" 
+                    fill
+                    className="object-cover grayscale opacity-90 sepia-[0.2]" 
+                    alt="Sophisticated sanctuary"
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                  />
+                </motion.div>
                 <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
                 <div className="absolute inset-8 border border-white/20 rounded-[20px] pointer-events-none" />
               </div>
@@ -71,11 +78,13 @@ export default function About() {
           <div className="md:col-span-5 relative">
             <Reveal x={-20} y={0}>
               <div className="aspect-[3/4] bg-primary/5 rounded-[100px] rounded-tl-none overflow-hidden relative shadow-2xl">
-                 <img 
-                   src="/images/portrait-of-oluyemisi.avif" 
-                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
-                   alt="Portrait of Oluyemisi"
-                 />
+                  <Image 
+                    src="/images/portrait-of-oluyemisi.avif" 
+                    fill
+                    className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                    alt="Portrait of Oluyemisi"
+                    sizes="(max-width: 768px) 100vw, 40vw"
+                  />
                  <div className="absolute inset-0 bg-primary/10 mix-blend-overlay pointer-events-none" />
               </div>
             </Reveal>
@@ -229,10 +238,12 @@ export default function About() {
               </div>
               <div className="relative">
                  <div className="aspect-square bg-white rounded-full overflow-hidden border border-secondary/5 rotate-3 hover:rotate-0 transition-all duration-700 shadow-xl group">
-                    <img 
+                    <Image 
                       src="/images/journal.avif" 
-                      className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000" 
+                      fill
+                      className="object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000" 
                       alt="Journaling coffee moments"
+                      sizes="(max-width: 768px) 100vw, 30vw"
                     />
                  </div>
               </div>

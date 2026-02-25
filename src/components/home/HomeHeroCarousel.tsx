@@ -195,7 +195,13 @@ export function HomeHeroCarousel() {
                       transition={{ duration: 1.5, ease: "circOut" }}
                       className="w-[85%] h-[85%] rounded-full overflow-hidden grayscale opacity-50 hover:opacity-100 transition-all duration-1000 cursor-pointer shadow-inner relative"
                     >
-                      <img src={SLIDES[current].bg} className="w-full h-full object-cover scale-125" alt="Sanctuary focus" />
+                      <Image 
+                        src={SLIDES[current].bg} 
+                        alt="Sanctuary focus" 
+                        fill 
+                        className="object-cover scale-125"
+                        sizes="(max-width: 1024px) 100vw, 40vw"
+                      />
                       <div className="absolute inset-0 bg-primary/20 mix-blend-overlay" />
                     </motion.div>
                   </div>
