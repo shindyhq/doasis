@@ -19,10 +19,10 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "D'Oasis Counseling & Coaching | Faith-Rooted Healing for Women",
+    default: "D'Oasis Counseling & Coaching",
     template: "%s | D'Oasis Counseling & Coaching",
   },
-  description: "D'Oasis offers faith-integrated counseling & coaching for women navigating grief, identity shifts & spiritual growth. Trauma-informed, culturally sensitive, virtual.",
+  description: "Faith-integrated counseling & coaching for women navigating grief, identity shifts & spiritual growth. Trauma-informed, culturally sensitive, virtual sessions.",
   keywords: [
     "faith-based counseling for women",
     "Christian life coach",
@@ -42,18 +42,19 @@ export const metadata: Metadata = {
   creator: "D'Oasis Counseling & Coaching",
   publisher: "D'Oasis Counseling & Coaching",
   metadataBase: new URL('https://doasis.org'),
+  alternates: { canonical: 'https://doasis.org' },
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://doasis.org',
     siteName: "D'Oasis Counseling & Coaching",
-    title: "D'Oasis Counseling & Coaching | Faith-Rooted Healing for Women",
-    description: "D'Oasis offers faith-integrated counseling & coaching for women navigating grief, identity shifts & spiritual growth. Trauma-informed, culturally sensitive, virtual.",
+    title: "D'Oasis | Faith-Rooted Healing for Women",
+    description: "Faith-integrated counseling & coaching for women navigating grief, identity shifts & spiritual growth. Trauma-informed, culturally sensitive, virtual sessions.",
   },
   twitter: {
     card: 'summary_large_image',
     title: "D'Oasis Counseling & Coaching",
-    description: "D'Oasis offers faith-integrated counseling & coaching for women navigating grief, identity shifts & spiritual growth. Trauma-informed, culturally sensitive, virtual.",
+    description: "Faith-integrated counseling & coaching for women navigating grief, identity shifts & spiritual growth. Trauma-informed, culturally sensitive, virtual sessions.",
   },
   robots: {
     index: true,

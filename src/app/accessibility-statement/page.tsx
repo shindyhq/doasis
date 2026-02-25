@@ -4,8 +4,7 @@ import { LegalPageLayout } from '@/components/layout/LegalPageLayout';
 export const metadata: Metadata = {
   title: "Accessibility Statement | D'Oasis Counseling & Coaching",
   description: "D'Oasis is committed to WCAG 2.1 AA accessibility standards. Learn about our accessibility features, accommodations, and how to report barriers.",
-  alternates: { canonical: 'https://doasis.org/accessibility-statement' },
-  robots: { index: false, follow: false },
+  robots: { index: false, follow: true },
 };
 
 export default function AccessibilityStatement() {
@@ -90,7 +89,7 @@ export default function AccessibilityStatement() {
 
       <p><strong>Please contact us:</strong></p>
       <p>
-        <strong>Email:</strong> hello@doasis.com<br />
+        <strong>Email:</strong> hello@doasis.org<br />
         <strong>Subject line:</strong> "Accessibility Request" or "Accessibility Feedback"
       </p>
 
@@ -125,7 +124,7 @@ export default function AccessibilityStatement() {
       <h2>Contact Information</h2>
       <p>
         <strong>D'Oasis Counseling & Coaching</strong><br />
-        <strong>Email:</strong> hello@doasis.com<br />
+        <strong>Email:</strong> hello@doasis.org<br />
         <strong>Website:</strong> doasis.org
       </p>
 

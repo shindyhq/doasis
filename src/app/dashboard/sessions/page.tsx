@@ -11,7 +11,7 @@ export default async function SessionsPage() {
   // Mock user for dev
   const user = authUser || {
       id: 'mock-user-id',
-      email: 'guest@doasis.com',
+      email: 'guest@doasis.org',
       user_metadata: { full_name: 'Guest User' }
   };
 

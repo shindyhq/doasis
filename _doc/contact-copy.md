@@ -61,7 +61,7 @@ I offer talks and workshops for faith communities, women's groups, and wellness 
 
 **🤝 Collaborations & Partnerships**  
 If you're a practitioner, organization, or creator interested in partnering, I'd love to explore possibilities.  
-**[Email me: partnerships@doasis.com]**
+**[Email me: partnerships@doasis.org]**
 
 **📱 Stay Connected**  
 Follow along for reflections, resources, and reminders on Instagram: **[@doasis.wellness]**

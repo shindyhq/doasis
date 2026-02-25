@@ -63,7 +63,7 @@ export const Footer = () => {
         
         {/* Level 1: Brand Identity */}
         <div className="flex flex-col items-center gap-8 w-full">
-          <Link href="/" className="hover:opacity-90 transition-opacity">
+          <Link href="/" className="hover:opacity-90 transition-opacity" aria-label="D'Oasis — Go to homepage">
             <Logo variant="dark" size="lg" orientation="vertical" />
           </Link>
           
@@ -82,7 +82,7 @@ export const Footer = () => {
                <Instagram size={22} className="group-hover:scale-110 transition-transform" />
              </a>
              <a 
-               href="mailto:hello@doasis.com" 
+               href="mailto:hello@doasis.org" 
                className="p-3.5 bg-white/5 rounded-full hover:bg-white/10 text-background/60 hover:text-accent transition-all duration-300 group"
                aria-label="Email"
              >

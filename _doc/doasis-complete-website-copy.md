@@ -840,7 +840,7 @@ I offer talks and workshops for faith communities, women's groups, and wellness 
 
 **🤝 Collaborations & Partnerships**  
 If you're a practitioner, organization, or creator interested in partnering, I'd love to explore possibilities.  
-**[Email me: partnerships@doasis.com]**
+**[Email me: partnerships@doasis.org]**
 
 **📱 Stay Connected**  
 Follow along for reflections, resources, and reminders on Instagram: **[@doasis.wellness]**
@@ -992,7 +992,7 @@ For multi-session packages, one emergency reschedule per package is always honor
 
 ### Q: What if I need to reschedule?
 
-**A:** Simply email me at hello@doasis.com or use the reschedule link in your confirmation email. I'll do my best to find an alternative time that works for both of us.
+**A:** Simply email me at hello@doasis.org or use the reschedule link in your confirmation email. I'll do my best to find an alternative time that works for both of us.
 
 ---
 

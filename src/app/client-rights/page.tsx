@@ -4,8 +4,7 @@ import { LegalPageLayout } from '@/components/layout/LegalPageLayout';
 export const metadata: Metadata = {
   title: "Client Rights Statement | D'Oasis Counseling & Coaching",
   description: "Your rights as a D'Oasis client: informed consent, confidentiality, respectful treatment, refusal of services, and access to professional ethical care.",
-  alternates: { canonical: 'https://doasis.org/client-rights' },
-  robots: { index: false, follow: false },
+  robots: { index: false, follow: true },
 };
 
 export default function ClientRights() {
@@ -133,7 +132,7 @@ export default function ClientRights() {
       </ul>
       <p><strong>Where to file complaints:</strong></p>
       <ul>
-        <li>Directly with D'Oasis: hello@doasis.com</li>
+        <li>Directly with D'Oasis: hello@doasis.org</li>
       </ul>
 
       <h2>Right to Safety</h2>
@@ -180,7 +179,7 @@ export default function ClientRights() {
       <h2>Questions About Your Rights</h2>
       <p>If you have questions about your rights or believe your rights have been violated:</p>
       <p>
-        <strong>Contact:</strong> hello@doasis.com
+        <strong>Contact:</strong> hello@doasis.org
       </p>
 
       <hr />

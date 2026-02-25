@@ -33,7 +33,7 @@ export default async function ClientDetailPage(props: PageProps) {
   // Mock user for dev
   const user = authUser || {
       id: 'mock-admin-id',
-      email: 'admin@doasis.com',
+      email: 'admin@doasis.org',
       user_metadata: { full_name: 'Admin User' }
   };
 

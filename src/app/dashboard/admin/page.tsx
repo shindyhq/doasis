@@ -20,7 +20,7 @@ export default async function AdminDashboardPage({ searchParams }: { searchParam
   // Mock user for dev - remove before production
   const user = authUser || {
       id: 'mock-admin-id',
-      email: 'admin@doasis.com',
+      email: 'admin@doasis.org',
       user_metadata: { full_name: 'Admin User' }
   };
 

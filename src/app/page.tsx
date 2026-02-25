@@ -2,7 +2,7 @@
 import { Section } from '@/components/layout/Section';
 
 export const metadata: Metadata = {
-  title: "D'Oasis Counseling & Coaching | Faith-Rooted Healing for Women",
+  title: "Faith-Rooted Healing for Women",
   description: "D'Oasis is a sanctuary for women navigating grief, identity shifts & faith questions. Book a Clarity Session or 1:1 coaching with certified counselor Oluyemisi.",
   keywords: [
     "faith-based counseling for women",

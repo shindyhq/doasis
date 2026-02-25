@@ -27,7 +27,7 @@ export default async function DashboardPage() {
   // Mock user for dev - remove before production
   const user = authUser || {
       id: 'mock-user-id',
-      email: 'guest@doasis.com',
+      email: 'guest@doasis.org',
       user_metadata: { full_name: 'Guest User' }
   };
 

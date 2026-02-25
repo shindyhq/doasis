@@ -69,7 +69,7 @@ export const Navbar = () => {
         <nav className={`w-full px-6 md:px-12 py-4 flex items-center justify-between transition-all duration-500 ${navBgClass}`}>
           
           {/* Logo */}
-          <Link href="/" className="z-50 relative group">
+          <Link href="/" className="z-50 relative group" aria-label="D'Oasis — Go to homepage">
             <Logo variant={isScrolled || !isHome ? "light" : "dark"} size="md" />
           </Link>
 

@@ -4,8 +4,7 @@ import { LegalPageLayout } from '@/components/layout/LegalPageLayout';
 export const metadata: Metadata = {
   title: "Cancellation & Refund Policy | D'Oasis Counseling & Coaching",
   description: "D'Oasis cancellation & refund policy: 48hr notice for full credit, 50% fee within 24–48hrs, full fee under 24hrs. Package and Restoration Circle terms included.",
-  alternates: { canonical: 'https://doasis.org/cancellation-policy' },
-  robots: { index: false, follow: false },
+  robots: { index: false, follow: true },
 };
 
 export default function CancellationPolicy() {
@@ -21,7 +20,7 @@ export default function CancellationPolicy() {
 
       <h3>How to Cancel</h3>
       <ul>
-        <li>Email: hello@doasis.com</li>
+        <li>Email: hello@doasis.org</li>
         <li>Include: Your name, appointment date/time, and reason (optional)</li>
         <li>Cancel as soon as you know you can't attend</li>
       </ul>
@@ -167,7 +166,7 @@ export default function CancellationPolicy() {
       <h2>Questions or Concerns</h2>
       <p>If you have questions about this policy or need to discuss your specific situation:</p>
       <p>
-        <strong>Email:</strong> hello@doasis.com
+        <strong>Email:</strong> hello@doasis.org
       </p>
       <p>
         <strong>We're here to work with you, not against you.</strong> Open communication is always the best approach.

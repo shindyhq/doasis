@@ -139,7 +139,7 @@ After the retention period, we securely delete or anonymize your information.
 - **Restrict Processing:** Request limitations on how we use your information
 - **Data Portability:** Receive your data in a structured, commonly used format
 
-**To exercise these rights, contact us at:** hello@doasis.com
+**To exercise these rights, contact us at:** hello@doasis.org
 
 ---
 
@@ -184,7 +184,7 @@ We may update this Privacy Policy periodically. Changes will be posted on this p
 
 For questions about this Privacy Policy or to exercise your rights:
 
-**Email:** hello@doasis.com  
+**Email:** hello@doasis.org  
 **Phone:** [Your phone number]  
 **Mail:** D'Oasis Counseling & Coaching, [Your mailing address if applicable, or "Online Services Only"]
 
@@ -510,7 +510,7 @@ We reserve the right to modify these Terms at any time.
 
 For questions about these Terms:
 
-**Email:** hello@doasis.com  
+**Email:** hello@doasis.org  
 **Phone:** [Your phone number]  
 **Website:** doasis.org
 
@@ -745,7 +745,7 @@ This disclaimer is governed by the laws of the State of [Your State].
 
 For questions about this disclaimer:
 
-**Email:** hello@doasis.com  
+**Email:** hello@doasis.org  
 **Website:** doasis.org
 
 ---
@@ -871,7 +871,7 @@ We may update this Cookie Policy periodically. Changes will be posted with a new
 
 Questions about cookies?
 
-**Email:** hello@doasis.com
+**Email:** hello@doasis.org
 
 ---
 
@@ -908,7 +908,7 @@ us improve our services.
 - **Less than 24 hours or no-show:** Full session fee charged
 
 **How to Cancel:**
-- Email: hello@doasis.com
+- Email: hello@doasis.org
 - Include: Your name, appointment date/time, and reason (optional)
 - Cancel as soon as you know you can't attend
 
@@ -1021,7 +1021,7 @@ Repeated technical issues on the client's end will not result in refunds.
 ### Payment Disputes
 
 **If you dispute a charge:**
-- Contact us directly first: hello@doasis.com
+- Contact us directly first: hello@doasis.org
 - We will work to resolve the issue
 - Chargebacks without attempting resolution may result in termination of services
 - Successful chargebacks will result in immediate termination
@@ -1079,7 +1079,7 @@ We reserve the right to modify this policy. Changes will be posted with a new "L
 
 If you have questions about this policy or need to discuss your specific situation:
 
-**Email:** hello@doasis.com  
+**Email:** hello@doasis.org  
 **Phone:** [Your phone number]
 
 **We're here to work with you, not against you.** Open communication is always the best approach.
@@ -1342,7 +1342,7 @@ For minor clients (under 18):
 
 Questions about telehealth services?
 
-**Email:** hello@doasis.com  
+**Email:** hello@doasis.org  
 **Phone:** [Your phone number]
 
 ---
@@ -1501,7 +1501,7 @@ At D'Oasis, you have specific rights designed to protect you and ensure you rece
 - Change practitioners if concerns are unresolved
 
 **Where to file complaints:**
-- Directly with D'Oasis: hello@doasis.com
+- Directly with D'Oasis: hello@doasis.org
 - [State Licensing Board] (if applicable)
 - [Professional Association] (e.g., ICF, ACA)
 
@@ -1556,7 +1556,7 @@ At D'Oasis, you have specific rights designed to protect you and ensure you rece
 
 If you have questions about your rights or believe your rights have been violated:
 
-**Contact:** hello@doasis.com  
+**Contact:** hello@doasis.org  
 **Phone:** [Your phone number]
 
 **External Resources:**
@@ -1664,7 +1664,7 @@ Some content on our website is provided by third parties (embedded videos, socia
 
 **Please contact us:**
 
-**Email:** hello@doasis.com  
+**Email:** hello@doasis.org  
 **Phone:** [Your phone number]  
 **Subject line:** "Accessibility Request" or "Accessibility Feedback"
 
@@ -1713,7 +1713,7 @@ Washington, DC 20530
 ### Contact Information
 
 **D'Oasis Counseling & Coaching**  
-**Email:** hello@doasis.com  
+**Email:** hello@doasis.org  
 **Website:** doasis.org
 
 ---
