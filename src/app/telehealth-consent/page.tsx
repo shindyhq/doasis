@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/layout/LegalPageLayout';
+
+export const metadata: Metadata = {
+  title: "Telehealth Consent & Agreement | D'Oasis Counseling & Coaching",
+  description: "D'Oasis telehealth consent: secure Zoom sessions, privacy requirements, emergency procedures & your rights for virtual coaching and counseling services.",
+  alternates: { canonical: 'https://www.doasiswellness.com/telehealth-consent' },
+  robots: { index: false, follow: false },
+};
 
 export default function TelehealthConsent() {
   return (

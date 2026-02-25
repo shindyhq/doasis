@@ -1,4 +1,30 @@
+import type { Metadata } from 'next';
 import { Section } from '@/components/layout/Section';
+
+export const metadata: Metadata = {
+  title: "D'Oasis Counseling & Coaching | Faith-Rooted Healing for Women",
+  description: "D'Oasis is a sanctuary for women navigating grief, identity shifts & faith questions. Book a Clarity Session or 1:1 coaching with certified counselor Oluyemisi.",
+  keywords: [
+    "faith-based counseling for women",
+    "online life coach for women",
+    "grief counseling virtual",
+    "identity transformation coaching",
+    "Christian counselor online",
+    "spiritual coaching for women",
+    "trauma-informed coaching",
+    "women's wellness sanctuary",
+    "Oluyemisi counselor",
+    "faith and healing coaching",
+    "restoration circles group coaching",
+    "women navigating transitions",
+  ],
+  alternates: { canonical: 'https://www.doasiswellness.com' },
+  openGraph: {
+    title: "D'Oasis | A Sanctuary for Women's Healing & Transformation",
+    description: "Faith-rooted, trauma-informed counseling & coaching for women navigating grief, identity, and spiritual growth. Begin your gentle journey today.",
+    url: 'https://www.doasiswellness.com',
+  },
+};
 import { Button } from '@/components/ui/Button';
 import { Reveal } from '@/components/ui/Reveal';
 import Link from 'next/link';

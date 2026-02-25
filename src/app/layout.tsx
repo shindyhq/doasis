@@ -18,8 +18,48 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "D'Oasis | Faith-Rooted Counseling & Coaching",
-  description: "Gentle, grounded support for women navigating grief, identity shifts, and spiritual growth.",
+  title: {
+    default: "D'Oasis Counseling & Coaching | Faith-Rooted Healing for Women",
+    template: "%s | D'Oasis Counseling & Coaching",
+  },
+  description: "D'Oasis offers faith-integrated counseling & coaching for women navigating grief, identity shifts & spiritual growth. Trauma-informed, culturally sensitive, virtual.",
+  keywords: [
+    "faith-based counseling for women",
+    "Christian life coach",
+    "trauma-informed coaching",
+    "grief counseling online",
+    "identity transformation coaching",
+    "spiritual direction for women",
+    "D'Oasis counseling",
+    "Oluyemisi coach",
+    "faith and wellness coaching",
+    "virtual counseling for women",
+    "women's healing sanctuary",
+    "spiritual resilience coaching",
+    "life transitions counselor",
+  ],
+  authors: [{ name: "Oluyemisi | D'Oasis" }],
+  creator: "D'Oasis Counseling & Coaching",
+  publisher: "D'Oasis Counseling & Coaching",
+  metadataBase: new URL('https://www.doasiswellness.com'),
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://www.doasiswellness.com',
+    siteName: "D'Oasis Counseling & Coaching",
+    title: "D'Oasis Counseling & Coaching | Faith-Rooted Healing for Women",
+    description: "D'Oasis offers faith-integrated counseling & coaching for women navigating grief, identity shifts & spiritual growth. Trauma-informed, culturally sensitive, virtual.",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "D'Oasis Counseling & Coaching",
+    description: "D'Oasis offers faith-integrated counseling & coaching for women navigating grief, identity shifts & spiritual growth. Trauma-informed, culturally sensitive, virtual.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
 };
 
 import { MotionProvider } from '@/components/ui/MotionProvider';

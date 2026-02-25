@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/layout/LegalPageLayout';
+
+export const metadata: Metadata = {
+  title: "Accessibility Statement | D'Oasis Counseling & Coaching",
+  description: "D'Oasis is committed to WCAG 2.1 AA accessibility standards. Learn about our accessibility features, accommodations, and how to report barriers.",
+  alternates: { canonical: 'https://www.doasiswellness.com/accessibility-statement' },
+  robots: { index: false, follow: false },
+};
 
 export default function AccessibilityStatement() {
   return (

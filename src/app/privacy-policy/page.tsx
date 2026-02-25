@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/layout/LegalPageLayout';
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | D'Oasis Counseling & Coaching",
+  description: "How D'Oasis Counseling & Coaching collects, uses & protects your personal information. HIPAA-conscious data practices for coaching & counseling clients.",
+  alternates: { canonical: 'https://www.doasiswellness.com/privacy-policy' },
+  robots: { index: false, follow: false },
+};
 
 export default function PrivacyPolicy() {
   return (

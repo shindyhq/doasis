@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/layout/LegalPageLayout';
+
+export const metadata: Metadata = {
+  title: "Disclaimer | D'Oasis Counseling & Coaching",
+  description: "Important disclaimer for D'Oasis Counseling & Coaching. Coaching is not therapy. Read emergency resources, scope of practice, and limitation of liability.",
+  alternates: { canonical: 'https://www.doasiswellness.com/disclaimer' },
+  robots: { index: false, follow: false },
+};
 
 export default function Disclaimer() {
   return (
