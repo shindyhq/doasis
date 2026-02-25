@@ -1,4 +1,4 @@
-## Contact Page
+﻿## Contact Page
 
 ### Meta Information
 **Meta Title:** Get in Touch | D'Oasis Counseling & Coaching
@@ -19,7 +19,7 @@ Whether you have questions, want to book a session, or just need to reach out—
 
 ### Section 1: How to Reach Me
 
-**📧 Email:** hello@doasiswellness.com  
+**📧 Email:** hello@doasis.org  
 **📱 Phone/Text:** [Your number] *(Optional)*  
 **💬 Social:** @doasis.wellness on Instagram
 

@@ -1,10 +1,10 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/layout/LegalPageLayout';
 
 export const metadata: Metadata = {
   title: "Cookie Policy | D'Oasis Counseling & Coaching",
   description: "D'Oasis Cookie Policy — how we use essential, analytics, and marketing cookies on our website and how you can manage your preferences.",
-  alternates: { canonical: 'https://www.doasiswellness.com/cookie-policy' },
+  alternates: { canonical: 'https://doasis.org/cookie-policy' },
   robots: { index: false, follow: false },
 };
 

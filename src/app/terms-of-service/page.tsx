@@ -1,10 +1,10 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/layout/LegalPageLayout';
 
 export const metadata: Metadata = {
   title: "Terms of Service | D'Oasis Counseling & Coaching",
   description: "D'Oasis Counseling & Coaching Terms of Service — service descriptions, fees, cancellation policy, confidentiality, and client responsibilities.",
-  alternates: { canonical: 'https://www.doasiswellness.com/terms-of-service' },
+  alternates: { canonical: 'https://doasis.org/terms-of-service' },
   robots: { index: false, follow: false },
 };
 
@@ -222,7 +222,7 @@ export default function TermsOfService() {
       <p className="text-lg font-serif text-primary/80 leading-relaxed mb-6">For questions about these Terms:</p>
       <p className="text-lg font-serif text-primary/80 leading-relaxed mb-6">
         <strong className="font-bold text-primary">Email:</strong> hello@doasis.com<br />
-        <strong className="font-bold text-primary">Website:</strong> www.doasiswellness.com
+        <strong className="font-bold text-primary">Website:</strong> doasis.org
       </p>
 
       <hr className="border-0 border-t border-primary/10 my-12" />

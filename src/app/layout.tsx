@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { Outfit, Cormorant_Garamond, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import { Navbar } from '@/components/layout/Navbar';
@@ -41,11 +41,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Oluyemisi | D'Oasis" }],
   creator: "D'Oasis Counseling & Coaching",
   publisher: "D'Oasis Counseling & Coaching",
-  metadataBase: new URL('https://www.doasiswellness.com'),
+  metadataBase: new URL('https://doasis.org'),
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.doasiswellness.com',
+    url: 'https://doasis.org',
     siteName: "D'Oasis Counseling & Coaching",
     title: "D'Oasis Counseling & Coaching | Faith-Rooted Healing for Women",
     description: "D'Oasis offers faith-integrated counseling & coaching for women navigating grief, identity shifts & spiritual growth. Trauma-informed, culturally sensitive, virtual.",

@@ -1,10 +1,10 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/layout/LegalPageLayout';
 
 export const metadata: Metadata = {
   title: "Privacy Policy | D'Oasis Counseling & Coaching",
   description: "How D'Oasis Counseling & Coaching collects, uses & protects your personal information. HIPAA-conscious data practices for coaching & counseling clients.",
-  alternates: { canonical: 'https://www.doasiswellness.com/privacy-policy' },
+  alternates: { canonical: 'https://doasis.org/privacy-policy' },
   robots: { index: false, follow: false },
 };
 
@@ -168,7 +168,7 @@ export default function PrivacyPolicy() {
       <p className="text-lg font-serif text-primary/80 leading-relaxed mb-6">For questions about this Privacy Policy or to exercise your rights:</p>
       <p className="text-lg font-serif text-primary/80 leading-relaxed mb-6">
         <strong className="font-bold text-primary">Email:</strong> hello@doasis.com<br />
-        <strong className="font-bold text-primary">Website:</strong> www.doasiswellness.com
+        <strong className="font-bold text-primary">Website:</strong> doasis.org
       </p>
     </LegalPageLayout>
   );

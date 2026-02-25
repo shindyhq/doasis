@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "The Sanctuary Journal | Reflections on Faith, Grief & Becoming — D'Oasis",
@@ -17,11 +17,11 @@ export const metadata: Metadata = {
     "healing journey writing",
     "spiritual formation women",
   ],
-  alternates: { canonical: 'https://www.doasiswellness.com/blog' },
+  alternates: { canonical: 'https://doasis.org/blog' },
   openGraph: {
     title: "The Sanctuary Journal | D'Oasis Counseling & Coaching",
     description: "Words for the becoming. Curated reflections on faith, grief, identity & the sacred beauty of the messy middle.",
-    url: 'https://www.doasiswellness.com/blog',
+    url: 'https://doasis.org/blog',
   },
 };
 

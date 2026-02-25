@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "About Oluyemisi | The Heart Behind D'Oasis Counseling & Coaching",
@@ -17,11 +17,11 @@ export const metadata: Metadata = {
     "identity reclamation coach",
     "grief support specialist",
   ],
-  alternates: { canonical: 'https://www.doasiswellness.com/about' },
+  alternates: { canonical: 'https://doasis.org/about' },
   openGraph: {
     title: "About Oluyemisi | The Heart Behind D'Oasis",
     description: "Certified counselor & coach Oluyemisi created D'Oasis as a premium sanctuary for women navigating faith, grief, and the reclamation of self.",
-    url: 'https://www.doasiswellness.com/about',
+    url: 'https://doasis.org/about',
   },
 };
 

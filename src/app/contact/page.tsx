@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 import { Section } from '@/components/layout/Section';
@@ -92,8 +92,8 @@ export default function Contact() {
                   <div className="space-y-10 pl-6">
                     <div className="group">
                       <span className="text-[10px] uppercase tracking-[0.3em] text-primary/40 mb-2 block font-display font-bold">Email Inquiries</span>
-                      <a href="mailto:hello@doasiswellness.com" className="text-2xl md:text-3xl font-display text-primary hover:text-accent transition-all duration-300 block italic leading-tight decoration-accent/20 underline decoration-1 underline-offset-8">
-                        hello@<br className="sm:hidden" />doasiswellness.com
+                      <a href="mailto:hello@doasis.org" className="text-2xl md:text-3xl font-display text-primary hover:text-accent transition-all duration-300 block italic leading-tight decoration-accent/20 underline decoration-1 underline-offset-8">
+                        hello@<br className="sm:hidden" />doasis.org
                       </a>
                     </div>
 

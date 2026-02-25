@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "FAQs | Counseling, Coaching & Booking Questions — D'Oasis",
@@ -17,11 +17,11 @@ export const metadata: Metadata = {
     "spiritual coaching for doubters",
     "women's therapy questions",
   ],
-  alternates: { canonical: 'https://www.doasiswellness.com/faqs' },
+  alternates: { canonical: 'https://doasis.org/faqs' },
   openGraph: {
     title: "FAQs | D'Oasis Counseling & Coaching",
     description: "Clarity before commitment. Answers to your questions about coaching, counseling, insurance, scheduling & faith integration at D'Oasis.",
-    url: 'https://www.doasiswellness.com/faqs',
+    url: 'https://doasis.org/faqs',
   },
 };
 

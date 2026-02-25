@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { Section } from '@/components/layout/Section';
 
 export const metadata: Metadata = {
@@ -18,11 +18,11 @@ export const metadata: Metadata = {
     "restoration circles group coaching",
     "women navigating transitions",
   ],
-  alternates: { canonical: 'https://www.doasiswellness.com' },
+  alternates: { canonical: 'https://doasis.org' },
   openGraph: {
     title: "D'Oasis | A Sanctuary for Women's Healing & Transformation",
     description: "Faith-rooted, trauma-informed counseling & coaching for women navigating grief, identity, and spiritual growth. Begin your gentle journey today.",
-    url: 'https://www.doasiswellness.com',
+    url: 'https://doasis.org',
   },
 };
 import { Button } from '@/components/ui/Button';

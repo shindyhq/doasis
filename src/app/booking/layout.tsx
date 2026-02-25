@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Book a Session | D'Oasis Counseling & Coaching",
@@ -16,11 +16,11 @@ export const metadata: Metadata = {
     "book virtual counseling",
     "schedule coaching session women",
   ],
-  alternates: { canonical: 'https://www.doasiswellness.com/booking' },
+  alternates: { canonical: 'https://doasis.org/booking' },
   openGraph: {
     title: "Book a Session | D'Oasis Counseling & Coaching",
     description: "Your next chapter starts here. Book a Clarity Session, free consultation, or group Restoration Circle — secure, confidential, and designed for your pace.",
-    url: 'https://www.doasiswellness.com/booking',
+    url: 'https://doasis.org/booking',
   },
 };
 

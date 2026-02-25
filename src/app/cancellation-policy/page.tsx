@@ -1,10 +1,10 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/layout/LegalPageLayout';
 
 export const metadata: Metadata = {
   title: "Cancellation & Refund Policy | D'Oasis Counseling & Coaching",
   description: "D'Oasis cancellation & refund policy: 48hr notice for full credit, 50% fee within 24–48hrs, full fee under 24hrs. Package and Restoration Circle terms included.",
-  alternates: { canonical: 'https://www.doasiswellness.com/cancellation-policy' },
+  alternates: { canonical: 'https://doasis.org/cancellation-policy' },
   robots: { index: false, follow: false },
 };
 

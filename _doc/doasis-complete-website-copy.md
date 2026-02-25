@@ -1,4 +1,4 @@
-# D'Oasis Complete Website Copy
+﻿# D'Oasis Complete Website Copy
 ## Faith-Rooted Counseling & Coaching for Women in Transition
 
 ---
@@ -798,7 +798,7 @@ Whether you have questions, want to book a session, or just need to reach out—
 
 ### Section 1: How to Reach Me
 
-**📧 Email:** hello@doasiswellness.com  
+**📧 Email:** hello@doasis.org  
 **📱 Phone/Text:** [Your number] *(Optional)*  
 **💬 Social:** @doasis.wellness on Instagram
 

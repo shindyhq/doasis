@@ -1,4 +1,4 @@
-# D'Oasis Legal Pages
+﻿# D'Oasis Legal Pages
 ## Ready-to-Use Legal Documents for Online Counseling & Coaching
 
 ---
@@ -512,7 +512,7 @@ For questions about these Terms:
 
 **Email:** hello@doasis.com  
 **Phone:** [Your phone number]  
-**Website:** www.doasiswellness.com
+**Website:** doasis.org
 
 ---
 
@@ -746,7 +746,7 @@ This disclaimer is governed by the laws of the State of [Your State].
 For questions about this disclaimer:
 
 **Email:** hello@doasis.com  
-**Website:** www.doasiswellness.com
+**Website:** doasis.org
 
 ---
 
@@ -1714,7 +1714,7 @@ Washington, DC 20530
 
 **D'Oasis Counseling & Coaching**  
 **Email:** hello@doasis.com  
-**Website:** www.doasiswellness.com
+**Website:** doasis.org
 
 ---
 

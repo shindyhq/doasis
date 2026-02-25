@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Work With Me | Counseling & Coaching Services — D'Oasis",
@@ -18,11 +18,11 @@ export const metadata: Metadata = {
     "grief coaching women",
     "soul-centered coaching",
   ],
-  alternates: { canonical: 'https://www.doasiswellness.com/work-with-me' },
+  alternates: { canonical: 'https://doasis.org/work-with-me' },
   openGraph: {
     title: "Counseling & Coaching Services | D'Oasis",
     description: "Three sacred containers for healing: The Clarity Session, Becoming 1:1 Coaching & Restoration Circles. Faith-integrated, trauma-informed, virtual.",
-    url: 'https://www.doasiswellness.com/work-with-me',
+    url: 'https://doasis.org/work-with-me',
   },
 };
 
