@@ -31,7 +31,7 @@ export function TopClientsTable({ clients }: TopClientsTableProps) {
                                 <div className="flex items-center gap-3">
                                     <div className="relative w-8 h-8 rounded-full overflow-hidden bg-slate-100 shrink-0">
                                         {item.profile?.avatar_url ? (
-                                            <Image src={item.profile.avatar_url} alt={item.profile.full_name || 'Client'} fill className="object-cover" />
+                                            <Image src={item.profile.avatar_url} alt={item.profile.full_name || 'Client'} fill sizes="32px" className="object-cover" />
                                         ) : (
                                             <div className="w-full h-full flex items-center justify-center text-slate-400 text-xs font-medium">
                                                 {(item.profile?.full_name || 'U').charAt(0)}

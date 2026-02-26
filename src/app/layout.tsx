@@ -42,7 +42,6 @@ export const metadata: Metadata = {
   creator: "D'Oasis Counseling & Coaching",
   publisher: "D'Oasis Counseling & Coaching",
   metadataBase: new URL('https://doasis.org'),
-  alternates: { canonical: 'https://doasis.org' },
   openGraph: {
     type: 'website',
     locale: 'en_US',

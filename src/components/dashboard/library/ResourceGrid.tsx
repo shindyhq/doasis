@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 import { Play, Headphones, FileText, Link as LinkIcon, CheckCircle, Clock } from 'lucide-react';
 import { Resource, ClientResource } from '@/types/custom';
 import { markResourceComplete } from '@/actions/resources';
@@ -94,7 +95,13 @@ export default function ResourceGrid({ initialResources }: ResourceGridProps) {
                     'bg-primary/5'}
                 `}>
                   {resource.thumbnail_url ? (
-                    <img src={resource.thumbnail_url} alt={resource.title} className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" />
+                    <Image 
+                      src={resource.thumbnail_url} 
+                      alt={resource.title} 
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" 
+                    />
                   ) : (
                     <div className={`w-16 h-16 rounded-full flex items-center justify-center transition-transform group-hover:scale-110
                       ${resource.type === 'video' ? 'bg-white/20 text-white' : 'bg-primary/10 text-primary'}

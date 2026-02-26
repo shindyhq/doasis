@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { Profile } from '@/lib/types/admin';
 import { useClientData } from '@/hooks/admin/useClientData';
 import { Widget } from '@/components/admin/widgets/Widget';
+import Image from 'next/image';
 import { 
   Users, Search, Filter, Mail, Video, MoreVertical, 
   MapPin, Phone, Calendar, Clock, ArrowRight, Shield 
@@ -136,7 +137,15 @@ export const AdminClientManager = ({ clients }: AdminClientManagerProps) => {
                   <div className="w-24 h-24 rounded-[32px] bg-white shadow-2xl p-2 mb-6 rotate-3 hover:rotate-0 transition-transform duration-500">
                      <div className="w-full h-full bg-primary/5 rounded-[24px] flex items-center justify-center text-primary/20">
                        {selectedClient.avatar_url ? (
-                         <img src={selectedClient.avatar_url} className="w-full h-full object-cover rounded-[24px]" alt="" />
+                         <div className="relative w-full h-full rounded-[24px] overflow-hidden">
+                           <Image 
+                             src={selectedClient.avatar_url} 
+                             alt={selectedClient.full_name || 'Member avatar'}
+                             fill
+                             sizes="96px"
+                             className="object-cover"
+                           />
+                         </div>
                        ) : (
                          <Users size={32} />
                        )}

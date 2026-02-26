@@ -23,7 +23,7 @@ export function UpcomingAppointmentsList({ appointments = [] }: UpcomingAppointm
                         <div key={apt.id} className="flex gap-4 group">
                             <div className="relative w-12 h-12 rounded-xl overflow-hidden shrink-0 bg-slate-100 flex items-center justify-center text-secondary font-bold">
                                 {apt.profiles?.avatar_url ? (
-                                    <Image src={apt.profiles.avatar_url} alt={apt.profiles.full_name || 'Client'} fill className="object-cover" />
+                                    <Image src={apt.profiles.avatar_url} alt={apt.profiles.full_name || 'Client'} fill sizes="48px" className="object-cover" />
                                 ) : (
                                     <span>{apt.profiles?.full_name?.charAt(0) || 'C'}</span>
                                 )}

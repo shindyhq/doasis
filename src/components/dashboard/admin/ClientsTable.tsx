@@ -114,7 +114,7 @@ export function ClientsTable({ data, meta, resources }: ClientsTableProps) {
                                         <td className="px-6 py-4">
                                             <div className="flex items-center gap-3">
                                                 <div className="relative w-10 h-10 rounded-full overflow-hidden bg-slate-100">
-                                                    {client.avatar_url && <Image src={client.avatar_url} alt={client.full_name || 'Client'} fill className="object-cover" />}
+                                                    {client.avatar_url && <Image src={client.avatar_url} alt={client.full_name || 'Client'} fill sizes="40px" className="object-cover" />}
                                                     {!client.avatar_url && <div className="w-full h-full flex items-center justify-center text-slate-400 text-xs font-medium">{(client.full_name || 'C').charAt(0)}</div>}
                                                 </div>
                                                 <div>
