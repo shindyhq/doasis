@@ -5,6 +5,7 @@ import { Section } from '@/components/layout/Section';
 import { motion } from 'framer-motion';
 import { BLOG_POSTS, BLOG_CATEGORIES } from '@/data/posts';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Reveal } from '@/components/ui/Reveal';
 import { NewsletterSignup } from '@/components/blog/NewsletterSignup';
 
@@ -60,13 +61,20 @@ export default function Blog() {
           <div className="lg:col-span-5 relative">
             <Reveal delay={0.3}>
               <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl relative group">
-                <motion.img
+                <motion.div
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 1.5 }}
-                  src="/images/external/blog-hero.avif"
-                  className="w-full h-full object-cover grayscale opacity-90 sepia-[0.2]"
-                  alt="A woman writing - words for the becoming"
-                />
+                  className="w-full h-full"
+                >
+                  <Image
+                    src="/images/external/blog-hero.avif"
+                    alt="A woman writing - words for the becoming"
+                    fill
+                    priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover grayscale opacity-90 sepia-[0.2]"
+                  />
+                </motion.div>
                 <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
                 <div className="absolute inset-8 border border-white/20 rounded-[20px] pointer-events-none" />
               </div>
@@ -121,11 +129,17 @@ export default function Blog() {
             >
               <Link href={`/blog/${post.slug}`} className="block relative aspect-[4/5] rounded-[2rem] overflow-hidden bg-primary/5 mb-12 editorial-shadow transition-all duration-1000 group">
                 {post.image ? (
-                  <motion.img 
-                    src={post.image} 
-                    alt={post.title}
-                    className="absolute inset-0 w-full h-full object-cover grayscale opacity-90 mix-blend-multiply group-hover:grayscale-0 group-hover:opacity-100 group-hover:mix-blend-normal transition-all duration-[2000ms] ease-out group-hover:scale-110"
-                  />
+                  <motion.div 
+                    className="absolute inset-0 w-full h-full transition-all duration-[2000ms] ease-out group-hover:scale-110"
+                  >
+                    <Image 
+                      src={post.image} 
+                      alt={post.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover grayscale opacity-90 mix-blend-multiply group-hover:grayscale-0 group-hover:opacity-100 group-hover:mix-blend-normal transition-all duration-[2000ms]"
+                    />
+                  </motion.div>
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center p-16 text-center">
                     <div className="w-full h-full border border-primary/5 rounded-[1rem] flex items-center justify-center">

@@ -258,15 +258,15 @@ export default function Contact() {
                 "Cancellation Policy",
                 "Scheduling Fit"
               ].map((q) => (
-                <Link key={q} href="/faq" className="group p-6 md:p-8 rounded-3xl hover:bg-accent/[0.03] transition-all border border-transparent hover:border-accent/10 shadow-sm hover:shadow-md">
-                  <p className="text-sm font-playfair italic text-primary/60 group-hover:text-accent transition-colors">
+                <Link key={q} href="/faqs" className="group p-6 md:p-8 rounded-3xl hover:bg-accent/[0.03] transition-all border border-transparent hover:border-accent/10 shadow-sm hover:shadow-md">
+                  <p className="text-sm font-display text-primary/60 group-hover:text-accent transition-colors">
                     {q}
                   </p>
                 </Link>
               ))}
             </div>
             <div className="mt-12">
-              <Button href="/faq" variant="outline" className="h-11 px-10 text-[9px] rounded-full border-primary/20 hover:border-accent hover:bg-accent/5">
+              <Button href="/faqs" variant="outline" className="h-11 px-10 text-[9px] rounded-full border-primary/20 hover:border-accent hover:bg-accent/5">
                 View All FAQs
               </Button>
             </div>
